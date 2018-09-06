@@ -1,0 +1,15 @@
+{
+  "name": "lvivcssweb",
+  "version": "0.0.0",
+  "scripts": {
+    "hbs": "hbs -P ./src/handlebars/partials/* -D ./data/data.json -H ./src/handlebars/helpers/eq.js ./src/handlebars/**.hbs",
+    "css": "css-combine ./src/css/index.css > index.css && cleancss -o index.css index.css",
+    "watch-hbs": "chokidar \"./data/data.json\" \"./src/**/*.hbs\" -c \"yarn hbs\"",
+    "watch-css": "chokidar \"./src/**/*.css\" -c \"yarn css\"",
+    "build": "yarn hbs && yarn css"
+  },
+  "private": true,
+  "dependencies": {
+    "chokidar-cli": "^2.0.0"
+  }
+}

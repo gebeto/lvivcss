@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	{{> head page=pages.workshops}}
+	<script src="./js/modal.js" defer></script>
+	<script src="./js/follow.js" defer type="module"></script>
+</head>
+
+<body>
+	{{> gtm}}
+	{{> nav path="workshops"}}
+	<h1 class="logo small app-logo"><a href="./">LvivCSS'19</a></h1>
+	<h2 class="app-header app-sticky">
+		Воркшопи<br>
+		<a class="call-to-action" href="/tickets">придбай квиток</a>
+	</h2>
+	<main class="app-main app-column app-column-max-2">
+		{{#each workshops}}
+		<figure class="app-column-item app-card">
+			{{#if this.title}}
+			<h3 class="talkname">{{this.title}}</h3>
+			{{/if}}
+			<h4>
+				{{#if this.speakerId}}
+				{{#find ../speakers this.speakerId 'speakerName'}}{{/find}}
+				{{else}}
+				{{this.name}}
+				{{/if}}
+			</h4>
+			{{#if this.speakerId}}
+			<img class="app-card-img" src="/assets/images/speakers/{{this.speakerId}}.jpg" alt="{{this.speakerName}}">
+			{{else}}
+			<img class="app-card-img" src="/assets/images/speakers/{{this.id}}.jpg" alt="{{this.speakerName}}">
+			{{/if}}
+			<figcaption class="app-card-caption">
+				<p>{{this.about}}</p>
+			</figcaption>
+		</figure>
+		{{/each}}
+		<p class="cliffhanger">…чекайте на реєстрацію…</p>
+	</main>
+</body>

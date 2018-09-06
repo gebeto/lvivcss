@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	{{> head page=pages.partners}}
+</head>
+
+<body>
+	{{> gtm}}
+	{{> nav path='partners'}}
+	<h1 class="logo small app-logo"><a href="./">LvivCSS'19</a></h1>
+	<h2 class="app-header app-sticky">
+		Наші партнери<br>
+		<a class="call-to-action" href="./partnership">стати нашим партнером</a>
+	</h2>
+	<div class="app-main">
+		{{#each partners as |partner|}}
+		<section class="partner-category">
+			<h3>{{partner.title}}</h3>
+			{{#each partner.items}}
+			<figure class="{{partner.name}} partner">
+				<img alt="{{this.name}}" class="partner-logo" src="/assets/images/partners/{{this.logo}}">
+				<figcaption class="partner-url">
+					{{#if this.url}}
+					<a href="{{this.url}}">{{this.name}}</a>
+					{{else}}
+					{{this.name}}
+					{{/if}}
+				</figcaption>
+			</figure>
+			{{/each}}
+		</section>
+		{{/each}}
+	</div>
+</body>

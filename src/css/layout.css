@@ -1,0 +1,172 @@
+/* Reset default boxes */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Minimal dimensions */
+html,
+body {
+  width: 100%;
+  min-width: 240px;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+/* Variables */
+body {
+  /* Single screen layout */
+  --singleScreenLayout:
+    "nav header main";
+  --singleScreenPadding: 0 1rem 0 0;
+  --singleScreenColumns: var(--navWidth) 4fr 3fr;
+  --singleScreenRows: 1fr;
+  --singleScreenVerticalAlign: center;
+  /* Single screen layout orientation:portrait */
+  --singleScreenNarrowLayout:
+    "nav header"
+    "nav main";
+  --singleScreenNarrowColumns: var(--navWidth) 1fr;
+  --singleScreenNarrowRows: 1fr;
+  --singleScreenNarrowVerticalAlign: flex-start;
+  /* Single screen narrow */
+  --singleScreenPortraitLayout:
+    "nav"
+    "header"
+    "main";
+  --singleScreenPortraitColumns: 1fr;
+  --singleScreenPortraitRows: var(--navHeight) min-content 1fr;
+  --singleScreenPortraitPadding: 0 1rem;
+  --singleScreenPortraitVerticalAlign: flex-start;
+  
+  /* Default layout */
+  --defaultLayout:
+    "nav logo"
+    "nav header"
+    "nav main"
+    "nav footer";
+  --defaultPadding: 0 1rem 0 0;
+  --defaultColumns: var(--navWidth) 1fr;
+  --defaultRows: repeat(4, min-content);
+  --defaultVerticalAlign: flex-start;
+
+  --defaultTitleTop: 0;
+  --portraitTitleTop: calc(var(--navHeight) - 1px);
+  
+  /* Default layout orientation:portrait */
+  --defaultPortraitLayout:
+    "nav"
+    "logo"
+    "header"
+    "main"
+    "footer";
+  --defaultPortraitPadding: 0 1rem;
+  --defaultPortraitRows: var(--navHeight) repeat(3, min-content);
+  --defaultPortraitColumns: 1fr;
+  --defaultPortraitTitleTop: calc(var(--navHeight) - 1px);
+
+  --gridPadding: var(--defaultPadding);
+  --gridLayout: var(--defaultLayout);
+  --gridColumns: var(--defaultColumns);
+  --gridRows: var(--defaultRows);
+  --gridVerticalAlign: var(--defaultVerticalAlign);
+  --stickyTitleTop: var(--defaultTitleTop);
+}
+
+body {
+  display: grid;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: var(--gridPadding);
+  grid-template-areas: var(--gridLayout);
+  grid-template-columns: var(--gridColumns);
+  grid-template-rows: var(--gridRows);
+  align-items: var(--gridVerticalAlign);
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+body.single-screen {
+  --gridPadding: var(--singleScreenPadding);
+  --gridLayout: var(--singleScreenLayout);
+  --gridColumns: var(--singleScreenColumns);
+  --gridRows: var(--singleScreenRows);
+  --gridVerticalAlign: var(--singleScreenVerticalAlign);
+}
+
+.app-nav {
+  grid-area: nav;
+}
+
+.app-header {
+  grid-area: header;
+}
+
+.app-header p:last-child {
+  margin-bottom: 0;
+}
+
+.app-main {
+  grid-area: main;
+}
+
+.app-logo {
+  grid-area: logo;
+}
+
+.app-footer {
+  grid-area: footer;
+}
+
+.app-column {
+  --columnCount: 3;
+  column-count: var(--columnCount);
+  column-gap: 2rem;
+}
+
+.app-column-max-2 {
+  --columnCount: 2;
+}
+
+.app-column-item {
+  break-inside: avoid;
+}
+
+@media (orientation:landscape) and (max-width:1280px) {
+  body.single-screen {
+    --gridLayout: var(--singleScreenNarrowLayout);
+    --gridRows: var(--singleScreenNarrowRows);
+  }
+}
+
+@media (orientation:portrait), (max-height:420px) {
+  body {
+    --gridLayout: var(--defaultPortraitLayout);
+    --gridColumns: var(--defaultPortraitColumns);
+    --gridRows: var(--defaultPortraitRows);
+    --gridPadding: var(--defaultPortraitPadding);
+    --gridVerticalAlign: var(--defaultPortraitVerticalAlign);
+    --stickyTitleTop: var(--portraitTitleTop);
+  }
+
+  body.single-screen {
+    --gridLayout: var(--singleScreenPortraitLayout);
+    --gridColumns: var(--singleScreenPortraitColumns);
+    --gridRows: var(--singleScreenPortraitRows);
+    --gridPadding: var(--singleScreenPortraitPadding);
+    --gridVerticalAlign: var(--singleScreenPortraitVerticalAlign);
+  }
+}
+
+@media (max-width:1366px) {
+  .app-column {
+    --columnCount: 2;
+  }
+}
+
+@media (max-width:768px) {
+  .app-column {
+    --columnCount: 1;
+  }
+}

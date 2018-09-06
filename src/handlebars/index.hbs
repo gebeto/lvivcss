@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	{{> head page=pages.index}}
+</head>
+
+<body class="single-screen">
+	{{> gtm}}
+	{{> nav path='/'}}
+	<section class="app-header">
+		{{> hero}}
+		<p class="call-to-action">
+			<a class="size-xl" href="/speakers">
+				<b>Подивись спікерів</b>
+			</a>
+			<a class="size-xl" href="/tickets">
+				<b>Придбай квиток</b>
+			</a>
+			<a class="size-l" href="https://t.me/lvivcss">
+				<b>Підпишись на telegram-канал ➔</b>
+			</a>
+			<a class="size-l" href="https://www.facebook.com/events/491374968072733/">
+				<b>Долучись до події у facebook➔</b>
+			</a>
+			<a class="size-l" href="http://twitter.com/lvivcss">
+				<b>У нас навіть є твітер ➔</b>
+			</a>
+		</p>
+	</section>
+	<div class="app-main">
+		<div class="app-gallery">
+			<a href="/speakers">
+				{{#each speakers}}
+				<img
+					class="app-gallery-item{{#if this.big}} big{{/if}}"
+					src="/assets/images/speakers/{{this.id}}.jpg"
+					alt="{{this.speakerName}}"
+					title="{{this.speakerName}} ({{this.city}})">
+				{{/each}}
+			</a>
+		</div>
+	</div>
+</body>

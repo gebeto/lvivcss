@@ -1,0 +1,118 @@
+:root {
+  --headerHeight: 6rem;
+}
+
+.call-to-action a {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.app-header.app-sticky {
+  position: sticky;
+  top: var(--stickyTitleTop);
+  height: var(--headerHeight);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--clrText);
+  background-color: white;
+  grid-area: header;
+}
+
+.app-gallery-item {
+  --imgWidth: calc(100% / 5);
+  float: left;
+  width: var(--imgWidth);
+}
+
+.app-gallery-item.big {
+  width: calc(var(--imgWidth) * 2);
+}
+
+.app-gallery {
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.conference-date {
+  font-size: var(--sizeXL);
+}
+
+.alert {
+  padding: 1rem;
+  color: white;
+  border-radius: 1rem;
+  background-color: var(--clrBlueLight);
+  font-size: var(--sizeXS);
+}
+
+.alert a {
+  text-decoration: underline;
+  color: white;
+  font-weight: 700;
+}
+
+.action {
+  display: inline-block;
+  text-transform: lowercase;
+  color: var(--clrBlueDeep);
+  border-bottom: 1px dashed currentColor;
+  font-size: var(--sizeS);
+  font-weight: 400;
+  line-height: 1rem;  
+}
+
+.follow-checkbox {
+  display: none;
+}
+
+.follow-button {
+  display: inline-flex;
+  margin-top: 2px;
+  font-size: var(--sizeS);
+  font-weight: 700;
+  align-items: center;
+}
+
+.heart-icon {
+  margin-right: 0.25rem;
+}
+
+:checked+.follow-button {
+  color: #C62828;
+}
+
+:checked+.follow-button .follow-label::before {
+  content: "не ";
+}
+
+:checked+.follow-button .heart-icon,
+:checked+.follow-button .heart-icon .shape {
+  fill: #C62828;
+}
+
+img.square {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: beige;
+}
+
+@media (orientation:landscape) {
+  .app-gallery-item {
+    transition: 200ms opacity;
+    opacity: 0.75;
+  }
+
+  .app-gallery-item:hover {
+    opacity: 1;
+  }
+}
+
+@media (orientation:portrait) {
+  .speaker-preview {
+    --imgWidth: calc(100% / 4);
+  }
+
+  .tickets .hero {
+    display: none;
+  }
+}

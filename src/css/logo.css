@@ -1,0 +1,30 @@
+.logo {
+	margin: 0 0 0 -0.05em;
+  color: var(--clrPurplePrimary);
+  font-family: "GlacialIndifference", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 6rem;
+  line-height: 1;
+}
+
+.logo.small {
+	margin: 1rem 0 0 0;
+  font-size: 3rem;
+}
+
+@media (orientation:portrait) {
+  .logo {
+    font-size: var(--size5XL);
+  }
+  .logo.small {
+    margin: 0;
+  }
+}
+
+@supports (-webkit-background-clip:text) {
+  .logo {
+    background: linear-gradient(to right, var(--clrPurplePrimary), var(--clrPurpleSecondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

@@ -1,0 +1,45 @@
+.partner-category {
+  overflow: hidden;
+}
+
+.partner-category:not(:first-child) {
+  padding-top: 1rem;
+}
+
+.partner {
+  --partnerLogoSize: 1rem;
+  --labelFontSize: calc(var(--partnerLogoSize) / 10);
+
+  float: left;
+  margin: 0;
+  padding: 1rem;
+  break-inside: avoid;
+}
+
+.partner-url {
+  text-align: center;
+  font-size: var(--labelFontSize);
+  font-weight: 700;
+}
+
+.partner-logo {
+  box-sizing: border-box;
+  width: var(--partnerLogoSize);
+  height: var(--partnerLogoSize);
+}
+
+.gold {
+  --partnerLogoSize: 9rem;
+}
+
+.silver {
+  --partnerLogoSize: 8rem;
+}
+
+.bronze {
+  --partnerLogoSize: 7rem;
+}
+
+.info {
+  --partnerLogoSize: 6rem;
+}

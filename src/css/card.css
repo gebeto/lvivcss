@@ -1,0 +1,123 @@
+body.noscroll {
+  overflow: hidden;
+}
+
+.app-card {
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px dashed gray;
+}
+
+.app-card-img {
+  --cardImgWidth: 6rem;
+  --cardImgHeight: calc(var(--cardImgWidth) / 3 * 4);
+  float: left;
+  box-sizing: border-box;
+  width: var(--cardImgWidth);
+  height: var(--cardImgHeight);
+  margin: 5pt 1rem 0 0;
+}
+
+.description,
+.modal-toggle {
+  display: none;
+}
+
+.app-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input:checked+.app-card {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: var(--navWidth);
+  overflow: auto;
+  margin: 0;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+input:checked+.app-card .card-collapse-action {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.card-collapse-action,
+input:checked+.app-card .card-expand-action {
+  display: none;
+}
+
+input:checked+.app-card .description,
+input:checked+.app-card .talkname {
+  display: block;
+}
+
+input:checked+.app-card .app-card-img {
+  --cardImgWidth: 16rem;
+}
+
+input:checked+.app-card .app-card-caption {
+  columns: 2;
+}
+
+@media (orientation:portrait) {
+  input:checked+.app-card {
+    top: var(--navHeight);
+    left: 0;
+    padding: 1rem;
+  }
+
+  input:checked+.app-card .app-card-caption {
+    columns: 0;
+  }
+
+  input:checked+.app-card .card-collapse-action {
+    position: fixed;
+    z-index: 15;
+    top: none;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    height: 2rem;
+    margin: 0;
+    border-top: 1px solid #333;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width:1024px) {
+  input:checked+.app-card {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  input:checked+.app-card .app-card-caption {
+    columns: initial;
+  }
+
+  input:checked+.app-card .app-card-img {
+    --cardImgWidth: 10rem;
+  }
+
+}
+
+@media (max-width:480px) {
+  input:checked+.app-card .app-card-img {
+    --cardImgWidth: 6rem;
+  }
+}
+
+.cliffhanger {
+  margin-top: 1rem;
+  text-align: center;
+  column-span: all;
+}
