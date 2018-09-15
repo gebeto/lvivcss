@@ -15,43 +15,27 @@
   <link rel="stylesheet" href="./styles/index.css">
   <link rel="icon" type="image/png" href="./assets/images/favicon.png">
   <script src="./scripts/rect.js" defer></script>
+  <script src="./scripts/speakers.js" defer></script>
 </head>
 
 <body>
   <header class="page-header">
     <nav class="site-nav">
-      <a href="./"><img src="./assets/images/LvivCSS2018.svg" alt="LvivCSS2018" class="logo-small"></a>
-      <a href="./speakers.html" class="active">Speakers</a>
-      <a href="http://global-css.org/lvivcss-2018-partnership/en">For sponsors</a>
+        <a href="./"><img src="./assets/images/LvivCSS2018.svg" alt="LvivCSS2018" class="logo-small"></a>
+        <a href="./speakers.html" class="active">Speakers</a>
+        <a href="./tickets.html">Ticket types</a>
+        <a href="http://global-css.org/lvivcss-2018-partnership/en">For sponsors</a>
     </nav>
     <!-- <img src="./assets/images/LvivCSS2018.svg" alt="LvivCSS2018" class="index-logo"> -->
   </header>
   <main>
     <section>
       <h2>Exclusive speaker</h2>
-      <div class="speakers">
-        <div class="speaker">
-          <img src="./assets/images/hakon.jpg" alt="Håkon Wium Lie" class="speaker-photo">
-          <p class="speaker-name">Håkon Wium Lie</p>
-        </div>
-      </div>
+      <div class="speakers" id="exclusive"></div>
     </section>
     <section>
       <h2>Speakers</h2>
-      <div class="speakers">
-        <div class="speaker">
-          <img src="./assets/images/shpilevska.jpg" alt="Lena Shpilevska" class="speaker-photo">
-          <p class="speaker-name">Lena Shpilevska</p>
-        </div>
-        <div class="speaker">
-          <img src="./assets/images/rybka.jpg" alt="Vitalii Rybka" class="speaker-photo">
-          <p class="speaker-name">Vitalii Rybka</p>
-        </div>
-        <div class="speaker">
-          <img src="./assets/images/skachkov.jpg" alt="Oleksandr Skachkov" class="speaker-photo">
-          <p class="speaker-name">Oleksandr Skachkov</p>
-        </div>
-      </div>
+      <div class="speakers" id="speakers"></div>
     </section>
     <div class="outer-navigation">
       <a href="http://bit.ly/LvivCSS2018CFP" class="link-btn">Apply as a speaker</a>
