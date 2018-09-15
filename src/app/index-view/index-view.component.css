@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 300pt;
+  align-self: center;
+}

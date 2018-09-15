@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+/* VARIABLES */
+:root {
+  --clr-main: #4a0692;
+  --clr-main-shadow: #340763;
+  --clr-text: white;
+}
+
+body {
+  background-image: linear-gradient(
+    to right,
+    var(--clr-main-shadow),
+    var(--clr-main),
+    var(--clr-main-shadow)
+  );
+  color: var(--clr-text);
+  font-family: "Roboto Condensed";
+}
