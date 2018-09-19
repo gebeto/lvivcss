@@ -11,9 +11,11 @@
 html {
   overflow-x: hidden;
   min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-body, html {
+body {
   background-image: linear-gradient(to right, var(--shadow-color), var(--bg-color), var(--shadow-color));
   color: var(--text-color);
   font-family: var(--font);
@@ -27,6 +29,15 @@ body {
   overflow-x: hidden;
   position: relative;
   text-shadow: 0 1pt 1pt rgba(0, 0, 0, 0.5);
+}
+
+#background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -9999;
 }
 
 h2 {
