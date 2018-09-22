@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { speakers } from '../speakers.list';
+import { Router } from '@angular/router';
 
 interface FeatureInfo {
   count: string;
@@ -12,18 +13,19 @@ interface FeatureInfo {
   styleUrls: ['./index-view.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class IndexViewComponent implements OnInit {
+export class IndexViewComponent  {
   readonly features: FeatureInfo[] = [
     { count: '20+', title: 'speakers' },
     { count: '400', title: 'attendees' },
     { count: '4', title: 'workshops' },
-    { count: 'Infinite', title: 'fun' }
+    { count: '∞', title: 'fun' }
   ];
   readonly speakers = speakers;
-  constructor() { }
-
-  ngOnInit() {
+  constructor(readonly router: Router) { }
+  goToTickets() {
+    this.router.navigateByUrl('tickets');
   }
-
-  trackBy() {}
+  goToSponsor() {
+    window.location.href = 'http://global-css.org/lvivcss-2018-partnership/en';
+  }
 }

@@ -17,6 +17,8 @@
   :host {
     --img-size: 100pt;
     --title-font-size: 16pt;
+    width: 50%;
+    margin: 0;
   }
 }
 

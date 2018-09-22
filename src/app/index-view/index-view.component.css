@@ -63,3 +63,15 @@
 app-button {
   margin-bottom: 30pt;
 }
+
+@media screen and (orientation: portrait) {
+  .logo {
+    width: 80%;
+  }
+  .features {
+    flex-wrap: wrap;
+  }
+  .feature {
+    width: 50%;
+}
+}

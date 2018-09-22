@@ -15,5 +15,7 @@ export class PartnersViewComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  goToSponsor() {
+    window.location.href = 'http://global-css.org/lvivcss-2018-partnership/en';
+  }
 }

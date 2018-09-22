@@ -1,4 +1,7 @@
-<app-button [className]="'centered-item'">Become a sponsor</app-button>
+<app-button	
+	[className]="'centered-item'"
+	(click)="goToSponsor()"
+	>Become a sponsor</app-button>
 
 <img src="/assets/images/LvivCSS2018.svg" alt="LvivCSS2018" class="logo">
 
@@ -21,5 +24,9 @@
 	<app-info-card *ngFor="let speaker of speakers.exclusive" [data]="speaker"></app-info-card>
 </div>
 
-<app-button [className]="'centered-item'" size="medium">Apply as a speaker</app-button>
-<app-button [className]="'centered-item'" solid="true" size="big">Buy tickets</app-button>
+<app-button
+	[className]="'centered-item'"
+	solid="true"
+	size="big"
+	(click)="goToTickets()"
+	>Buy tickets</app-button>
