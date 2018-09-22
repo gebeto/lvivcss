@@ -1,0 +1,14 @@
+<header>{{data.title}}</header>
+<main>
+  <ng-container *ngIf="!data.base">
+    <h2>supporter pack</h2>
+    <p>in addition to <b>Regular ticket</b> includes:</p>
+  </ng-container>
+  <ul class="benefits">
+    <li *ngFor="let benefit of data.benefits" [innerHTML]="benefit | safeHtml"></li>
+  </ul>
+  <p class="price">{{data.price}}</p>
+</main>
+<aside (click)="buy.emit(data.type)" [ngStyle]="{backgroundColor: data.color}">
+  Buy ticket
+</aside>

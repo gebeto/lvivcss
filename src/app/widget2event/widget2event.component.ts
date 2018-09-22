@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter, HostListener } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
@@ -10,6 +10,10 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 export class Widget2EventComponent {
   private readonly id = 1466074;
   @Input() private type = null;
+  @Output() public close: EventEmitter<any> = new EventEmitter;
+  @HostListener('click') onHostClick() {
+    this.close.emit();
+  }
   get url(): SafeUrl {
     return this.s.bypassSecurityTrustResourceUrl(`https://2event.com/site/ticketsWidget?id=${this.id}&bg_color=lime&tickets_type=${this.type}&target=_top&lang=en&frame=tickets_iframe_0&tickets=`);
   }
