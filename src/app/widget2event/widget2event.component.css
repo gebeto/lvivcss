@@ -18,3 +18,9 @@ iframe {
 	height: var(--width);
 	z-index: 1;
 }
+
+@media screen and (max-width: 500pt) {
+	iframe {
+		--margin: 20pt;
+	}
+}
