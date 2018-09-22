@@ -1,0 +1,32 @@
+<app-button	
+	[className]="'centered-item'"
+	(click)="goToSponsor()"
+	>Become a sponsor</app-button>
+
+<img src="/assets/images/LvivCSS2018.svg" alt="LvivCSS2018" class="logo">
+
+<div class="conference-date">
+	<div class="backdrop"></div>
+	<time datetime="2018-11-10">10–<span hidden="hidden"> November</span></time><time datetime="2018-11-11">11 November</time>
+	<app-counter></app-counter>
+</div>
+
+<div class="features">
+	<p class="feature" *ngFor="let feature of features;">
+		<b class="feature-count">{{feature.count}}</b>
+		<span class="feature-description">{{feature.title}}</span>
+	</p>
+</div>
+
+<h2>Exclusive speaker</h2>
+
+<div class="speakers">
+	<app-info-card *ngFor="let speaker of speakers.exclusive" [data]="speaker"></app-info-card>
+</div>
+
+<app-button
+	[className]="'centered-item'"
+	solid="true"
+	size="big"
+	(click)="goToTickets()"
+	>Buy tickets</app-button>

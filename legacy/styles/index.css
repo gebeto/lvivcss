@@ -1,0 +1,262 @@
+@import "./fonts.css";
+@import "./navigation.css";
+:root {
+  --bg-color: #4a0692;
+  --shadow-color: #340763;
+  --text-color: white;
+  --font: Roboto Condensed;
+  --link-fsize: 14pt;
+}
+
+html {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to right, var(--shadow-color), var(--bg-color), var(--shadow-color));
+  color: var(--text-color);
+  font-family: var(--font);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  text-shadow: 0 1pt 1pt rgba(0, 0, 0, 0.5);
+}
+
+#background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -9999;
+}
+
+h2 {
+  align-items: center;
+  display: flex;
+  font-size: 32pt;
+  justify-content: center;
+  margin: 0 10%;
+  margin-bottom: 32pt;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+h2::before, h2::after {
+  background-color: white;
+  content: "";
+  display: block;
+  flex: 1;
+  height: 1px;
+}
+
+h2::before {
+  margin-right: 20pt;
+}
+
+h2::after {
+  margin-left: 20pt;
+}
+
+.speakers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+.page-header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10pt;
+}
+
+.index-logo {
+  margin-top: 30pt;
+  width: 300pt;
+}
+
+.conference-date {
+  display: block;
+  font-size: 21pt;
+  margin: 25pt 0;
+  padding: 5pt 0;
+  position: relative;
+  text-align: center;
+  width: 90%;
+}
+
+.conference-date .backdrop {
+  background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
+  filter: blur(9pt);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15%;
+}
+
+.feature {
+  --font-size: 42pt;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-count {
+  font-size: var(--font-size);
+  height: calc(var(--font-size) * 1.5);
+  line-height: 1.5;
+}
+
+.feature-description {
+  font-size: calc(var(--font-size) / 3);
+}
+
+.infinity-icon {
+  height: var(--font-size);
+  margin: calc(var(--font-size) / 4) 0;
+}
+
+.counter {
+  display: flex;
+  font-size: 12pt;
+  font-weight: 300;
+  justify-content: center;
+}
+
+.outer-navigation {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 32pt;
+  padding-bottom: 26pt;
+}
+
+.link-btn {
+  border: 1pt solid var(--text-color);
+  border-radius: 5pt;
+  color: var(--text-color);
+  display: block;
+  font-size: var(--link-fsize);
+  margin-top: 20pt;
+  padding: calc(var(--link-fsize) / 3.2) calc(var(--link-fsize) / 2);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.outer-navigation .link-btn {
+  --link-fsize: 32pt;
+}
+
+.outer-navigation .link-btn.apply {
+  --link-fsize: 21pt;
+}
+
+.link-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.link-btn.tickets {
+  background-color: white;
+  color: var(--bg-color);
+  font-weight: bold;
+}
+
+.page-footer {
+  bottom: 0;
+  filter: blur(5pt);
+  position: absolute;
+  width: 100%;
+}
+
+.rect {
+  --rect-height: 50pt;
+  --rect-min-height: calc(var(--rect-height) * 0.5);
+  animation: grow 5000ms ease-in infinite;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05), transparent);
+  bottom: 0;
+  height: var(--rect-min-height);
+  position: absolute;
+}
+
+@keyframes grow {
+  0% {
+    height: var(--rect-min-height);
+  }
+  50% {
+    height: var(--rect-height);
+  }
+  100% {
+    height: var(--rect-min-height);
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .index-logo {
+    width: 80%;
+  }
+  .features {
+    flex-wrap: wrap;
+  }
+  .feature {
+    width: 50%;
+  }
+  .conference-date {
+    margin-bottom: 0;
+  }
+  .speaker {
+    flex: 1;
+  }
+  .outer-navigation .link-btn {
+    --link-fsize: 24pt;
+  }
+  .site-nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+  .nav-links {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    left: 10pt;
+    right: 10pt;
+  }
+  .site-nav a {
+    text-align: center;
+  }
+
+
+}
+
+@supports (-ms-ime-align:auto) {
+  /* EDGE cannot process variables for rotate */
+  .social-button:nth-of-type(1) a {
+    transform: scale(var(--zoom)) rotateZ(15deg);
+  }
+  .social-button:nth-of-type(2) a {
+    transform: scale(var(--zoom)) rotateZ(45deg);
+  }
+  .social-button:nth-of-type(3) a {
+    transform: scale(var(--zoom)) rotateZ(75deg);
+  }
+}

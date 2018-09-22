@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Regular",
+    "price": 1500,
+    "base": true,
+    "color": "#4067df",
+    "benefits": [
+      "Conference admission",
+      "LvivCSS2018 t-shirt"
+    ]
+  },
+  {
+    "title": "&lt;element&gt;",
+    "price": 2000,
+    "color": "#cbcb51",
+    "benefits": [
+      "<b>GlobalCSS</b> t-shirt",
+      "<b>&lt;element&gt;</b> supporter badge",
+      "Special welcome drink on afterparty",
+      "Name listed on special site page"
+    ]
+  },
+  {
+    "title": ".classname",
+    "price": 2500,
+    "color": "#00fd00",
+    "benefits": [
+      "<b>GlobalCSS</b> t-shirt",
+      "<b>.classname</b> supporter badge",
+      "Special welcome drink on afterparty",
+      "Name listed on special site page with link to social network of your choice"
+    ]
+  },
+  {
+    "title": "#id",
+    "price": 3000,
+    "color": "#a49061",
+    "benefits": [
+      "<b>GlobalCSS</b> t-shirt",
+      "<b>#id</b> supporter badge",
+      "Special welcome drink on afterparty",
+      "Name listed on special site page with photo and link to social network of your choice",
+      "Closed preparty admission",
+      "Exclusive <b>LvivCSS2018 Partner</b> t-shirt"
+    ]
+  },
+  {
+    "title": "&lt;inline style&gt;",
+    "price": 4000,
+    "color": "#fea300",
+    "benefits": [
+      "<b>GlobalCSS</b> t-shirt",
+      "<b>&lt;inline style&gt;</b> supporter badge",
+      "Special welcome drink on afterparty",
+      "Name listed on special site page",
+      "Closed preparty admission",
+      "Exclusive <b>LvivCSS2018 Partner</b> t-shirt",
+      "Invitation to stage with organizers at closing ceremony, presentation to audience",
+      "25% discount for LvivCSS2019"
+    ]
+  }
+]

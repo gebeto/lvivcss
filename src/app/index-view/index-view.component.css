@@ -1,0 +1,77 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 300pt;
+  align-self: center;
+}
+
+.speakers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.conference-date {
+  display: block;
+  font-size: 21pt;
+  margin: 25pt 0;
+  padding: 5pt 0;
+  position: relative;
+  text-align: center;
+  width: 90%;
+  align-self: center;
+}
+
+.conference-date .backdrop {
+  background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
+  filter: blur(9pt);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.features {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15%;
+}
+
+.feature {
+  --font-size: 42pt;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-count {
+  font-size: var(--font-size);
+  height: calc(var(--font-size) * 1.5);
+  line-height: 1.5;
+}
+
+.feature-description {
+  font-size: calc(var(--font-size) / 3);
+}
+
+.infinity-icon {
+  height: var(--font-size);
+  margin: calc(var(--font-size) / 4) 0;
+}
+
+app-button {
+  margin-bottom: 30pt;
+}
+
+@media screen and (orientation: portrait) {
+  .logo {
+    width: 80%;
+  }
+  .features {
+    flex-wrap: wrap;
+  }
+  .feature {
+    width: 50%;
+}
+}
