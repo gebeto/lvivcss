@@ -1,0 +1,6 @@
+:host {
+  display: flex;
+  font-size: 12pt;
+  font-weight: 300;
+	justify-content: center;
+}

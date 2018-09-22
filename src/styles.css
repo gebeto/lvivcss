@@ -16,3 +16,41 @@ body {
   color: var(--clr-text);
   font-family: "Roboto Condensed";
 }
+
+h2 {
+  align-items: center;
+  display: flex;
+  font-size: 32pt;
+  justify-content: center;
+  margin: 0 10%;
+  margin-bottom: 32pt;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+h2::before, h2::after {
+  background-color: white;
+  content: "";
+  display: block;
+  flex: 1;
+  height: 1px;
+}
+
+h2::before {
+  margin-right: 20pt;
+}
+
+h2::after {
+  margin-left: 20pt;
+}
+
+.centered-item {
+  align-self: center;
+}
+
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,0 +1,34 @@
+:host {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30pt;
+}
+
+.site-nav {
+  --a-height: 24pt;
+  height: var(--a-height);
+  margin-bottom: 20pt;
+}
+
+a {
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 12pt;
+  line-height: var(--a-height);
+  height: var(--a-height);
+  display: inline-block;
+  padding: 0 8pt;
+  text-shadow: none;
+  text-decoration: none;
+  border-radius: 3pt;
+}
+
+a.active {
+  background-color: white;
+  color: var(--clr-main);
+}
+
+.logo-small {
+  height: calc(var(--a-height) / 2);
+}
