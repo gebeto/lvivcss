@@ -3,6 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { DataCard } from '../data-card';
 import { Observable, Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
+import { FirestoreService } from '../firebase.service';
 
 @Component({
   selector: 'app-speakers-view',
@@ -12,12 +13,7 @@ import { map, takeUntil } from 'rxjs/operators';
 })
 export class SpeakersViewComponent implements OnDestroy {
   readonly iDie: Subject<any> = new Subject();
-  readonly speakers: Observable<DataCard[]> = this.firestore
-    .collection<DataCard>('/speakers')
-    .valueChanges()
-    .pipe(
-      takeUntil(this.iDie)
-    );
+  readonly speakers: Observable<DataCard[]> = this.firestoreService.speakers;
 
   readonly exclusive: Observable<DataCard[]> = this.speakers.pipe(
     map(all => all.filter(({ exclusive }) => exclusive))
@@ -30,7 +26,7 @@ export class SpeakersViewComponent implements OnDestroy {
   );
 
   constructor(
-    readonly firestore: AngularFirestore
+    readonly firestoreService: FirestoreService
   ) { }
 
   ngOnDestroy() {

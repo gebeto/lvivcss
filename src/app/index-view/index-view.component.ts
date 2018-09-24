@@ -2,8 +2,8 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject, Observable } from 'rxjs';
 import { DataCard } from '../data-card';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { takeUntil, map } from 'rxjs/operators';
+import { takeUntil } from 'rxjs/operators';
+import { FirestoreService } from '../firebase.service';
 
 interface FeatureInfo {
   count: string;
@@ -18,7 +18,7 @@ interface FeatureInfo {
 })
 export class IndexViewComponent {
   readonly iDie: Subject<any> = new Subject();
-  readonly speakers: Observable<DataCard[]> = this.firestore
+  readonly speakers: Observable<DataCard[]> = this.firestoreService.firestore
     .collection<DataCard>('/speakers', ref => ref.where('exclusive', '==', true))
     .valueChanges()
     .pipe(
@@ -33,7 +33,7 @@ export class IndexViewComponent {
   ];
   constructor(
     readonly router: Router,
-    readonly firestore: AngularFirestore
+    readonly firestoreService: FirestoreService
   ) { }
   goToTickets() {
     this.router.navigateByUrl('tickets');

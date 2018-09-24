@@ -9,6 +9,7 @@ export interface DataCard {
   title: string;
   exclusive?: boolean;
   hidden?: boolean;
+  status?: string;
   social: {
     [key in SocialNetwork]: string;
   };

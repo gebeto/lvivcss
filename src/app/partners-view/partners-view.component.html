@@ -1,16 +1,16 @@
-<ng-container *ngIf="partners.sponsors.length">
+<ng-container *ngIf="sponsors | async as sponsors">
   <h2>Sponsors</h2>
   <div class="info-cards">
-    <app-info-card *ngFor="let item of partners.sponsors" [data]="item"></app-info-card>
+    <app-info-card *ngFor="let item of sponsors" [data]="item"></app-info-card>
   </div>
   <app-button	
     [className]="'centered-item btn'"
     (click)="goToSponsor()"
     >Become a sponsor</app-button>
 </ng-container>
-<ng-container *ngIf="partners.media.length">
+<ng-container *ngIf="media | async as media">
   <h2>Media partners</h2>
   <div class="info-cards">
-    <app-info-card *ngFor="let item of partners.media" [data]="item"></app-info-card>
+    <app-info-card *ngFor="let item of media" [data]="item"></app-info-card>
   </div>
 </ng-container>
