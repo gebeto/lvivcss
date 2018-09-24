@@ -7,6 +7,7 @@ import {
   HostListener,
 } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { UrlSegment } from '@angular/router';
 
 @Component({
   selector: 'app-widget2event',
@@ -22,7 +23,17 @@ export class Widget2EventComponent {
     this.close.emit();
   }
   get url(): SafeUrl {
-    return this.s.bypassSecurityTrustResourceUrl(`https://2event.com/site/ticketsWidget?id=${this.id}&bg_color=lime&tickets_type=${this.type}&target=_top&lang=en&frame=tickets_iframe_0&tickets=`);
+    const url = new UrlSegment('https://2event.com/site/ticketsWidget', {
+      id: `${this.id}`,
+      bg_color: 'lime',
+      tickets_type: `${this.type}`,
+      target: '_top',
+      lang: 'en',
+      frame: 'tickets_iframe_0',
+      tickets: ''
+    });
+
+    return this.s.bypassSecurityTrustResourceUrl(url.path);
   }
   constructor(readonly s: DomSanitizer) { }
 }

@@ -5,9 +5,11 @@ enum SocialNetwork {
 }
 
 export interface DataCard {
-  img: string,
-  title: string,
+  img: string;
+  title: string;
+  exclusive?: boolean;
+  hidden?: boolean;
   social: {
     [key in SocialNetwork]: string;
-  }
+  };
 }

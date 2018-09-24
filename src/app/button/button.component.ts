@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -6,25 +6,14 @@ import { Component, OnInit, HostBinding, Input, ChangeDetectionStrategy } from '
   styleUrls: ['./button.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
   @Input() solid: boolean;
   @Input() size: string;
 
   get className() {
-    const data = [];
-    if (this.solid) {
-      data.push('solid');
-    }
-    
-    if (this.size) {
-      data.push(this.size);
-    }
-    return data.join(' ');
+    return [
+      ...(this.solid ? ['solid'] : []),
+      ...(this.size ? [this.size] : [])
+    ].join(' ');
   }
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

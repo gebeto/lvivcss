@@ -1,16 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { DataCard } from '../data-card';
 
 @Component({
   selector: 'app-info-card',
   templateUrl: './info-card.component.html',
-  styleUrls: ['./info-card.component.css']
+  styleUrls: ['./info-card.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class InfoCardComponent implements OnInit {
+export class InfoCardComponent {
   @Input() data: DataCard;
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

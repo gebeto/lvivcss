@@ -1,6 +1,9 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { speakers } from '../speakers.list';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subject, Observable } from 'rxjs';
+import { DataCard } from '../data-card';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { takeUntil, map } from 'rxjs/operators';
 
 interface FeatureInfo {
   count: string;
@@ -13,15 +16,25 @@ interface FeatureInfo {
   styleUrls: ['./index-view.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class IndexViewComponent  {
+export class IndexViewComponent {
+  readonly iDie: Subject<any> = new Subject();
+  readonly speakers: Observable<DataCard[]> = this.firestore
+    .collection<DataCard>('/speakers', ref => ref.where('exclusive', '==', true))
+    .valueChanges()
+    .pipe(
+      takeUntil(this.iDie)
+    );
+
   readonly features: FeatureInfo[] = [
     { count: '20+', title: 'speakers' },
     { count: '400', title: 'attendees' },
     { count: '4', title: 'workshops' },
     { count: '∞', title: 'fun' }
   ];
-  readonly speakers = speakers;
-  constructor(readonly router: Router) { }
+  constructor(
+    readonly router: Router,
+    readonly firestore: AngularFirestore
+  ) { }
   goToTickets() {
     this.router.navigateByUrl('tickets');
   }

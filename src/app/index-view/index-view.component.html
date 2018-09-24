@@ -21,7 +21,7 @@
 <h2>Exclusive speaker</h2>
 
 <div class="speakers">
-	<app-info-card *ngFor="let speaker of speakers.exclusive" [data]="speaker"></app-info-card>
+	<app-info-card *ngFor="let speaker of speakers | async" [data]="speaker"></app-info-card>
 </div>
 
 <app-button

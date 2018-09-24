@@ -20,7 +20,7 @@ interface DateChunk {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CounterComponent implements OnDestroy, OnInit {
-  private targetDate = new Date("Nov 10, 2018 10:00:00").getTime();
+  private targetDate = new Date('Nov 10, 2018 10:00:00').getTime();
   public chunks: DateChunk[] = [];
   private sub: Subscription;
 
