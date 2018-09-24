@@ -1,7 +1,7 @@
 export const partners = {
   'sponsors': [
     {
-      'img': './assets/images/sigma.png',
+      'img': './assets/images/sigma.jpg',
       'title': 'Sigma Software',
       'social': {
         'fb': 'https://www.facebook.com/SIGMASOFTWAREGROUP/',
@@ -9,7 +9,7 @@ export const partners = {
       }
     },
     {
-      'img': './assets/images/svitla.png',
+      'img': './assets/images/svitla.jpg',
       'title': 'Svitla Systems',
       'social': {
         'fb': 'https://www.facebook.com/SvitlaSystems',
@@ -19,7 +19,7 @@ export const partners = {
   ],
   'media': [
     {
-      'img': './assets/images/if-cluster.png',
+      'img': './assets/images/if-cluster.jpg',
       'title': 'IF IT Cluster',
       'social': {
         'fb': 'https://www.facebook.com/IFcluster/',
