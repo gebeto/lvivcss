@@ -8,11 +8,6 @@ enum TimePeriod {
   Seconds = 'seconds',
 }
 
-interface DateChunk {
-  value: number;
-  period: TimePeriod;
-}
-
 @Component({
   selector: 'app-counter',
   templateUrl: './counter.component.html',
@@ -21,7 +16,7 @@ interface DateChunk {
 })
 export class CounterComponent implements OnDestroy, OnInit {
   private targetDate = new Date('Nov 10, 2018 10:00:00').getTime();
-  public chunks: DateChunk[] = [];
+  public chunks: string;
   private sub: Subscription;
 
   constructor(readonly ref: ChangeDetectorRef) { }
@@ -30,26 +25,17 @@ export class CounterComponent implements OnDestroy, OnInit {
     const now = new Date().getTime();
     // Find the distance between now and the count down date
     const distance = this.targetDate - now;
-
+    const dd = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hh = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mm = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const ss = Math.floor((distance % (1000 * 60)) / 1000);
     // Time calculations for days, hours, minutes and seconds
     this.chunks = [
-      {
-        value: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        period: TimePeriod.Days
-      },
-      {
-        value: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        period: TimePeriod.Hours
-      },
-      {
-        value: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-        period: TimePeriod.Minutes
-      },
-      {
-        value: Math.floor((distance % (1000 * 60)) / 1000),
-        period: TimePeriod.Seconds
-      }
-    ];
+      `${dd}`.padStart(2, '0'),
+      `${hh}`.padStart(2, '0'),
+      `${mm}`.padStart(2, '0'),
+      `${ss}`.padStart(2, '0')
+    ].join(':');
 
     this.ref.detectChanges();
   }

@@ -1,32 +1,26 @@
-<app-button	
-	[className]="'centered-item'"
-	(click)="goToSponsor()"
-	>Become a sponsor</app-button>
-
-<img src="/assets/images/logo.svg" alt="LvivCSS2018" class="logo">
-
+<!-- <h2>10 - 11 November</h2> -->
 <div class="conference-date">
-	<div class="backdrop"></div>
-	<time datetime="2018-11-10">10–<span hidden="hidden"> November</span></time><time datetime="2018-11-11">11 November</time>
-	<app-counter></app-counter>
+	<p class="title">LvivCSS conference 2018</p>
+	<time datetime="2018-11-10">10–<span hidden="hidden"> November</span></time><time datetime="2018-11-11">11 November</time><br>
+	<small>Lviv, !FESTREPUBLIC</small>
 </div>
-
 <div class="features">
 	<p class="feature" *ngFor="let feature of features;">
 		<b class="feature-count">{{feature.count}}</b>
 		<span class="feature-description">{{feature.title}}</span>
 	</p>
 </div>
-
 <h2>Exclusive speaker</h2>
-
 <div class="speakers">
 	<app-info-card *ngFor="let speaker of speakers | async" [data]="speaker"></app-info-card>
 </div>
+<p class="event-description">
+	LvivCSS2018 isn't just yet another conference about CSS. This is event where elements are blending together. This year
+	conference is dedicated to how, why and in which ways visuals in web can be created. It is dedicated to chemistry
+	between designers and developers, to emerging and evolution of new visualisation methods, to new UX concepts, to
+	unusual applications of unusual technologies. All these things have only one point in common — you can see and feel
+	theirs results in browser. Our goal is to create event which can be useful to all, who is creating web-products. That
+	is why we are welcoming designers, front-end developers, artists, 3d-programmers and all those who are privy to
+	visualisation magic.
+</p>
 
-<app-button
-	[className]="'centered-item'"
-	solid="true"
-	size="big"
-	(click)="goToTickets()"
-	>Buy tickets</app-button>

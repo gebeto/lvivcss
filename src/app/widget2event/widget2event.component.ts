@@ -23,17 +23,16 @@ export class Widget2EventComponent {
     this.close.emit();
   }
   get url(): SafeUrl {
-    const url = new UrlSegment('https://2event.com/site/ticketsWidget', {
-      id: `${this.id}`,
-      bg_color: 'lime',
-      tickets_type: `${this.type}`,
-      target: '_top',
-      lang: 'en',
-      frame: 'tickets_iframe_0',
-      tickets: ''
-    });
+    const url = 'https://2event.com/site/ticketsWidget' +
+      `?id=${this.id}` +
+      `&bg_color=lime` +
+      `&tickets_type=${this.type}` +
+      `&target=_top` +
+      `&lang=en` +
+      `&frame=tickets_iframe_0` +
+      `&tickets`;
 
-    return this.s.bypassSecurityTrustResourceUrl(url.path);
+    return this.s.bypassSecurityTrustResourceUrl(url);
   }
   constructor(readonly s: DomSanitizer) { }
 }

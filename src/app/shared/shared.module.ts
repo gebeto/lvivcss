@@ -6,10 +6,14 @@ import { ButtonComponent } from '../button/button.component';
 import { Widget2EventComponent } from '../widget2event/widget2event.component';
 import { TicketCardComponent } from '../ticket-card/ticket-card.component';
 import { SafeHtmlPipe } from '../safe-html.pipe';
+import { HeaderComponent } from '../header/header.component';
+import { NavigationComponent } from '../navigation/navigation.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   declarations: [
     CounterComponent,
@@ -17,7 +21,9 @@ import { SafeHtmlPipe } from '../safe-html.pipe';
     ButtonComponent,
     Widget2EventComponent,
     TicketCardComponent,
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    NavigationComponent,
+    HeaderComponent
   ],
   exports: [
     CounterComponent,
@@ -25,7 +31,9 @@ import { SafeHtmlPipe } from '../safe-html.pipe';
     ButtonComponent,
     Widget2EventComponent,
     TicketCardComponent,
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    NavigationComponent,
+    HeaderComponent
   ]
 })
 export class SharedModule { }
