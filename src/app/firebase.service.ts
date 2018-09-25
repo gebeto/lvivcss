@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { DataCard } from './data-card';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +17,6 @@ export class FirestoreService {
 
   constructor(
     readonly firestore: AngularFirestore
-  ) { }
+  ) {
+  }
 }

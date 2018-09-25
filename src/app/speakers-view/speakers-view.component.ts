@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnDestroy, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { DataCard } from '../data-card';
 import { Observable, Subject } from 'rxjs';
@@ -11,9 +11,11 @@ import { FirestoreService } from '../firebase.service';
   styleUrls: ['./speakers-view.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SpeakersViewComponent implements OnDestroy {
+export class SpeakersViewComponent implements OnDestroy, OnInit {
   readonly iDie: Subject<any> = new Subject();
-  readonly speakers: Observable<DataCard[]> = this.firestoreService.speakers;
+  readonly speakers: Observable<DataCard[]> = this.firestoreService.speakers.pipe(
+    takeUntil(this.iDie)
+  );
 
   readonly exclusive: Observable<DataCard[]> = this.speakers.pipe(
     map(all => all.filter(({ exclusive }) => exclusive))
@@ -32,6 +34,10 @@ export class SpeakersViewComponent implements OnDestroy {
   ngOnDestroy() {
     this.iDie.next();
     this.iDie.complete();
+  }
+
+  ngOnInit() {
+    this.all.subscribe(x => console.log(x));
   }
 
   trackBy(__, { title }) { return title; }

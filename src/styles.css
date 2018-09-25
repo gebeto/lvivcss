@@ -6,6 +6,11 @@
   --clr-text: white;
 }
 
+html, body {
+  max-height: 100%;
+  height: 100%;
+}
+
 body {
   background-image: linear-gradient(
     to right,
@@ -15,6 +20,8 @@ body {
   );
   color: var(--clr-text);
   font-family: "Roboto Condensed";
+  padding: 0;
+  margin: 0;
 }
 
 h2 {

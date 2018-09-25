@@ -2,7 +2,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject, Observable } from 'rxjs';
 import { DataCard } from '../data-card';
-import { takeUntil } from 'rxjs/operators';
+import { takeUntil, map } from 'rxjs/operators';
 import { FirestoreService } from '../firebase.service';
 
 interface FeatureInfo {
@@ -18,12 +18,9 @@ interface FeatureInfo {
 })
 export class IndexViewComponent {
   readonly iDie: Subject<any> = new Subject();
-  readonly speakers: Observable<DataCard[]> = this.firestoreService.firestore
-    .collection<DataCard>('/speakers', ref => ref.where('exclusive', '==', true))
-    .valueChanges()
-    .pipe(
-      takeUntil(this.iDie)
-    );
+  readonly speakers: Observable<DataCard[]> = this.firestoreService.speakers.pipe(
+    map(all => all.filter(({ exclusive }) => exclusive))
+  );
 
   readonly features: FeatureInfo[] = [
     { count: '20+', title: 'speakers' },

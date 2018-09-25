@@ -1,9 +1,12 @@
-<h2>Exclusive speaker</h2>
-<div class="info-cards">
-  <app-info-card *ngFor="let speaker of exclusive | async; trackBy: trackBy" [data]="speaker"></app-info-card>
-</div>
-
-<h2>Speakers</h2>
-<div class="info-cards">
-  <app-info-card *ngFor="let speaker of all | async; trackBy: trackBy" [data]="speaker"></app-info-card>
-</div>
+<ng-container *ngIf="exclusive | async as exclusive">
+  <h2>Exclusive speaker</h2>
+  <div class="info-cards">
+    <app-info-card *ngFor="let speaker of exclusive; trackBy: trackBy" [data]="speaker"></app-info-card>
+  </div>
+</ng-container>
+<ng-container *ngIf="all | async as all">
+  <h2>Speakers</h2>
+  <div class="info-cards">
+    <app-info-card *ngFor="let speaker of all; trackBy: trackBy" [data]="speaker"></app-info-card>
+  </div>
+</ng-container>
