@@ -108,6 +108,7 @@ input {
     left: 0;
     right: 20%;
     height: calc(100vh - 50pt);
+    box-shadow: 3pt 3pt 15pt rgba(0, 0, 0, 0.5);
     background-image: linear-gradient(
       to bottom right,
       var(--clr-main),
@@ -117,16 +118,42 @@ input {
   .host {
     outline: none;
   }
-  .host:focus nav,
-  .host:focus-within nav {
+  .host:focus label {
+    border: 4pt lime solid;
+  }
+  .host:focus > nav,
+  .host:focus-within > nav {
     transform: translateX(0);
   }
-  .host:focus .trigger,
-  .host:focus-within .trigger {
+  .host:focus > .trigger,
+  .host:focus-within > .trigger {
     pointer-events: none;
     opacity: 0;
   }
   a {
     line-height: 40pt;
+  }
+
+  @supports (-ms-ime-align:auto) {
+    input:checked ~ div .ham {
+      background-color: white;
+    } 
+    input:checked ~ div .ham::before {
+      background-image: linear-gradient(
+        var(--clr-main-shadow) 0%,
+        var(--clr-main-shadow) 20%,
+        transparent 20%,
+        transparent 40%,
+        var(--clr-main-shadow) 40%,
+        var(--clr-main-shadow) 60%,
+        transparent 60%,
+        transparent 80%,
+        var(--clr-main-shadow) 80%,
+        var(--clr-main-shadow) 100%
+      );
+    } 
+    input:checked ~ div nav {
+      transform: translate3d(0,0,100px);
+    } 
   }
 }
