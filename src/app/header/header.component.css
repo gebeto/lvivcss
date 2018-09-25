@@ -4,7 +4,7 @@
 	display: flex;
 	height: 30pt;
 	min-height: 30pt;
-	padding: 5pt 10pt;
+	padding: 10pt 10pt;
 	box-shadow: 0 0 20pt rgba(0, 0, 0, 0.5);
 }
 .cell {
@@ -50,4 +50,9 @@
 .get-ticket.active {
 	background-color: white;	
 	color: #D90368;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
 }
