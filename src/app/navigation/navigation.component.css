@@ -13,7 +13,6 @@
 a {
   color: inherit;
   text-transform: uppercase;
-  font-size: 12pt;
   line-height: var(--a-height);
   height: var(--a-height);
   display: inline-block;
@@ -21,6 +20,7 @@ a {
   text-shadow: none;
   text-decoration: none;
   border-radius: 3pt;
+  outline: none;
 }
 
 a.active {
@@ -30,4 +30,103 @@ a.active {
 
 .logo-small {
   height: calc(var(--a-height) / 2);
+}
+
+input {
+  display: none;
+}
+
+.trigger {
+  display: none;
+}
+@media screen and (orientation: portrait) {
+  :host() {
+    margin-right: 50pt;
+  }
+  .trigger,
+  .trigger-x {
+    position: absolute;
+    top: 5pt;
+    left: 5pt;
+    display: block;
+    height: 40pt;
+    width: 40pt;
+    color: var(--clr-main);
+    margin-right: 10pt;
+    background-color: var(--clr-main-shadow);
+  }
+  .ham::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10pt;
+    right: 10pt;
+    bottom: 10pt;
+    left: 10pt;
+    background-image: linear-gradient(
+      white 0%,
+      white 20%,
+      transparent 20%,
+      transparent 40%,
+      white 40%,
+      white 60%,
+      transparent 60%,
+      transparent 80%,
+      white 80%,
+      white 100%
+    );
+  }
+  .trigger {
+    transition-duration: 200ms;
+  }
+  .trigger-x {
+    background-color: white;
+  }
+  .trigger-x::before {
+    background-image: linear-gradient(
+      var(--clr-main-shadow) 0%,
+      var(--clr-main-shadow) 20%,
+      transparent 20%,
+      transparent 40%,
+      var(--clr-main-shadow) 40%,
+      var(--clr-main-shadow) 60%,
+      transparent 60%,
+      transparent 80%,
+      var(--clr-main-shadow) 80%,
+      var(--clr-main-shadow) 100%
+    );
+  }
+  nav {
+    display: flex;
+    transform: translateX(-100%);
+    transition-duration: 200ms;
+    flex-direction: column;
+    font-size: 18pt;
+    padding: 10pt;
+    position: absolute;
+    top: 50pt;
+    left: 0;
+    right: 20%;
+    height: calc(100vh - 50pt);
+    background-image: linear-gradient(
+      to bottom right,
+      var(--clr-main),
+      var(--clr-main-shadow)
+      );
+  }
+  .host {
+    outline: none;
+  }
+  .host:focus nav,
+  .host:focus-within nav {
+    transform: translateX(0);
+  }
+  .host:focus .trigger,
+  .host:focus-within .trigger {
+    pointer-events: none;
+    opacity: 0;
+  }
+  a {
+    line-height: 40pt;
+  }
 }

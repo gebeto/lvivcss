@@ -1,8 +1,8 @@
-<nav>
-  <a routerLink="speakers" routerLinkActive="active">Speakers</a>
-  <a routerLink="partners" routerLinkActive="active">Partners</a>
-  <!-- <app-button
-    [className]="'centered-item'"
-    solid="true"
-    >Buy tickets</app-button> -->
-</nav>
+<label for="__nav_trigger" class="ham trigger-x"></label>
+<div class="host" tabindex="1">
+  <label for="__nav_trigger" class="ham trigger"></label>
+  <nav>
+    <a tabindex="-1" routerLink="speakers" routerLinkActive="active">Speakers</a>
+    <a tabindex="-1" routerLink="partners" routerLinkActive="active">Partners</a>
+  </nav>
+</div>

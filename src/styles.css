@@ -3,7 +3,14 @@
 :root {
   --clr-main: #4a0692;
   --clr-main-shadow: #340763;
+  --clr-secondary: #2E294E;
   --clr-text: white;
+  --sz-padding: 15%;
+  --gradient: linear-gradient(
+    to right,
+    var(--clr-main),
+    var(--clr-main-shadow)
+  );
 }
 
 html, body {
@@ -12,12 +19,7 @@ html, body {
 }
 
 body {
-  background-image: linear-gradient(
-    to right,
-    var(--clr-main-shadow),
-    var(--clr-main),
-    var(--clr-main-shadow)
-  );
+  background-color: var(--clr-secondary);
   color: var(--clr-text);
   font-family: "Roboto Condensed";
   padding: 0;
@@ -30,7 +32,7 @@ h2 {
   display: flex;
   font-size: 32pt;
   justify-content: center;
-  margin: 0 10%;
+  padding: 0 var(--sz-padding);
   margin-bottom: 32pt;
   text-align: center;
   text-transform: uppercase;
@@ -64,7 +66,15 @@ h2::after {
 }
 
 @media screen and (orientation: portrait) {
+  :root {
+    --sz-padding: 5%;
+  }
   h2 {
     font-size: 24pt;
   }
+}
+
+/*  */
+perfect-scrollbar > .ps.ps--active-y > .ps__rail-y {
+  z-index: 999;
 }

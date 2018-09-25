@@ -6,8 +6,9 @@
 	min-height: 30pt;
 	padding: 10pt 10pt;
 	box-shadow: 0 0 20pt rgba(0, 0, 0, 0.5);
+	background-image: var(--gradient);
 }
-.cell {
+.nav-container {
 	flex: 1;
 	display: flex;
 	align-items: center;
@@ -32,7 +33,7 @@
 }
 
 .get-ticket {
-	--a-height: 24pt;
+	--a-height: 30pt;
 	font-weight: 900;
 	font-family: Roboto;
 	color: var(--clr-text);
@@ -55,4 +56,11 @@
 .col {
 	display: flex;
 	flex-direction: column;
+}
+
+@media screen and (orientation: portrait) {
+	.nav-container {
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+	}
 }

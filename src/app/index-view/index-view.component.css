@@ -1,4 +1,5 @@
 :host {
+  --sz-title: 48pt;
   display: flex;
   flex-direction: column;
   padding-bottom: 30pt;
@@ -11,8 +12,8 @@
 }
 
 .conference-date .title {
-  font-size: 48pt;
-  line-height: 48pt;
+  font-size: var(--sz-title);
+  line-height: var(--sz-title);
   font-family: Roboto;
   font-weight: bold;
   margin: 0;
@@ -21,15 +22,17 @@
   font-size: 21pt;
 }
 .conference-date {
+  background-color: #2E294E;
   font-family: Roboto Condensed;
   text-transform: uppercase;
   font-weight: 100;
   display: block;
   font-size: 14pt;
-  margin: 25pt 10%;
-  padding: 0;
   position: relative;
   align-self: center;
+  width: 100%;
+  padding: 10pt var(--sz-padding);
+  box-sizing: border-box;
 }
 
 .event-description {
@@ -40,13 +43,17 @@
 .features {
   display: flex;
   justify-content: space-between;
-  padding: 0 15%;
+  padding: 0 var(--sz-padding);
   box-shadow: 0 0 25pt rgba(0, 0, 0, 0.5);
   margin-bottom: 20pt;
+	background-image: var(--gradient);
+  position: relative;
+  z-index: 1;
 }
 
 .feature {
   --font-size: 42pt;
+  
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -72,6 +79,9 @@ app-button {
 }
 
 @media screen and (orientation: portrait) {
+  :host {
+    --sz-title: 32pt;
+  }
   .logo {
     width: 80%;
   }
@@ -80,5 +90,5 @@ app-button {
   }
   .feature {
     width: 50%;
-}
+  }
 }
