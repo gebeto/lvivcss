@@ -7,4 +7,5 @@
 main {
 	flex: 1;
 	max-height: calc(100% - 30pt);
+	overflow-y:auto; 
 }
