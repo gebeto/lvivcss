@@ -9,6 +9,7 @@ import { SafeHtmlPipe } from '../safe-html.pipe';
 import { HeaderComponent } from '../header/header.component';
 import { NavigationComponent } from '../navigation/navigation.component';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { RouterModule } from '@angular/router';
     TicketCardComponent,
     SafeHtmlPipe,
     NavigationComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   exports: [
     CounterComponent,
@@ -33,7 +35,8 @@ import { RouterModule } from '@angular/router';
     TicketCardComponent,
     SafeHtmlPipe,
     NavigationComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }
