@@ -8,10 +8,11 @@
   --a-height: 24pt;
   height: var(--a-height);
   margin-bottom: 20pt;
+  color: white;
 }
 
 a {
-  color: inherit;
+  color: white;
   text-transform: uppercase;
   line-height: var(--a-height);
   height: var(--a-height);
@@ -65,14 +66,14 @@ input {
     left: 10pt;
     background-image: linear-gradient(
       white 0%,
-      white 20%,
-      transparent 20%,
-      transparent 40%,
-      white 40%,
-      white 60%,
-      transparent 60%,
-      transparent 80%,
-      white 80%,
+      white 16%,
+      transparent 16%,
+      transparent 42%,
+      white 42%,
+      white 58%,
+      transparent 58%,
+      transparent 84%,
+      white 84%,
       white 100%
     );
   }
@@ -85,14 +86,14 @@ input {
   .trigger-x::before {
     background-image: linear-gradient(
       var(--clr-main-shadow) 0%,
-      var(--clr-main-shadow) 20%,
-      transparent 20%,
-      transparent 40%,
-      var(--clr-main-shadow) 40%,
-      var(--clr-main-shadow) 60%,
-      transparent 60%,
-      transparent 80%,
-      var(--clr-main-shadow) 80%,
+      var(--clr-main-shadow) 16%,
+      transparent 16%,
+      transparent 42%,
+      var(--clr-main-shadow) 42%,
+      var(--clr-main-shadow) 58%,
+      transparent 58%,
+      transparent 84%,
+      var(--clr-main-shadow) 84%,
       var(--clr-main-shadow) 100%
     );
   }
@@ -141,14 +142,14 @@ input {
     input:checked ~ div .ham::before {
       background-image: linear-gradient(
         var(--clr-main-shadow) 0%,
-        var(--clr-main-shadow) 20%,
-        transparent 20%,
-        transparent 40%,
-        var(--clr-main-shadow) 40%,
-        var(--clr-main-shadow) 60%,
-        transparent 60%,
-        transparent 80%,
-        var(--clr-main-shadow) 80%,
+        var(--clr-main-shadow) 16%,
+        transparent 16%,
+        transparent 42%,
+        var(--clr-main-shadow) 42%,
+        var(--clr-main-shadow) 58%,
+        transparent 58%,
+        transparent 84%,
+        var(--clr-main-shadow) 84%,
         var(--clr-main-shadow) 100%
       );
     } 

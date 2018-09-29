@@ -47,6 +47,7 @@
   text-decoration: none;
 	border-radius: 3pt;
 	background-color: #D90368;
+	color: white;
 }
 .get-ticket.active {
 	background-color: white;	

@@ -4,7 +4,7 @@
   --clr-main: #4a0692;
   --clr-main-shadow: #340763;
   --clr-secondary: #2E294E;
-  --clr-text: white;
+  --clr-text: #333;
   --sz-padding: 15%;
   --gradient: linear-gradient(
     to right,
@@ -19,7 +19,8 @@ html, body {
 }
 
 body {
-  background-color: var(--clr-secondary);
+  /* background-color: var(--clr-secondary); */
+  background-color: #eee;
   color: var(--clr-text);
   font-family: "Roboto Condensed";
   padding: 0;
@@ -40,7 +41,7 @@ h2 {
 }
 
 h2::before, h2::after {
-  background-color: white;
+  background-color: var(--clr-text);
   content: "";
   display: block;
   flex: 1;
