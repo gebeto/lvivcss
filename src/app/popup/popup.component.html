@@ -1,0 +1,12 @@
+<section class="wrapper">
+  <div class="card scroll" (click)="$event.stopPropagation()">
+    <img src="{{value?.img}}" alt="">
+    <h1>{{value?.title}}</h1>
+    <section class="content">
+      <h3>{{value?.topic}}</h3>
+      <div [innerHTML]="value?.bio | safeHtml"></div>
+    </section>
+  </div>
+  <!-- <button class="nav prev" (click)="shift.emit(-1)">PREV</button>
+  <button class="nav next" (click)="shift.emit(1)">NEXT</button> -->
+</section>

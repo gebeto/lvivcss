@@ -10,6 +10,7 @@ import { HeaderComponent } from '../header/header.component';
 import { NavigationComponent } from '../navigation/navigation.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
+import { PopupComponent } from '../popup/popup.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { FooterComponent } from '../footer/footer.component';
     SafeHtmlPipe,
     NavigationComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PopupComponent
   ],
   exports: [
     CounterComponent,
@@ -36,7 +38,8 @@ import { FooterComponent } from '../footer/footer.component';
     SafeHtmlPipe,
     NavigationComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PopupComponent
   ]
 })
 export class SharedModule { }

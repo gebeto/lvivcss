@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
 import { DataCard } from '../data-card';
-import { Observable, Subject } from 'rxjs';
-import { map, takeUntil } from 'rxjs/operators';
+import { Observable, Subject, BehaviorSubject, combineLatest } from 'rxjs';
+import { map, takeUntil, withLatestFrom, filter } from 'rxjs/operators';
 import { FirestoreService } from '../firebase.service';
 
 @Component({
@@ -26,6 +26,8 @@ export class SpeakersViewComponent implements OnDestroy {
     )
   );
 
+  public speaker: DataCard;
+
   constructor(
     readonly firestoreService: FirestoreService
   ) { }
@@ -33,6 +35,14 @@ export class SpeakersViewComponent implements OnDestroy {
   ngOnDestroy() {
     this.iDie.next();
     this.iDie.complete();
+  }
+
+  show(value: DataCard) {
+    this.speaker = value;
+  }
+
+  onPopupClose() {
+    this.speaker = null;
   }
 
   trackBy(__, { title }) { return title; }

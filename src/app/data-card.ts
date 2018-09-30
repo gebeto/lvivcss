@@ -13,4 +13,7 @@ export interface DataCard {
   social: {
     [key in SocialNetwork]: string;
   };
+  description?: string;
+  topic?: string;
+  bio?: string;
 }
