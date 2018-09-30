@@ -34,8 +34,8 @@
 
 .get-ticket {
 	--a-height: 30pt;
-	font-weight: 900;
-	font-family: Roboto;
+	font-weight: 600;
+	font-family: inherit;
 	color: var(--clr-text);
   text-transform: uppercase;
   font-size: 16pt;

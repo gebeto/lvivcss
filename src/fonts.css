@@ -1,25 +1,4 @@
 @font-face {
-  font-family: "Roboto Condensed";
-  font-weight: normal;
-  font-style: normal;
-  src: url("assets/fonts/RobotoCondensed-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Roboto Condensed";
-  font-weight: bold;
-  font-style: normal;
-  src: url("assets/fonts/RobotoCondensed-Bold.ttf");
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-weight: 900;
-  font-style: normal;
-  src: url("assets/fonts/Roboto-Black.ttf");
-}
-
-@font-face {
   font-family: 'icomoon';
   src: url('assets/fonts/icomoon.ttf?pvwgz2');
   font-weight: normal;
@@ -45,3 +24,27 @@
   content: "\ea41";
 }
 
+@font-face {
+  font-family: "Rubik";
+  font-weight: 900;
+  font-style: normal;
+  src: url("assets/fonts/Rubik-Black.ttf");
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: bold;
+  font-style: normal;
+  src: url("assets/fonts/Rubik-Bold.ttf");
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: 400;
+  font-style: normal;
+  src: url("assets/fonts/Rubik-Medium.ttf");
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: normal;
+  font-style: normal;
+  src: url("assets/fonts/Rubik-Regular.ttf");
+}

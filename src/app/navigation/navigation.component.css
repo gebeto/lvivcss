@@ -17,16 +17,17 @@ a {
   line-height: var(--a-height);
   height: var(--a-height);
   display: inline-block;
-  padding: 0 8pt;
+  margin: 0 8pt;
+  padding-bottom: 3pt;
   text-shadow: none;
   text-decoration: none;
-  border-radius: 3pt;
   outline: none;
 }
 
 a.active {
-  background-color: white;
-  color: var(--clr-main);
+  /* background-color: white; */
+  /* color: var(--clr-main); */
+  border-bottom: 1px solid white;
 }
 
 .logo-small {

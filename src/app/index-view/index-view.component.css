@@ -14,7 +14,7 @@
 .conference-date .title {
   font-size: var(--sz-title);
   line-height: var(--sz-title);
-  font-family: Roboto;
+  font-family: Rubik;
   font-weight: bold;
   margin: 0;
 }
@@ -23,7 +23,6 @@
 }
 .conference-date {
   background-color: #2E294E;
-  font-family: Roboto Condensed;
   text-transform: uppercase;
   font-weight: 100;
   display: block;

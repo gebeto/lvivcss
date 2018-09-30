@@ -1,8 +1,7 @@
 :host {
   display: flex;
   font-size: 9pt;
-  font-family: Roboto;
-  font-weight: 900;
+  font-weight: 600;
   justify-content: center;
   color: white;
 }

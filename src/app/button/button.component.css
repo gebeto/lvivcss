@@ -4,7 +4,7 @@
 
 button {
   background: none;
-  font-family: "Roboto Condensed";
+  font-family: inherit;
   font-size: var(--size);
   padding: calc(var(--size) / 3.2) calc(var(--size) / 2);
 
