@@ -9,6 +9,7 @@
   height: var(--a-height);
   margin-bottom: 20pt;
   color: white;
+  display: flex;
 }
 
 a {
@@ -22,6 +23,7 @@ a {
   text-shadow: none;
   text-decoration: none;
   outline: none;
+  border-bottom: 1px solid transparent;
 }
 
 a.active {
