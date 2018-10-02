@@ -11,6 +11,7 @@
   flex-direction: column;
   margin: 10pt;
   perspective: 400pt;
+  max-width: 200pt;
 }
 
 @media screen and (orientation: portrait) {
@@ -112,6 +113,15 @@ a {
 
 .title {
   font-size: var(--title-font-size);
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.topic-title {
+  font-weight: 600;
+  margin: 0;
+  color: #D90368;
+  text-align: center;
 }
 
 /* EDGE cannot process variables for rotate */

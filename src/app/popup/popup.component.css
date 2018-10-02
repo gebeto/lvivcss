@@ -27,6 +27,10 @@
 	grid-column-gap: 10pt;
 }
 
+img {
+	height: 200pt;
+}
+
 @media screen and (orientation: portrait) {
 	.card {
 		grid-template-areas:

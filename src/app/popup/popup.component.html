@@ -3,8 +3,9 @@
     <img src="{{value?.img}}" alt="">
     <h1>{{value?.title}}</h1>
     <section class="content">
-      <h3>{{value?.topic}}</h3>
       <div [innerHTML]="value?.bio | safeHtml"></div>
+      <h3>{{value?.topic}}</h3>
+      <div *ngIf="value?.description" [innerHTML]="value?.description | safeHtml"></div>
     </section>
   </div>
   <!-- <button class="nav prev" (click)="shift.emit(-1)">PREV</button>
