@@ -3,8 +3,8 @@
   background-color: white;
   flex: 0 calc(50% - 60pt);
   width: 500pt;
-  grid-template-areas: "aside header" "aside main";
-  grid-template-columns: 90pt 1fr;
+  grid-template-areas: "header" "main" "aside";
+  grid-template-columns: 1fr;
   text-shadow: none;
 	color: #424242;
   margin-bottom: 30pt;
@@ -47,7 +47,7 @@ header {
   text-shadow: none;
   display: flex;
   align-items: center;
-  padding-left: 60pt;
+  padding-left: 30pt;
   font-size: 30pt;
   font-weight: bold;
   margin-bottom: 30pt;
@@ -56,9 +56,8 @@ header {
 main {
   grid-area: main;
   padding-bottom: 10pt;
-  padding-left: 60pt;
+  padding-left: 30pt;
   position: relative;
-
 }
 
 main h2 {

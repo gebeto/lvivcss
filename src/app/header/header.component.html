@@ -7,4 +7,6 @@
   </div>
   <app-navigation class="navigation"></app-navigation>
 </div>
-<a routerLink="tickets" routerLinkActive="active" class="get-ticket">Buy ticket</a>
+<a
+  *ngIf="notTicketsRoute$|async"
+  routerLink="tickets" routerLinkActive="active" class="get-ticket">Buy ticket</a>
