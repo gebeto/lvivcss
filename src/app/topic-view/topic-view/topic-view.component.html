@@ -1,0 +1,7 @@
+  <ng-container *ngFor="let item of topics|async">
+    <h3>{{item.topic}}</h3>
+    <h4>{{item.name}}</h4>
+    <div class="description">
+      <div [innerHTML]="item.description | safeHtml"></div>
+    </div>
+  </ng-container>
