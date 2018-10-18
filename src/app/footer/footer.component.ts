@@ -1,19 +1,14 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, HostBinding, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
   @HostBinding('class.open') open = false;
-  constructor() { }
-
-  ngOnInit() {
-  }
-
   toggle() {
     this.open = !this.open;
   }
-
 }

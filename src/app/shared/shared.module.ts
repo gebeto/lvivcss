@@ -6,10 +6,7 @@ import { ButtonComponent } from '../button/button.component';
 import { Widget2EventComponent } from '../widget2event/widget2event.component';
 import { TicketCardComponent } from '../ticket-card/ticket-card.component';
 import { SafeHtmlPipe } from '../safe-html.pipe';
-import { HeaderComponent } from '../header/header.component';
-import { NavigationComponent } from '../navigation/navigation.component';
 import { RouterModule } from '@angular/router';
-import { FooterComponent } from '../footer/footer.component';
 import { PopupComponent } from '../popup/popup.component';
 
 @NgModule({
@@ -24,9 +21,6 @@ import { PopupComponent } from '../popup/popup.component';
     Widget2EventComponent,
     TicketCardComponent,
     SafeHtmlPipe,
-    NavigationComponent,
-    HeaderComponent,
-    FooterComponent,
     PopupComponent
   ],
   exports: [
@@ -36,9 +30,6 @@ import { PopupComponent } from '../popup/popup.component';
     Widget2EventComponent,
     TicketCardComponent,
     SafeHtmlPipe,
-    NavigationComponent,
-    HeaderComponent,
-    FooterComponent,
     PopupComponent
   ]
 })
