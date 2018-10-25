@@ -1,11 +1,11 @@
 <ng-container *ngIf="sponsors | async as sponsors">
-  <h2>Sponsors</h2>
+  <h2>Спонсори</h2>
   <div class="info-cards">
     <app-info-card *ngFor="let item of sponsors" [data]="item"></app-info-card>
   </div>
 </ng-container>
 <ng-container *ngIf="media | async as media">
-  <h2>Media partners</h2>
+  <h2>Медіа партнери</h2>
   <div class="info-cards">
     <app-info-card *ngFor="let item of media" [data]="item"></app-info-card>
   </div>

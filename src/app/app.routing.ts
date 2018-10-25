@@ -7,6 +7,7 @@ export const routes: Routes = [
   { path: 'partners', loadChildren: './partners-view/partners-view.module#PartnersViewModule' },
   { path: 'topics', loadChildren: './topic-view/topic-view.module#TopicViewModule' },
   { path: 'tickets', loadChildren: './tickets-view/tickets-view.module#TicketsViewModule' },
+  { path: 'schedule', loadChildren: './schedule-view/schedule-view.module#ScheduleViewModule' }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

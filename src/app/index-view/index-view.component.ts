@@ -23,10 +23,10 @@ export class IndexViewComponent {
   );
 
   readonly features: FeatureInfo[] = [
-    { count: '20+', title: 'speakers' },
-    { count: '400', title: 'attendees' },
-    { count: '4', title: 'workshops' },
-    { count: '∞', title: 'fun' }
+    { count: '20+', title: 'доповідачів' },
+    { count: '400', title: 'учасників' },
+    { count: '4', title: 'воркшопи' },
+    { count: '∞', title: 'задоволення' }
   ];
   constructor(
     readonly router: Router,

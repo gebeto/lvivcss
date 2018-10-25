@@ -6,8 +6,8 @@ export const tickets = [
     'color': '#4067df',
     type: 49248,
     'benefits': [
-      'Conference admission',
-      'LvivCSS2018 t-shirt'
+      'Вхід на конференцію',
+      'Футболка LvivCSS2018'
     ]
   },
   {
@@ -16,10 +16,10 @@ export const tickets = [
     'color': '#cbcb51',
     type: 49249,
     'benefits': [
-      '<b>GlobalCSS</b> t-shirt',
-      '<b><element></b> supporter badge',
-      'Special welcome drink on afterparty',
-      'Name listed on special site page'
+      'Футболка <b>GlobalCSS</b>',
+      'Спеціальний бейдж <b>element</b> supporter',
+      'Особливий welcome drink на афтепаті',
+      'Ім\'я в списку на спеціальній сторінці'
     ]
   },
   {
@@ -28,10 +28,10 @@ export const tickets = [
     'color': '#00fd00',
     type: 49672,
     'benefits': [
-      '<b>GlobalCSS</b> t-shirt',
-      '<b>.classname</b> supporter badge',
-      'Special welcome drink on afterparty',
-      'Name listed on special site page with link to social network of your choice'
+      'Футболка <b>GlobalCSS</b>',
+      'Спеціальний бейдж <b>.classname</b> supporter',
+      'Особливий welcome drink на афтепаті',
+      'Ім\'я в списку на спеціальній сторінці з посиланням на соцмережу за вашим вибором'
     ]
   },
   {
@@ -40,12 +40,12 @@ export const tickets = [
     'color': '#a49061',
     type: 49673,
     'benefits': [
-      '<b>GlobalCSS</b> t-shirt',
-      '<b>#id</b> supporter badge',
-      'Special welcome drink on afterparty',
-      'Name listed on special site page with photo and link to social network of your choice',
-      'Closed preparty admission',
-      'Exclusive <b>LvivCSS2018 Partner</b> t-shirt'
+      'Футболка <b>GlobalCSS</b>',
+      'Спеціальний бейдж <b>#id</b> supporter',
+      'Особливий welcome drink на афтепаті',
+      'Ім\'я в списку на спеціальній сторінці з фото та з посиланням на соцмережу за вашим вибором',
+      'Вхід на закрите пре-паті',
+      'Екслюзивна футболка <b>LvivCSS2018 Partner</b>'
     ]
   }
 ];

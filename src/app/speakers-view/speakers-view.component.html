@@ -1,5 +1,5 @@
 <ng-container *ngIf="exclusive | async as exclusive">
-  <h2>Exclusive speaker</h2>
+  <h2>Спеціальний гість</h2>
   <div class="info-cards">
     <app-info-card
       *ngFor="let speaker of exclusive; let i = index; trackBy: trackBy"
@@ -9,7 +9,7 @@
   </div>
 </ng-container>
 <ng-container *ngIf="all | async as all">
-  <h2>Speakers</h2>
+  <h2>Доповідачі</h2>
   <div class="info-cards">
     <app-info-card
       *ngFor="let speaker of all; let i = index; trackBy: trackBy"
