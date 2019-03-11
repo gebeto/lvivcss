@@ -37,7 +37,7 @@ h2 {
   margin-bottom: 32pt;
   text-align: center;
   text-transform: uppercase;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 h2::before, h2::after {

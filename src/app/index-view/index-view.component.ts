@@ -24,8 +24,8 @@ export class IndexViewComponent {
 
   readonly features: FeatureInfo[] = [
     { count: '20+', title: 'доповідачів' },
-    { count: '400', title: 'учасників' },
-    { count: '4', title: 'воркшопи' },
+    { count: '2', title: 'дні' },
+    { count: '3', title: 'воркшопи' },
     { count: '∞', title: 'задоволення' }
   ];
   constructor(

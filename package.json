@@ -6,6 +6,7 @@
     "start": "ng serve --aot",
     "build": "ng build --prod",
     "deploy": "firebase deploy --token $FIREBASE_TOKEN",
+    "build-deploy": "ng build --prod && firebase deploy",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

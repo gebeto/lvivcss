@@ -1,18 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>LvivCSS 2018</title>
-  <base href="/">
-  <meta property="og:image" content="http://lvivcss.org/assets/images/og-index/logo.png">
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://lvivcss.org" />
-  <meta property="og:title" content="LvivCSS 2018, most ambitious front-end conference" />
-  <meta property="og:description" content="We are not just yet another conference about CSS. This is event where elements are blending together." />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="https://firebasestorage.googleapis.com/v0/b/lvivcss-ddedf.appspot.com/o/assets%2Ffavicon.png?alt=media&token=52b90b03-d66f-4cc8-93d0-6920471fe78d">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LvivCSS'2019</title>
+  <style>
+    @font-face {
+      font-family: "Rubik";
+      font-weight: 900;
+      font-style: normal;
+      src: url("assets/fonts/Rubik-Black.ttf");
+    }
+    @font-face {
+      font-family: "Rubik";
+      font-weight: bold;
+      font-style: normal;
+      src: url("assets/fonts/Rubik-Bold.ttf");
+    }
+    @font-face {
+      font-family: "Rubik";
+      font-weight: 500;
+      font-style: normal;
+      src: url("assets/fonts/Rubik-Medium.ttf");
+    }
+    @font-face {
+      font-family: "Rubik";
+      font-weight: normal;
+      font-style: normal;
+      src: url("assets/fonts/Rubik-Regular.ttf");
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body, html {
+      height: 100%;
+      overflow: hidden;
+    }
+    body {
+      background-image: #2c0357;
+      background-image: radial-gradient(circle at center 0, #4a0692 0%, #2c0357 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    header {
+      color: white;
+      font-size: 30px;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    header time {
+      margin-left: 10px;
+    }
+
+    .btn-link {
+      display: block;
+      background-color: #c25322;
+      border: none;
+      border-radius: 3px;
+      box-shadow: 0 3px 0 0 #0e011c;
+      font-size: 24px;
+      padding: 10px;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
-  <app-root></app-root>
+  <header>
+    <img src="./assets/images/LvivCSS 2019.svg" height="163" width="163" alt="LvivCSS 2019">
+    <time><b>9</b> листопада</time>
+  </header>
+  <main>
+    <a class="btn-link" href="http://bit.ly/lvivcss2019-become-a-speaker">Стати спікером</a>
+  </main>
 </body>
 </html>

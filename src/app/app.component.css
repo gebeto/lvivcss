@@ -6,6 +6,7 @@
 
 main {
 	flex: 1;
+	position: relative;
 	max-height: calc(100% - 30pt);
 	overflow-y:auto; 
 }

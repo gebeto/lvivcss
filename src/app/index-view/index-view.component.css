@@ -79,6 +79,11 @@
   margin: calc(var(--font-size) / 4) 0;
 }
 
+.location {
+  text-align: center;
+  font-size: 18pt;
+}
+
 app-button {
   margin-bottom: 30pt;
 }

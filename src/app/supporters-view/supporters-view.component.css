@@ -1,0 +1,16 @@
+.content {
+	padding: 0 var(--sz-padding);
+	text-align: center;
+}
+
+.supporter {
+	font-size: 18pt;
+}
+
+.supporter:not(:last-child) {
+	margin-right: 6pt;
+}
+
+.supporter:not(:last-child)::after {
+	content: ",";
+}

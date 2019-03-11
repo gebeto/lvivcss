@@ -64,4 +64,18 @@
 		flex-direction: row-reverse;
 		justify-content: flex-end;
 	}
+
+	.get-ticket {
+		font-size: 10pt;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.get-ticket {
+		font-size: 8pt;
+		text-align: center;
+		line-height: 8pt;
+		display: flex;
+		align-items: center;
+	}
 }

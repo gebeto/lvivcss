@@ -244,8 +244,6 @@ h2::after {
   .site-nav a {
     text-align: center;
   }
-
-
 }
 
 @supports (-ms-ime-align:auto) {
