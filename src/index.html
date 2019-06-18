@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta property="og:title" content="LvivCSS 2019" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://lvivcss.org/assets/images/og-index/cover.png" />
+  <meta property="og:url" content="https://lvivcss.org/" />
+  <meta property="og:description" content="LvivCSS повертається, щоб стати ще кращою, цікавішою і найнезвичайнішою подією року!\n
+  LvivCSS — конференція про симбіоз дизайну та розробки, про найкращі практики створення красивого і зручного. І, звичайно ж, це про дружню атмосферу, нові знайомства і нові враження!\n
+  Не проґав свій шанс прийняти участь в одній з найкрутіших frontend-конференцій України!" />
+
   <title>LvivCSS'2019</title>
+  <link rel="shortcut icon" href="./assets/icons/1x/favicon.png" type="image/x-icon">
   <style>
     @font-face {
       font-family: "Rubik";
@@ -12,33 +23,32 @@
       font-style: normal;
       src: url("assets/fonts/Rubik-Black.ttf");
     }
+
     @font-face {
       font-family: "Rubik";
       font-weight: bold;
       font-style: normal;
       src: url("assets/fonts/Rubik-Bold.ttf");
     }
-    @font-face {
-      font-family: "Rubik";
-      font-weight: 500;
-      font-style: normal;
-      src: url("assets/fonts/Rubik-Medium.ttf");
-    }
+
     @font-face {
       font-family: "Rubik";
       font-weight: normal;
       font-style: normal;
-      src: url("assets/fonts/Rubik-Regular.ttf");
+      src: url("assets/fonts/Rubik-Medium.ttf");
     }
 
     * {
       padding: 0;
       margin: 0;
     }
-    body, html {
+
+    body,
+    html {
       height: 100%;
       overflow: hidden;
     }
+
     body {
       background-image: #2c0357;
       background-image: radial-gradient(circle at center 0, #4a0692 0%, #2c0357 100%);
@@ -47,7 +57,9 @@
       justify-content: center;
       align-items: center;
     }
+
     header {
+      margin: 0 25%;
       color: white;
       font-size: 30px;
       text-transform: uppercase;
@@ -55,11 +67,24 @@
       justify-content: center;
       align-items: center;
     }
+
+    .logo {
+      width: 45%;
+      max-width: 163px;
+    }
+
     header time {
       margin-left: 10px;
+      white-space: nowrap;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
     }
 
     .btn-link {
+      text-align: center;
       display: block;
       background-color: #c25322;
       border: none;
@@ -72,15 +97,49 @@
       text-decoration: none;
       margin-top: 30px;
     }
+
+    .btn-link.fb {
+      background-color: #4267b2;
+      font-size: 18px;
+    }
+
+    .social-links {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-link:not(:first-child) {
+      margin-left: 20px;
+    }
+
+    .social-link img {
+      border-radius: 10px;
+      box-shadow: 0 3px 0 0 #0e011c;
+    }
   </style>
 </head>
+
 <body>
   <header>
-    <img src="./assets/images/LvivCSS 2019.svg" height="163" width="163" alt="LvivCSS 2019">
-    <time><b>9</b> листопада</time>
+    <img class="logo" src="./assets/images/lvivcss-2019.svg" height="163" width="163" alt="LvivCSS 2019">
+    <time><b>2</b> листопада</time>
   </header>
   <main>
-    <a class="btn-link" href="http://bit.ly/lvivcss2019-become-a-speaker">Стати спікером</a>
+    <a class="btn-link" title="Реєструйся в нашій гуглоформі!" href="http://bit.ly/lvivcss2019-become-a-speaker"
+      target="blank">Стати спікером</a>
+    <div class="social-links">
+      <a class="social-link" title="Подія у facebook" href="https://www.facebook.com/events/331141920806498/"
+        target="blank">
+        <img src="./assets/icons/facebook.svg" alt="Подія у facebook" width="48px" height="48px">
+      </a>
+
+      <a class="social-link" title="Канал в telegram" href="https://t.me/lvivcss" target="blank">
+        <img src="./assets/icons/telegram.svg" alt="Канал в telegram" width="48px" height="48px">
+      </a>
+    </div>
   </main>
 </body>
+
 </html>
