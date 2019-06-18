@@ -1,7 +1,0 @@
-:host() {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	align-self: center;
-	padding-top: 30pt;
-}

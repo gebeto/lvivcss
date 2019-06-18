@@ -1,7 +1,0 @@
-<app-ticket-card
-	*ngFor="let ticket of tickets"
-	[data]="ticket"
-	(buy)="onTicketClick($event)"
-	></app-ticket-card>
-
-	<app-widget2event *ngIf="ticketId" [type]="ticketId" (close)="onWidgetClose()"></app-widget2event>

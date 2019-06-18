@@ -1,50 +1,19 @@
 @font-face {
-  font-family: 'icomoon';
-  src: url('assets/fonts/icomoon.ttf?pvwgz2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-circle-up:before {
-  content: "\ea41";
-}
-
-@font-face {
-  font-family: "Rubik";
-  font-weight: 900;
-  font-style: normal;
-  src: url("assets/fonts/Rubik-Black.ttf");
-}
-@font-face {
-  font-family: "Rubik";
+  font-family: "Glacial Indifference";
   font-weight: bold;
   font-style: normal;
-  src: url("assets/fonts/Rubik-Bold.ttf");
+  src: url("./assets/fonts/GlacialIndifference-Bold.otf");
 }
+
 @font-face {
-  font-family: "Rubik";
-  font-weight: 500;
-  font-style: normal;
-  src: url("assets/fonts/Rubik-Medium.ttf");
-}
-@font-face {
-  font-family: "Rubik";
+  font-family: "Manrope";
   font-weight: normal;
   font-style: normal;
-  src: url("assets/fonts/Rubik-Regular.ttf");
+  src: url("./assets/fonts/manrope-regular.ttf");
+}
+@font-face {
+  font-family: "Manrope";
+  font-weight: bold;
+  font-style: normal;
+  src: url("./assets/fonts/manrope-bold.ttf");
 }

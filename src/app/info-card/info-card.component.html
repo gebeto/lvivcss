@@ -1,8 +1,0 @@
-<div class="image" *ngIf="data.img">
-  <img [src]="data.img" [alt]="data.title" class="data-photo">
-  <div class="social-button" *ngFor="let item of data.social | keyvalue">
-    <a [href]="item.value" [class]="item.key" target="_blank"></a>
-  </div>
-</div>
-<p class="title">{{data.title}}</p>
-<p class="topic-title">{{data.topic}}</p>

@@ -1,0 +1,150 @@
+/* Variables */
+:root {
+  --purple-gradient: linear-gradient(to right, #4A148C, #7B1FA2);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	font-size: 16pt;
+}
+
+.title {
+	font-family: "Glacial Indifference";
+  color: #4A148C;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16pt;
+}
+
+body {
+	font-family: Manrope;
+	font-size: 20pt;
+}
+
+section {
+	padding: 32pt 15%;
+}
+
+.image {
+	height: 50vh;
+	background-color: grey;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.addition li {
+	list-style: none;
+	position: relative;
+}
+.addition li::before {
+	content: "+";
+	font-weight: bold;
+	color: #33691E;
+	display: inline-block;
+	position: absolute;
+	left: -20pt;
+}
+
+h1 {
+	font-size: 64pt;
+}
+
+h2 {
+	font-size: 40pt;
+}
+
+h4 {
+	margin-top: 16pt;
+}
+
+ul {
+	margin-bottom: 32pt;
+}
+
+.contact-immediately {
+  background-image: var(--purple-gradient);
+	color: white;
+	display: block;
+	position: fixed;
+	bottom: 16pt;
+	right: 16pt;
+	text-decoration: none;
+	font-size: 12pt;
+	padding: 8pt 12pt;
+}
+
+.popup {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.9);
+	width: 100vw;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.popup-body {
+	background-color: #FAFAFA;
+	display: flex;
+	flex-direction: column;
+	padding: 16pt 16pt 0 16pt;
+}
+
+.popup-body footer {
+	display: flex;
+	justify-content: flex-end;
+	padding: 8pt 0;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+	white-space: nowrap;
+	border: none;
+	font-family: Manrope;
+	font-size: 12pt;
+  background-image: var(--purple-gradient);
+  text-align: center;
+  color: white;
+  padding: 4pt 8pt;
+}
+.popup:target {
+	display: flex;
+}
+
+.info-strip {
+	display: flex;
+	margin-top: 16pt;
+}
+
+.info-strip li {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	text-align: center;
+}
+
+.info-strip .number {
+	font-size: 32pt;
+}
+
+@supports (-webkit-background-clip: text) {
+  .title {
+    background: var(--purple-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  } 
+} 
