@@ -1,0 +1,31 @@
+[debug] [2019-06-18T05:25:44.093Z] ----------------------------------------------------------------------
+[debug] [2019-06-18T05:25:44.098Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\babic\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-06-18T05:25:44.098Z] CLI Version:   6.7.2
+[debug] [2019-06-18T05:25:44.098Z] Platform:      win32
+[debug] [2019-06-18T05:25:44.098Z] Node Version:  v11.9.0
+[debug] [2019-06-18T05:25:44.100Z] Time:          Tue Jun 18 2019 08:25:44 GMT+0300 (Eastern European Summer Time)
+[debug] [2019-06-18T05:25:44.100Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-18T05:25:44.119Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-18T05:25:44.121Z] > authorizing via signed-in user
+[debug] [2019-06-18T05:25:44.121Z] [iam] checking project lvivcss-ddedf for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-18T05:25:44.125Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/lvivcss-ddedf:testIamPermissions  
+
+[debug] [2019-06-18T05:25:45.339Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-18T05:25:45.350Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/lvivcss-ddedf  
+ 
+[debug] [2019-06-18T05:25:45.877Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'lvivcss-ddedf'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-18T05:25:45.887Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/lvivcss-ddedf/versions  
+
+[debug] [2019-06-18T05:25:47.728Z] <<< HTTP RESPONSE 200
+[info] i  hosting[lvivcss-ddedf]: beginning deploy...
+[info] i  hosting[lvivcss-ddedf]: found 35 files in src
+[debug] [2019-06-18T05:25:47.833Z] [hosting] hash cache [c3Jj] load error: lines is not defined
+[debug] [2019-06-18T05:25:48.137Z] [hosting] hash cache [c3Jj] stored for 35 files
+[debug] [2019-06-18T05:25:48.138Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-18T05:25:48.138Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/lvivcss-ddedf/versions/4ab1846f8c5b378e:populateFiles  
+ <request body omitted>
