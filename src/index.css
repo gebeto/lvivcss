@@ -49,13 +49,24 @@ p {
 .landing nav {
   margin-top: 96pt;
 }
+
 .nav-item {
   line-height: 24pt;
   margin-bottom: 8pt;
 }
+
+.nav-item.important {
+  font-size: 120%;
+}
+
+.nav-item.important {
+  font-size: 150%;
+  margin-bottom: 16px;
+}
+
 .landing nav a {
   margin-bottom: 16pt;
-  color: #1A237E;  
+  color: #1A237E;
 }
 
 .landing nav a:visited {

@@ -8,7 +8,7 @@
 	padding: 0;
 }
 
-a {
+a, .small {
 	font-size: 16pt;
 }
 
@@ -88,7 +88,7 @@ ul {
 	bottom: 0.67rem;
 	right: 0.67rem;
 	text-decoration: none;
-	font-size: 0.5rem;
+	font-size: 12pt;
 	padding: 0.34rem 0.67rem;
 }
 
@@ -152,6 +152,13 @@ ul {
 
 .info-strip .number {
 	font-size: 32pt;
+}
+
+.divider {
+	border: none;
+	height: 4px;
+	width: 30%;
+	background-image: var(--purple-gradient);
 }
 
 @supports (-webkit-background-clip: text) {
