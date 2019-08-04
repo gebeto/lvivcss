@@ -1,0 +1,92 @@
+.speaker-photo {
+	min-width: 96pt;
+	min-height: 128pt;
+	background-color: antiquewhite;
+	float: left;
+	margin-right: 16pt;
+}
+
+
+p {
+	font-size: 12pt;
+}
+
+.content {
+	padding-top: 32pt;
+}
+
+.columns {
+	column-count: 1;
+	column-gap: 32pt;
+	column-fill: auto;
+	border-bottom: 1px solid grey;
+}
+
+.speaker-info {
+	break-inside: avoid;
+	margin-bottom: 32pt;
+	border-top: 1px solid grey;
+}
+
+.speaker-name {
+	font-size: 24pt;
+}
+
+.speaker-bio {
+	font-style: italic; 
+	height: 100px;
+	overflow: hidden;
+	color: #999;
+}
+
+.speaker-bio:hover {
+	cursor: zoom-in;
+}
+
+.speaker-bio:focus {
+	height: auto;
+	outline: none;
+	color: black;
+}
+
+.speaker-bio:focus:hover {
+	cursor: unset;
+}
+
+.topic {
+	position: relative;
+	font-weight: normal;
+	font-size: 24pt;
+	line-height: 24pt;
+	padding-top: 8pt;
+	margin-bottom: 8pt;
+	clear: both;
+}
+
+.topic::before {
+	content: "«";
+}
+
+.topic::after {
+	content: "»";
+}
+
+.add-bookmark {
+	color: brown;
+}
+
+.add-bookmark:hover {
+	cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+	.columns {
+		column-count: 2;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.columns {
+		column-count: 3;
+	}
+}

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "start": "live-server src/",
-    "deploy": "firebase deploy --token $FIREBASE_TOKEN"
+    "deploy": "firebase deploy"
   },
   "private": true
 }

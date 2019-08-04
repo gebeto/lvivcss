@@ -17,3 +17,9 @@
   font-style: normal;
   src: url("./assets/fonts/manrope-bold.ttf");
 }
+@font-face {
+  font-family: "Manrope";
+  font-weight: 900;
+  font-style: normal;
+  src: url("./assets/fonts/manrope-extrabold.ttf");
+}

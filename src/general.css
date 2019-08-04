@@ -1,0 +1,55 @@
+:root {
+  --base-font-size: 16pt;
+  --base-font-color: #333;
+  --link-hover-color: #0288D1;
+  --link-visited-color: #7B1FA2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--base-font-size);
+  color: var(--base-font-color);
+}
+
+body {
+  font-family: Manrope;
+}
+
+p:not(:last-of-type) {
+  margin-bottom: var(--base-font-size);
+}
+
+a {
+  text-decoration: none;
+  white-space: nowrap;
+  transition-duration: 200ms;
+  transition-property: color;
+}
+
+a:visited {
+  color: var(--link-visited-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+.link.important {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.link.important::before {
+  content: "→ ";
+  color: var(--base-font-color);
+}
+
+@media screen and (max-width: 980px) {
+  .link.important {
+    font-size: 1.5rem;
+  }
+}

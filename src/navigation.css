@@ -1,0 +1,56 @@
+.navigation {
+  display: flex;
+	flex-direction: column;
+}
+
+@media screen and (orientation: portrait) {
+	.navigation {
+		margin-right: 32pt;
+	}
+}
+
+.navigation .links {
+	height: 32pt;
+	line-height: 32pt;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	box-sizing: border-box;
+	width: 100vh;
+	position: fixed;
+	transform-origin: 100% 0;
+	transform: translateX(-100%) rotate(-90deg);
+	text-transform: lowercase;
+}
+
+
+.navigation .link {
+	text-decoration: none;
+	position: relative;
+	transition-duration: 200ms;
+}
+
+.navigation .link.active {
+	font-weight: bold;
+}
+
+/* .navigation .link::after {
+	content: "";
+	display: block;
+	background-color: blueviolet;
+	position: absolute;
+	width: 100%;
+	height: 200%;
+	top: -16pt;
+	z-index: -1;
+	transform: translateY(-100%);
+	transition-duration: 200ms;
+}
+
+.navigation .link:hover {
+	color: white;
+}
+
+.navigation .link:hover::after {
+	transform: translateY(0);
+} */
