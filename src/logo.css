@@ -5,10 +5,10 @@
 }
 
 .logo {
-	font-family: "Glacial Indifference";
-  color: var(--base-logo-color);
-  font-size: var(--logo-font-size);
   margin-bottom: 1rem;
+  color: var(--base-logo-color);
+	font-family: "Glacial Indifference";
+  font-size: var(--logo-font-size);
 }
 
 .logo.small {

@@ -8,17 +8,17 @@
 }
 
 .navigation .links {
-	height: var(--navigation-width);
-	line-height: var(--navigation-width);
+	position: fixed;
 	display: flex;
 	flex-direction: row-reverse;
-	justify-content: space-around;
 	box-sizing: border-box;
 	width: 100vh;
-	position: fixed;
-	transform-origin: 100% 0;
+	height: var(--navigation-width);
 	transform: translateX(-100%) rotate(-90deg);
+	transform-origin: 100% 0;
 	text-transform: lowercase;
+	line-height: var(--navigation-width);
+	justify-content: space-around;
 }
 
 
