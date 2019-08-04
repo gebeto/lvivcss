@@ -13,9 +13,6 @@
 html {
   font-size: var(--base-font-size);
   color: var(--base-font-color);
-}
-
-body {
   font-family: Manrope;
 }
 
@@ -43,13 +40,42 @@ a:hover {
   font-weight: 900;
 }
 
+.link.not-so.important {
+  font-size: 1rem;
+}
+
 .link.important::before {
   content: "→ ";
   color: var(--base-font-color);
 }
 
+h2 {
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  clear: both;
+}
+
+h3 {
+  font-weight: 100;
+  font-size: 1.5rem;
+  clear: both;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
 @media screen and (max-width: 980px) {
   .link.important {
     font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 }
