@@ -1,8 +1,9 @@
+const script = document.currentScript;
 const template = document.getElementById('speakerCardTemplate').cloneNode(true);
 async function getSpeakers() {
 	const speakers = await ((await fetch('./speakers.json')).json());
 	const buffer = document.createDocumentFragment();
-	
+
 	speakers.forEach(speaker => {
 		const node = document.importNode(template.content, true);
 		node.querySelector('[data-role="talkName"]').textContent = speaker.talkName;
@@ -16,5 +17,6 @@ async function getSpeakers() {
 	});
 
 	document.getElementById('speakers').appendChild(buffer);
+	document.head.removeChild(script);
 }
 getSpeakers();

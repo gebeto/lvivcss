@@ -3,11 +3,6 @@
 }
 
 .navigation {
-  display: flex;
-	flex-direction: column;
-}
-
-.navigation .links {
 	position: fixed;
 	display: flex;
 	flex-direction: row-reverse;
@@ -22,7 +17,7 @@
 }
 
 
-.navigation .link.active {
+.navigation-link.active {
 	font-weight: bold;
 }
 
