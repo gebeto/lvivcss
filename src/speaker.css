@@ -2,10 +2,12 @@
 	--column-count: 1;
 	--photo-width: 6rem;
 	--photo-height: calc(var(--photo-width) * (4 / 3));
+	--body-top-padding: 1rem;
 }
 
 body {
 	display: grid;
+	padding-top: var(--body-top-padding);
 	grid-template-columns: var(--navigation-width) 1fr 1rem;
 }
 
@@ -52,10 +54,22 @@ h1 {
 }
 
 .speaker-info {
+	overflow: hidden;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 	border-bottom: 1px solid grey;
 	break-inside: avoid;
+}
+
+.speaker-info p:empty,
+.speaker-info h3:empty,
+.speaker-info h4:empty {
+	display: none;
+}
+
+.cliffhanger {	
+	margin: 2rem 0;
+	text-align: center;
 }
 
 footer {
@@ -67,7 +81,10 @@ footer {
 
 @media screen {
 	@media (min-width: 768px) {
-		:root { --column-count: 2; }
+		:root {
+			--column-count: 2;
+			--body-top-padding: 0.5rem;
+		}
 	}
 
 	@media (min-width: 1366px) {
@@ -77,6 +94,7 @@ footer {
 	@media (max-width: 480px) {
 		:root {
 			--photo-width: 4rem;
+			--body-top-padding: 0;
 		}
 	}
 }

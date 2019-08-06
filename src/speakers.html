@@ -18,6 +18,8 @@
 		<link rel="shortcut icon" href="./assets/icons/1x/favicon.png" type="image/x-icon">
 		<link rel="stylesheet" href="index.css">
 		<link rel="stylesheet" href="speaker.css">
+
+		<script src="speaker-list.js" defer></script>
 	</head>
 
 	<body>
@@ -25,7 +27,7 @@
 			<section class="links">
 				<a href="/" class="link">Головна</a>
 				<a href="/speakers.html" class="link active">Спікери</a>
-				<a href="/" class="link">Партнерам</a>
+				<a href="/partnership.html" class="link">Партнерам</a>
 			</section>
 		</nav>
 		<h1><span class="logo small">LvivCSS'19</span></h1>
@@ -34,56 +36,20 @@
 			<a class="link not-so important" href="https://lvivcss2019.ticketforevent.com">квитки</a>
 		</header>
 		<main class="main">
-			<section class="columns">
-				<article class="speaker-info">
-					<h3>Неймовірно цікава доповідь про все на світі</h3>
-					<h4>Олена Шпілевська</h4>
-					<img src="assets/images/speakers/shpilevska.png" alt="Олена Шпілевська" class="speaker-photo">
-					<p class="speaker-bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima incidunt eaque tenetur expedita dolores assumenda itaque aliquam, mollitia odio neque excepturi fugit, consequuntur nihil necessitatibus hic soluta! Lorem ipsum dolor, sit amet consectetur
-						adipisicing elit. Minima incidunt eaque tenetur expedita dolores assumenda itaque aliquam, mollitia odio neque excepturi fugit, consequuntur nihil necessitatibus hic soluta!</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium perspiciatis rerum repudiandae magnam nisi.</p>
-				</article>
-				<article class="speaker-info">
-					<h3>Вам не потрібен Bootstrap</h3>
-					<h4>Олександра Шинкевич</h4>
-					<img src="assets/images/speakers/shynkevych.png" alt="Олександра Шинкевич" class="speaker-photo">
-					<p class="speaker-bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore quia totam autem voluptate voluptatum libero velit quam impedit, harum ipsa nihil, quibusdam aliquid maiores aspernatur quos ex fugit pariatur sint.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quaerat assumenda illo. Adipisci suscipit distinctio eveniet, esse quibusdam, at aliquid iure, optio aspernatur officiis expedita explicabo et veritatis nobis eos!</p>
-				</article>
-				<article class="speaker-info">
-					<h3>Ще раз про анімацію, і мене більше нікуди не запросять</h3>
-					<h4>Юрій Артюх</h4>
-					<img src="assets/images/speakers/artyukh.png" alt="Юрій Артюх" class="speaker-photo">
-					<p class="speaker-bio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat quisquam adipisci nihil ab autem, cupiditate a veniam suscipit. Magni ea dolores pariatur error non, ut fuga obcaecati vitae aperiam unde.</p>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus eveniet dolore, nesciunt necessitatibus aut consectetur aliquid dolorum. Ipsum recusandae vitae earum, soluta deleniti itaque dolores minima necessitatibus provident iusto esse.</p>
-				</article>
-				<article class="speaker-info">
-					<h3>Неймовірно цікава доповідь про все на світі</h3>
-					<h4>Олена Шпілевська</h4>
-					<img src="assets/images/speakers/shpilevska.png" alt="Олена Шпілевська" class="speaker-photo">
-					<p class="speaker-bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima incidunt eaque tenetur expedita dolores assumenda itaque aliquam, mollitia odio neque excepturi fugit, consequuntur nihil necessitatibus hic soluta! Lorem ipsum dolor, sit amet consectetur
-						adipisicing elit. Minima incidunt eaque tenetur expedita dolores assumenda itaque aliquam, mollitia odio neque excepturi fugit, consequuntur nihil necessitatibus hic soluta!</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, praesentium perspiciatis rerum repudiandae magnam nisi.</p>
-				</article>
-				<article class="speaker-info">
-					<h3>Вам не потрібен Bootstrap</h3>
-					<h4>Олександра Шинкевич</h4>
-					<img src="assets/images/speakers/shynkevych.png" alt="Олександра Шинкевич" class="speaker-photo">
-					<p class="speaker-bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore quia totam autem voluptate voluptatum libero velit quam impedit, harum ipsa nihil, quibusdam aliquid maiores aspernatur quos ex fugit pariatur sint.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quaerat assumenda illo. Adipisci suscipit distinctio eveniet, esse quibusdam, at aliquid iure, optio aspernatur officiis expedita explicabo et veritatis nobis eos!</p>
-				</article>
-				<article class="speaker-info">
-					<h3>Ще раз про анімацію, і мене більше нікуди не запросять</h3>
-					<h4>Юрій Артюх</h4>
-					<img src="assets/images/speakers/artyukh.png" alt="Юрій Артюх" class="speaker-photo">
-					<p class="speaker-bio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat quisquam adipisci nihil ab autem, cupiditate a veniam suscipit. Magni ea dolores pariatur error non, ut fuga obcaecati vitae aperiam unde.</p>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus eveniet dolore, nesciunt necessitatibus aut consectetur aliquid dolorum. Ipsum recusandae vitae earum, soluta deleniti itaque dolores minima necessitatibus provident iusto esse.</p>
-				</article>
-			</section>
+			<section class="columns" id="speakers"></section>
+			<p class="cliffhanger">&hellip;далі буде&hellip;</p>
 		</main>
 		<footer>
 			<a class="important link" href="">стати спікером</a>
 		</footer>
 	</body>
-
+	<template id="speakerCardTemplate">
+		<article class="speaker-info">
+			<h3 data-role="talkName"></h3>
+			<h4 data-role="speakerName"></h4>
+			<img data-role="speakerPhoto" class="speaker-photo">
+			<p data-role="talkDescription"></p>
+			<p data-role="speakerBio"></p>
+		</article>
+	</template>
 </html>
