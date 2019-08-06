@@ -14,38 +14,38 @@
   LvivCSS — конференція про симбіоз дизайну та розробки, про найкращі практики створення красивого і зручного. І, звичайно ж, це про дружню атмосферу, нові знайомства і нові враження!\n
   Не проґав свій шанс прийняти участь в одній з найкрутіших frontend-конференцій України!" />
 
-		<title>Спікери LvivCSS'2019</title>
+		<title>LvivCSS'2019</title>
 		<link rel="shortcut icon" href="./assets/icons/1x/favicon.png" type="image/x-icon">
 		<link rel="stylesheet" href="index.css">
-		<link rel="stylesheet" href="speaker.css">
-
+		<link rel="stylesheet" href="partners.css">
 		<script src="navigation.js" defer></script>
-		<script src="speaker-list.js" defer></script>
+		<script src="partners.js" defer></script>
 	</head>
 
 	<body class="page">
 		<nav class="navigation" id="navigation"></nav>
 		<h1><span class="logo small">LvivCSS'19</span></h1>
 		<header class="sticky-header">
-			<h2>Спікери</h2>
+			<h2>Партнери</h2>
 			<a class="link not-so important" href="https://lvivcss2019.ticketforevent.com">квитки</a>
 		</header>
-		<main class="main">
-			<section class="columns" id="speakers"></section>
-			<p class="cliffhanger">&hellip;далі буде&hellip;</p>
-		</main>
+		<main class="main" id="main"></main>
 		<footer>
-			<a class="important link" href="">стати спікером</a>
+			<a class="important link" href="">як стати партнером</a>
 		</footer>
 	</body>
-	<template id="speakerCardTemplate">
-		<article class="speaker-info">
-			<h3 data-role="talkName"></h3>
-			<h4 data-role="speakerName"></h4>
-			<img data-role="speakerPhoto" class="speaker-photo">
-			<p data-role="talkDescription"></p>
-			<p data-role="speakerBio"></p>
-		</article>
+
+	<template id="sectionTmpl">
+		<section>
+			<h3></h3>
+		</section>
+	</template>
+
+	<template id="figureTmpl">
+		<figure class="partner">
+			<div class="partner-logo"></div>
+			<figcaption></figcaption>
+		</figure>
 	</template>
 
 </html>
