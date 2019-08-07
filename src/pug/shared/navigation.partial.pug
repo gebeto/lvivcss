@@ -1,0 +1,6 @@
+nav.navigation
+	each item in navigation
+		a(
+			href=item.href ? "/" + item.href + ".html" : "/",
+			class="navigation-link" + (filename === item.href ? " active" : "")
+		)= item.title

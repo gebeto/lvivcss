@@ -1,0 +1,32 @@
+- var filename = "speakers"
+
+doctype
+html(lang='en')
+	head
+		include shared/header.partial.pug
+		title LvivCSS'2019
+		link(rel="stylesheet" href="css/speaker.css")
+	body.page
+		include shared/navigation.partial.pug
+		h1
+			span.logo.small LvivCSS'19
+		header.sticky-header
+			h2 Спікери
+			a.link.not-so.important(href="https://lvivcss2019.ticketforevent.com") квитки
+		main.main
+			section#speakers.columns
+				each item in speakers
+					article(class="speaker-info")
+						h3(data-role="talkName")= item.talkName
+						h4(data-role="speakerName")= item.speakerName
+						img(
+							class="speaker-photo"
+							src="/assets/images/speakers/" + item.image + ".png"
+						)
+						if item.talkDescription
+							p(data-role="talkDescription")= item.talkDescription
+						if item.speakerBio
+							p(data-role="speakerBio")= item.speakerBio
+			p.cliffhanger …далі буде…
+		footer
+			a.important.link(href="") стати спікером
