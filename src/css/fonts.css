@@ -2,40 +2,40 @@
   font-family: "Glacial Indifference";
   font-weight: bold;
   font-style: normal;
-  src: url("./assets/fonts/GlacialIndifference-Bold.otf");
+  src: url("../assets/fonts/GlacialIndifference-Bold.otf");
 }
 
 @font-face {
   font-family: "Manrope";
   font-weight: 100;
   font-style: normal;
-  src: url("./assets/fonts/manrope-thin.ttf");
+  src: url("../assets/fonts/manrope-thin.ttf");
 }
 
 @font-face {
   font-family: "Manrope";
   font-weight: 300;
   font-style: normal;
-  src: url("./assets/fonts/manrope-light.ttf");
+  src: url("../assets/fonts/manrope-light.ttf");
 }
 
 @font-face {
   font-family: "Manrope";
   font-weight: normal;
   font-style: normal;
-  src: url("./assets/fonts/manrope-regular.ttf");
+  src: url("../assets/fonts/manrope-regular.ttf");
 }
 
 @font-face {
   font-family: "Manrope";
   font-weight: bold;
   font-style: normal;
-  src: url("./assets/fonts/manrope-bold.ttf");
+  src: url("../assets/fonts/manrope-bold.ttf");
 }
 
 @font-face {
   font-family: "Manrope";
   font-weight: 900;
   font-style: normal;
-  src: url("./assets/fonts/manrope-extrabold.ttf");
+  src: url("../assets/fonts/manrope-extrabold.ttf");
 }
