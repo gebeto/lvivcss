@@ -46,7 +46,7 @@ body.page {
 }
 
 .index-main {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: var(--main-grid-template-columns);
 }
@@ -98,7 +98,7 @@ body.page {
   
   @media (max-width: 480px) {
     :root {
-      --main-grid-template-columns: 3rem 1fr 2rem;
+      --main-grid-template-columns: 1rem 1fr 2rem;
       --body-top-padding: 0;
     }
   }

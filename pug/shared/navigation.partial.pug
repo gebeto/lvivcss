@@ -1,4 +1,6 @@
 nav.navigation
+	p(tabindex=1 class="navigation-header") Навігація
+
 	each item in navigation
 		a(
 			href=item.href ? "/" + item.href + ".html" : "/",

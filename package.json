@@ -2,8 +2,8 @@
   "name": "lvivcssweb",
   "version": "0.0.0",
   "scripts": {
-    "dev": "pug src/pug/*.pug -o src/ -O src/data/data.json -w",
-    "start": "live-server src/",
+    "dev": "pug src/pug/*.pug -o src/ -O data/data.json -w",
+    "start": "live-server",
     "deploy": "firebase deploy"
   },
   "private": true,
