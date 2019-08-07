@@ -2,8 +2,15 @@
   "name": "lvivcssweb",
   "version": "0.0.0",
   "scripts": {
+    "dev": "pug src/pug/*.pug -o src/ -O src/data/data.json -w",
     "start": "live-server src/",
-    "deploy": "firebase deploy --token $FIREBASE_TOKEN"
+    "deploy": "firebase deploy"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "pug": "^2.0.4"
+  },
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
 }

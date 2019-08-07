@@ -1,0 +1,31 @@
+:root {
+	--navigation-width: 4rem;
+}
+
+.navigation {
+	position: fixed;
+	display: flex;
+	flex-direction: row-reverse;
+	box-sizing: border-box;
+	width: 100vh;
+	height: var(--navigation-width);
+	transform: translateX(-100%) rotate(-90deg);
+	transform-origin: 100% 0;
+	text-transform: lowercase;
+	line-height: var(--navigation-width);
+	justify-content: space-around;
+}
+
+
+.navigation-link.active {
+	font-weight: bold;
+}
+
+@media screen {
+	@media (max-width: 480px) {
+		:root {	--navigation-width: 2.5rem; }
+	}
+	@media (max-width: 360px) {
+		:root {	--navigation-width: 2rem; }
+	}
+}

@@ -1,0 +1,50 @@
+section {
+  overflow: hidden;
+}
+
+section:not(:first-child) {
+  padding-top: 1rem;
+}
+
+h3 {
+  margin-top: 1rem;
+}
+
+.partner {
+  --logo-size: 10rem;
+  --font-size: calc(var(--logo-size) / 10);
+  float: left;
+}
+
+figcaption {
+  text-align: center;
+  font-size: var(--font-size);
+  font-weight: bold;
+}
+
+.partner-logo {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+
+.partner-logo {
+  width: var(--logo-size);
+  height: var(--logo-size);
+}
+
+.gold {
+  --logo-size: 9rem;
+}
+
+.silver {
+  --logo-size: 8rem;
+}
+
+.bronze {
+  --logo-size: 7rem;
+}
+
+.info {
+  --logo-size: 6rem;
+}
