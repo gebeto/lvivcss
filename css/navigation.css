@@ -51,6 +51,7 @@
     .navigation {
       z-index: 99;
 			top: 100vh;
+			top: calc(var(--vh, 1vh) * 100);
       float: left;
       flex-direction: column;
       width: 100vw;
