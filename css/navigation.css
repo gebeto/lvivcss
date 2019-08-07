@@ -50,7 +50,7 @@
 
     .navigation {
       z-index: 99;
-			top: 100%;
+			top: 100vh;
       float: left;
       flex-direction: column;
       width: 100vw;

@@ -1,0 +1,25 @@
+- var filename = "partners"
+
+doctype
+html(lang='en')
+	head
+		include shared/header.partial.pug
+		title LvivCSS'2019
+		link(rel="stylesheet" href="css/partners.css")
+	body.page
+		include shared/navigation.partial.pug
+		h1
+			span.logo.small LvivCSS'19
+		header.sticky-header
+			h2 Партнери
+			a.link.not-so.important(href="/tickets.html") квитки
+		main.main
+			each category in partners
+				section
+					h3= category.title
+					each item in category.items
+						figure(class=category.name + " partner")
+							.partner-logo(style="background-image: url(assets/images/partners/" + item.logo + ".png)")
+							figcaption= item.name
+		footer
+			a.important.link(href="") як стати партнером

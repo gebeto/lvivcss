@@ -1,0 +1,16 @@
+@media (max-width: 860px) {
+	:root {
+		--main-grid-template-columns: 4rem 1fr 4rem;
+		--conference-date-font-size: 1.5rem;
+		--description-column: 2;
+		--description-padding: 0;
+		--hero-left-padding: 0;
+		--body-top-padding: 0.5rem;
+	}
+}
+
+@media (orientation: portrait) {
+	:root {
+		--main-grid-template-columns: 1rem 1fr 4rem;
+	}
+}

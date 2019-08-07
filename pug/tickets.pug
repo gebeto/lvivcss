@@ -1,0 +1,24 @@
+- var filename = "tickets"
+
+doctype
+html(lang='en')
+	head
+		include shared/header.partial.pug
+		title LvivCSS'2019
+		link(rel="stylesheet", href="css/tickets.css")
+	body
+		include shared/navigation.partial.pug
+		main.index-main
+			section.hero
+				h1
+					span.logo LvivCSS'19
+				p
+					time.conference-date(datetime="2019-11-02") 2 листопада 2019
+					address.conference-address
+						a(href="https://goo.gl/maps/m17XLnBE8UHEeM1n6" target="_blank")
+							b MolodoZeleno
+							| ,
+							br
+							| вул. Джерельна 20, м. Львів
+			section.description
+				<script type="text/javascript" src="https://lvivcss2019.ticketforevent.com/uk/widget/?h=0&s=0&bt=1&template=flatwhite"></script>
