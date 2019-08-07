@@ -1,5 +1,6 @@
 :root {
   --navigation-width: 4rem;
+  --navigation-item-height: 4rem;
 }
 
 .navigation {
@@ -12,13 +13,14 @@
   transform: translateX(-100%) rotate(-90deg);
   transform-origin: 100% 0;
   text-transform: lowercase;
-  line-height: var(--navigation-width);
+  line-height: var(--navigation-item-height);
   justify-content: space-around;
 }
 
 .navigation-header {
   display: none;
   font-size: 0.7rem;
+  line-height: 2rem;
   text-transform: lowercase;
   font-weight: bold;
   outline: none;
@@ -32,22 +34,22 @@
 @media screen {
   @media (max-width: 480px) {
     :root {
-      --navigation-width: 2.5rem;
+      --navigation-item-height: 2.5rem;
     }
   }
 
-  @media (max-width: 360px) {
-    :root {
-      --navigation-width: 2rem;
-    }
-  }
 
   @media (orientation: portrait) {
+    :root {
+      --navigation-width: 1rem;
+    }
+    
     body {
       padding-bottom: 2rem;
     }
 
     .navigation {
+      z-index: 99;
 			top: 100vh;
       float: left;
       flex-direction: column;

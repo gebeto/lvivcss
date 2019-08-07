@@ -8,3 +8,9 @@
 		--body-top-padding: 0.5rem;
 	}
 }
+
+@media (orientation: portrait) {
+	:root {
+		--main-grid-template-columns: 1rem 1fr 4rem;
+	}
+}
