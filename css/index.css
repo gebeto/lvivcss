@@ -9,6 +9,7 @@
   --description-padding: 2rem;
   --conference-date-font-size: 2rem;
 	--body-top-padding: 1rem;
+	--hero-left-padding: 2rem;
 }
 
 body.page {
@@ -55,6 +56,7 @@ body.page {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: var(--hero-left-padding);
 }
 
 .description {
@@ -89,6 +91,7 @@ body.page {
       --conference-date-font-size: 1.5rem;
       --description-column: 2;
       --description-padding: 0;
+      --hero-left-padding: 0;
       --body-top-padding: 0.5rem;
     }
   }

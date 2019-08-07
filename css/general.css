@@ -16,8 +16,12 @@ html {
   font-size: var(--base-font-size);
 }
 
-p:not(:last-of-type) {
-  margin-bottom: var(--base-font-size);
+p:not(:first-of-type) {
+  margin-top: var(--base-font-size);
+}
+
+ul {
+  margin-left: 1rem;
 }
 
 a {
