@@ -13,7 +13,7 @@ html(lang='en')
 				span.logo.small LvivCSS'19
 		header.sticky-header
 			h2 Партнери
-			a.link.not-so.important(href="/tickets.html") квитки
+			a.not-so.important.link(href="./partnership.html") стати партнером
 		main.main
 			each category in partners
 				section
@@ -23,4 +23,3 @@ html(lang='en')
 							.partner-logo(style="background-image: url(assets/images/partners/" + item.logo + ".png)")
 							figcaption= item.name
 		footer
-			a.important.link(href="") як стати партнером
