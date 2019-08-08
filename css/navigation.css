@@ -93,7 +93,7 @@
       z-index: 99;
       bottom: 100%;
       flex-direction: column;
-      width: auto;
+      width: 100vw;
       height: auto;
       padding: 0 1rem;
       transition-duration: 200ms;

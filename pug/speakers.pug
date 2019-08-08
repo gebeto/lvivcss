@@ -13,7 +13,8 @@ html(lang='en')
 				span.logo.small LvivCSS'19
 		header.sticky-header
 			h2 Спікери
-			a.link.not-so.important(href="/tickets.html") квитки
+			//- a.link.not-so.important(href="/tickets.html") квитки
+			a.important.not-so.link(href="./call-for-papers.html") стати спікером
 		main.main
 			section#speakers.columns
 				each item in speakers
@@ -29,5 +30,3 @@ html(lang='en')
 						if item.speakerBio
 							p(data-role="speakerBio")= item.speakerBio
 			p.cliffhanger …далі буде…
-		footer
-			a.important.link(href="./call-for-papers.html") стати спікером
