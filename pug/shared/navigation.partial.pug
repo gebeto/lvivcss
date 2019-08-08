@@ -4,6 +4,11 @@ nav.navigation
 			href=item.href ? "/" + item.href + ".html" : "/",
 			class="navigation-link" + (filename === item.href ? " active" : "")
 		)= item.title
-		
-	p(tabindex=1 class="navigation-header") Навігація
+
+	p.rainbow-symbol(tabindex=1 class="navigation-header")
+		span.burger
+			span.burger-line
+			span.burger-line
+			span.burger-line
+		| Навігація
 .backdrop

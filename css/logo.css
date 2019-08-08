@@ -39,13 +39,15 @@
     :root { --logo-font-size: 3rem; }
   }
   
-  @media (max-width: 320px) {
-    :root {
-      --logo-font-size: 2rem;
-    }
+  @media (max-width: 480px) {
     .logo.small {
       margin-top: 0;
       font-size: var(--logo-font-size);
+    }
+  }
+  @media (max-width: 320px) {
+    :root {
+      --logo-font-size: 2rem;
     }
   }
 }
