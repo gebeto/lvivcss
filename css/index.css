@@ -23,7 +23,6 @@ body.page {
 }
 
 .page h1 {
-  margin-top: var(--body-top-padding);
 	grid-column: 2;
 }
 
@@ -75,6 +74,10 @@ body.page {
   @media (orientation: portrait) {
     :root {
       --main-grid-template-columns: 4rem 1fr 4rem;
+    }
+
+    .page .sticky-header {
+      top: calc(2rem - 1px);
     }
 
     @media (max-width: 1024px) {
