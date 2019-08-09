@@ -99,6 +99,7 @@
       transition-duration: 200ms;
       transform: translateY(2rem);
       background-color: white;
+      border-bottom: 1px dashed #333;
     }
 
     .navigation-link {

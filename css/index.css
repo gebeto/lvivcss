@@ -8,40 +8,40 @@
   --description-column: 3;
   --description-padding: 2rem;
   --conference-date-font-size: 2rem;
-	--body-top-padding: 1rem;
-	--hero-left-padding: 2rem;
+  --body-top-padding: 1rem;
+  --hero-left-padding: 2rem;
 }
 
 body.page {
-	display: grid;
+  display: grid;
   grid-template-columns: var(--navigation-width) 1fr 1rem;
 }
 
 .page .main {
   padding-top: 1rem;
-	grid-column: 2;
+  grid-column: 2;
 }
 
 .page h1 {
-	grid-column: 2;
+  grid-column: 2;
 }
 
 .page .sticky-header {
-	position: sticky;
-	top: 0;
-	display: flex;
-	border-bottom: 1px solid grey;
-	background-color: white;
-	justify-content: space-between;
-	align-items: center;
-	grid-column: 2;
+  position: sticky;
+  top: 0;
+  display: flex;
+  border-bottom: 1px solid grey;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: 2;
 }
 
 .page footer {
-	display: flex;
-	padding: 1rem 0;
-	grid-column: 2;
-	justify-content: flex-end;
+  display: flex;
+  padding: 1rem 0;
+  grid-column: 2;
+  justify-content: flex-end;
 }
 
 .index-main {
@@ -50,16 +50,16 @@ body.page {
 }
 
 .hero {
-  grid-column: 2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding-left: var(--hero-left-padding);
+  grid-column: 2;
+  justify-content: center;
 }
 
 .description {
-  grid-column: var(--description-column);
   padding: var(--description-padding);
+  grid-column: var(--description-column);
 }
 
 .conference-date {
@@ -70,15 +70,13 @@ body.page {
 .conference-address {
   font-style: normal;
 }
+
+.conference-address a {
+  color: #333;
+}
+
 @media screen {
   @media (orientation: portrait) {
-    :root {
-      --main-grid-template-columns: 4rem 1fr 4rem;
-    }
-
-    .page .sticky-header {
-      top: calc(2rem - 1px);
-    }
 
     @media (max-width: 1024px) {
       :root {
@@ -86,8 +84,16 @@ body.page {
         --description-padding: 0;
       }
     }
+
+    :root {
+      --main-grid-template-columns: 4rem 1fr 4rem;
+    }
+
+    .page .sticky-header {
+      top: calc(2rem - 1px);
+    }
   }
-  
+
   @media (max-width: 768px) {
     :root {
       --conference-date-font-size: 1.5rem;
@@ -97,15 +103,24 @@ body.page {
       --body-top-padding: 0.5rem;
     }
   }
-  
+
   @media (max-width: 480px) {
     :root {
       --main-grid-template-columns: 1rem 1fr 2rem;
       --body-top-padding: 0;
     }
+
     .page .sticky-header {
       flex-direction: column;
       align-items: flex-start;
-    };
+    }
+
+    ;
+  }
+
+  @media (max-width: 480px) {
+    address {
+      font-size: 0.7rem;
+    }
   }
 }
