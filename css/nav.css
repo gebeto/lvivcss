@@ -1,0 +1,28 @@
+:root {
+  --navigation-size: 4rem;
+  --navigation-item-height: 4rem;
+  --nav-width: 100vh;
+}
+
+.navigation {
+  position: fixed;
+  left: 0;
+
+  display: flex;
+
+  width: var(--nav-width);
+  height: var(--navigation-size);
+
+  text-transform: lowercase;
+
+  line-height: var(--navigation-item-height);
+}
+
+.navigation-link.active {
+  color: var(--base-font-color);
+  font-weight: bold;
+}
+
+.navigation-header {
+  display: none;
+}

@@ -5,16 +5,15 @@ html(lang='en')
 	head
 		include shared/header.partial.pug
 		title LvivCSS'2019
+		link(rel="stylesheet" href="css/page.layout.css")
 		link(rel="stylesheet" href="css/partners.css")
 	body.page
 		include shared/navigation.partial.pug
-		h1
-			a(href="./")
-				span.logo.small LvivCSS'19
-		header.sticky-header
-			h2 Партнери
-			a.not-so.important.link(href="./partnership.html") стати партнером
-		main.main
+		h1.logo.small
+			a(href="./") LvivCSS'19
+			h2.page-title.sticky Партнери
+			//- a.not-so.important.link(href="./partnership.html") стати партнером
+		main.content
 			each category in partners
 				section
 					h3= category.title
@@ -22,4 +21,3 @@ html(lang='en')
 						figure(class=category.name + " partner")
 							.partner-logo(style="background-image: url(assets/images/partners/" + item.logo + ".png)")
 							figcaption= item.name
-		footer

@@ -1,3 +1,9 @@
+@import "page.layout.css";
+
+.content {
+  padding-bottom: 1rem;
+}
+
 section {
   overflow: hidden;
 }
@@ -14,6 +20,7 @@ h3 {
   --logo-size: 10rem;
   --font-size: calc(var(--logo-size) / 10);
   float: left;
+  break-inside: avoid;
 }
 
 figcaption {
@@ -47,4 +54,10 @@ figcaption {
 
 .info {
   --logo-size: 6rem;
+}
+
+@media (max-width: 1280px) {
+  :root {
+    --column-count: 3;
+  }
 }

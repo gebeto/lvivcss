@@ -1,64 +1,58 @@
+@import "typography.css";
+@import "fonts.css";
+@import "general.css";
+@import "layout.css";
+@import "page.layout.css";
+
 :root {
 	--column-count: 1;
-	--photo-width: 6rem;
-	--photo-height: calc(var(--photo-width) * (4 / 3));
+  --photo-width: 6rem;
+  --photo-height: calc(var(--photo-width) * (4 / 3));
 	--body-top-padding: 1rem;
-}
-
-p {
-	font-size: 0.75rem;
-	line-height: 1.5;
+	
+	/* Global override */
+	--paragraph-font-size: 0.75rem;
 }
 
 .columns {
-	grid-column: 2;
-	column-count: var(--column-count);
-	column-gap: 32pt;
+  column-count: var(--column-count);
+  column-gap: 32pt;
 }
 
 .speaker-photo {
-	float: left;
-	box-sizing: border-box;
-	width: var(--photo-width);
-	height: var(--photo-height);
-	margin-top: 5pt;
-	margin-right: 1rem;
-	border: 2px solid #ccc;
+  float: left;
+  box-sizing: border-box;
+  width: var(--photo-width);
+  height: var(--photo-height);
+  margin: 5pt 1rem 0 0;
+  border: 2px solid #ccc;
 }
 
 .speaker-info {
-	overflow: hidden;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-	border-bottom: 1px solid grey;
-	break-inside: avoid;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid grey;
+  break-inside: avoid;
 }
 
-.speaker-info p:empty,
-.speaker-info h3:empty,
-.speaker-info h4:empty {
-	display: none;
+.cliffhanger {
+  margin: 2rem 0;
+  text-align: center;
 }
 
-.cliffhanger {	
-	margin: 2rem 0;
-	text-align: center;
+@media (min-width: 768px) {
+  :root {
+    --column-count: 2;
+  }
 }
 
-@media screen {
-	@media (min-width: 768px) {
-		:root {
-			--column-count: 2;
-		}
-	}
+@media (min-width: 1366px) {
+  :root {
+    --column-count: 3;
+  }
+}
 
-	@media (min-width: 1366px) {
-		:root { --column-count: 3; }
-	}
-
-	@media (max-width: 480px) {
-		:root {
-			--photo-width: 4rem;
-		}
-	}
+@media (max-width: 480px) {
+  :root {
+    --photo-width: 4rem;
+  }
 }

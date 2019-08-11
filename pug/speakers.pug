@@ -8,25 +8,24 @@ html(lang='en')
 		link(rel="stylesheet" href="css/speaker.css")
 	body.page
 		include shared/navigation.partial.pug
-		h1
-			a(href="./")
-				span.logo.small LvivCSS'19
-		header.sticky-header
-			h2 Спікери
-			//- a.link.not-so.important(href="/tickets.html") квитки
-			a.important.not-so.link(href="./call-for-papers.html") стати спікером
-		main.main
-			section#speakers.columns
-				each item in speakers
-					article(class="speaker-info")
-						h3(data-role="talkName")= item.talkName
-						h4(data-role="speakerName")= item.speakerName
-						img(
-							class="speaker-photo"
-							src="/assets/images/speakers/" + item.image + ".png"
-						)
-						if item.talkDescription
-							p(data-role="talkDescription")= item.talkDescription
-						if item.speakerBio
-							p(data-role="speakerBio")= item.speakerBio
+		h1.logo.small
+			a(href="./") LvivCSS'19
+		h2.page-title.sticky Спікери
+				//- a.link.not-so.important(href="/tickets.html") квитки
+				//- a.important.not-so.link(href="./call-for-papers.html") стати спікером
+		section.content.columns
+
+			each item in speakers
+				article(class="speaker-info")
+					if item.talkName
+						h3= item.talkName
+					h4= item.speakerName
+					img(
+						class="speaker-photo"
+						src="/assets/images/speakers/" + item.image + ".png"
+					)
+					if item.talkDescription
+						p= item.talkDescription
+					if item.speakerBio
+						p= item.speakerBio
 			p.cliffhanger …далі буде…

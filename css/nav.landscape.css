@@ -1,0 +1,6 @@
+.navigation {
+	flex-direction: row-reverse;
+	transform: translateX(-100%) rotate(-90deg);
+	transform-origin: 100% 0;
+	justify-content: space-around;
+}
