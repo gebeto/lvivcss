@@ -2,10 +2,10 @@
   --base-logo-color: #4A148C;
   --purple-gradient: linear-gradient(to right, var(--base-logo-color), #7B1FA2);
   --logo-font-size: 6rem;
+  --logo-small-font-size: calc(var(--logo-font-size) / 2);
 }
 
 .logo {
-  margin-bottom: 1rem;
   color: var(--base-logo-color);
 	font-family: "Glacial Indifference";
   font-size: var(--logo-font-size);
@@ -13,8 +13,7 @@
 }
 
 .logo.small {
-  margin-top: 1rem;
-	font-size: calc(var(--logo-font-size) / 2);
+	font-size: var(--logo-small-font-size);
 }
 
 @supports (-webkit-background-clip: text) {
@@ -24,13 +23,4 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   } 
-}
-
-@media screen {
-  
-  @media (max-width: 320px) {
-    :root {
-      --logo-font-size: 4rem;
-    }
-  }
 }
