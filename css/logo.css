@@ -13,7 +13,7 @@
 }
 
 .logo.small {
-  margin-top: 2rem;
+  margin-top: 1rem;
 	font-size: calc(var(--logo-font-size) / 2);
 }
 
@@ -27,21 +27,10 @@
 }
 
 @media screen {
-  @media (max-width: 1366px) {
-    :root { --logo-font-size: 5rem; }
-  }
-  
-  @media (max-width: 1024px) {
-    :root { --logo-font-size: 4rem; }
-  }
-  
-  @media (max-width: 980px) {
-    :root { --logo-font-size: 3rem; }
-  }
   
   @media (max-width: 320px) {
     :root {
-      --logo-font-size: 2rem;
+      --logo-font-size: 4rem;
     }
   }
 }

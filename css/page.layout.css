@@ -35,11 +35,12 @@ body {
 
 .page-title {
   display: flex;
+  flex-direction: column;
   border-bottom: 1px solid grey;
   background-color: white;
   grid-area: header;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 @media (orientation: portrait) {
@@ -59,6 +60,7 @@ body {
 
   body {
     margin: 0 1rem;
-    grid-template-rows: var(--navigation-size) repeat(3, min-content);;
+    grid-template-rows: var(--navigation-size) repeat(3, min-content);
+    ;
   }
 }

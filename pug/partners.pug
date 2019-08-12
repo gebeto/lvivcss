@@ -4,15 +4,16 @@ doctype
 html(lang='en')
 	head
 		include shared/header.partial.pug
-		title LvivCSS'2019
+		title Партнери LvivCSS'2019
 		link(rel="stylesheet" href="css/page.layout.css")
 		link(rel="stylesheet" href="css/partners.css")
 	body.page
 		include shared/navigation.partial.pug
 		h1.logo.small
 			a(href="./") LvivCSS'19
-			h2.page-title.sticky Партнери
-			//- a.not-so.important.link(href="./partnership.html") стати партнером
+		h2.page-title.sticky
+			| Наші партнери
+			a.action-link(href="./partnership.html") стати нашим партнером
 		main.content
 			each category in partners
 				section

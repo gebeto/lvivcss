@@ -4,15 +4,15 @@ doctype
 html(lang='en')
 	head
 		include shared/header.partial.pug
-		title LvivCSS'2019
+		title Спікери LvivCSS'2019
 		link(rel="stylesheet" href="css/speaker.css")
 	body.page
 		include shared/navigation.partial.pug
 		h1.logo.small
 			a(href="./") LvivCSS'19
-		h2.page-title.sticky Спікери
-				//- a.link.not-so.important(href="/tickets.html") квитки
-				//- a.important.not-so.link(href="./call-for-papers.html") стати спікером
+		h2.page-title.sticky Наші спікери
+			//- a.action-link(href="/tickets.html") придбати квитки
+			a.action-link(href="./call-for-papers.html") стати спікером
 		section.content.columns
 
 			each item in speakers
@@ -22,7 +22,8 @@ html(lang='en')
 					h4= item.speakerName
 					img(
 						class="speaker-photo"
-						src="/assets/images/speakers/" + item.image + ".png"
+						src="/assets/images/speakers/" + item.image + ".jpg"
+						alt= item.speakerName
 					)
 					if item.talkDescription
 						p= item.talkDescription
