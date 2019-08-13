@@ -2,7 +2,7 @@ nav.navigation
 	each item in navigation
 		a(
 			href=item.href ? "/" + item.href + ".html" : "/",
-			class="navigation-link" + (filename === item.href ? " active" : "")
+			class="navigation-link" + (filename === item.href ? " active" : "") + (item.isFlare ? " flare" : "")
 		)= item.title
 
 	p.navigation-header(tabindex=1, alt="Навігація")

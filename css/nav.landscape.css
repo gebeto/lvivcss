@@ -4,3 +4,12 @@
 	transform-origin: 100% 0;
 	justify-content: space-around;
 }
+
+.navigation-link.flare {
+	font-weight: 900;
+	color: #F57C00;
+}
+
+.navigation-link.flare.active {
+	color: inherit;
+}

@@ -22,5 +22,9 @@ html(lang='en')
 					h3= category.title
 					each item in category.items
 						figure(class=category.name + " partner")
-							.partner-logo(style="background-image: url(assets/images/partners/" + item.logo + ".png)")
-							figcaption= item.name
+							.partner-logo(style="background-image: url(assets/images/partners/" + item.logo + ".jpg)")
+							figcaption
+								if item.url
+									a(href=item.url)= item.name
+								if !item.url
+									= item.name

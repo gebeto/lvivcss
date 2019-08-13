@@ -8,7 +8,8 @@
 		},
 		{
 			"href": "tickets",
-			"title": "Квитки"
+			"title": "Квитки",
+			"isFlare": true
 		}, {
 			"href": "partners",
 			"title": "Партнери"
@@ -81,6 +82,10 @@
 		"items": [{
 			"logo": "vinnytsiajs",
 			"name": "VinnytsiaJS"
+		}, {
+			"logo": "girl-in-tech",
+			"name": "GIRL IN TECH",
+			"url": "https://t.me/girlintech"
 		}]
 	}]
 }
