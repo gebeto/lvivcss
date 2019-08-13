@@ -31,6 +31,19 @@ body {
   grid-area: content;
 }
 
+.conference-date {
+  font-size: var(--conference-date-font-size);
+  font-weight: bold;
+}
+
+.conference-address {
+  font-style: normal;
+}
+
+.conference-address a {
+  color: #333;
+}
+
 @media (max-width: 1280px) {
   :root {
     --body-grid: "nav hero""nav content";

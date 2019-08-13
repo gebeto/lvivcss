@@ -1,5 +1,3 @@
-@import "page.layout.css";
-
 .content {
   padding-bottom: 1rem;
 }
@@ -54,10 +52,4 @@ figcaption {
 
 .info {
   --logo-size: 6rem;
-}
-
-@media (max-width: 1280px) {
-  :root {
-    --column-count: 3;
-  }
 }

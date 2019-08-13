@@ -10,19 +10,6 @@ html {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.conference-date {
-  font-size: var(--conference-date-font-size);
-  font-weight: bold;
-}
-
-.conference-address {
-  font-style: normal;
-}
-
-.conference-address a {
-  color: #333;
-}
-
 .action-link {
   font-weight: bold;
   font-size: 1rem;
