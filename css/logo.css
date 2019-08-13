@@ -7,7 +7,7 @@
 
 .logo {
   color: var(--base-logo-color);
-	font-family: "Glacial Indifference";
+	font-family: "GlacialIndifference";
   font-size: var(--logo-font-size);
   display: inline-block;
 }
