@@ -24,6 +24,8 @@ html(lang='en')
 					h4= item.speakerName
 					img(
 						class="speaker-photo"
+						srcset="/assets/images/speakers/" + item.image + ".128.jpg 128w, /assets/images/speakers/" + item.image + ".86.jpg 86w"
+						sizes="(max-width: 480px) 86px, 128px"
 						src="/assets/images/speakers/" + item.image + ".jpg"
 						alt= item.speakerName
 					)

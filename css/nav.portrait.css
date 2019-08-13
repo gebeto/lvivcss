@@ -11,8 +11,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  transition-duration: 200ms;
-  transition-property: opacity;
+  transition: opacity 200ms;
   pointer-events: none;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.75);
@@ -25,8 +24,7 @@
 	width: 100vw;
 	height: auto;
 	padding: 0 1rem;
-	transition-duration: 200ms;
-	transition-property: transform;
+	transition: transform 200ms;
 	transform: translateY(2rem);
 	border-bottom: 1px dashed #333;
 	background-color: white;
