@@ -8,6 +8,7 @@ html(lang='en')
 		link(rel="stylesheet", href="css/hero.layout.css")
 		link(rel="stylesheet" href="css/hero.layout.portrait.css" media="(orientation: portrait)")
 		title LvivCSS'2019
+		<style>.global-logo{width: 320px;margin-bottom:1rem;}</style>
 	body
 		include shared/navigation.partial.pug
 		section.hero
@@ -21,6 +22,7 @@ html(lang='en')
 						b MolodoZeleno
 						| , вул. Джерельна 20, м. Львів
 		section.content
+			img(src="assets/images/partners/globalcss.png", alt="GlobalCSS", class="global-logo")
 			p
 				| Нам можна 
 				b писати:
