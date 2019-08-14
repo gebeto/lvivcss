@@ -31,8 +31,9 @@
 	font-size: 0.7em;
 }
 
-.navigation-header {
+p.navigation-header {
 	display: flex;
+	margin-bottom: 0;
 	transition-duration: 200ms;
 	outline: none;
 	font-size: 0.7rem;

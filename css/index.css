@@ -180,6 +180,10 @@ p:not(:first-of-type) {
   margin-top: var(--base-font-size);
 }
 
+p:last-of-type {
+  margin-bottom: var(--base-font-size);
+}
+
 /* Logo */
 :root {
   --base-logo-color: #4A148C;
