@@ -2,6 +2,10 @@
   --section-margin: 0 20% 0 5rem;
 }
 
+.back {
+	margin-top: 1rem;
+}
+
 img {
   width: 100%;
 }
