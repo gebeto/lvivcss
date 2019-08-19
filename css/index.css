@@ -234,13 +234,16 @@ p:last-of-type {
   position: fixed;
   left: 0;
 
-  display: flex;
+}
 
+.navigation .slider {
+  display: flex;
+  
   width: var(--nav-width);
   height: var(--navigation-size);
-
+  
   text-transform: lowercase;
-
+  
   line-height: var(--navigation-item-height);
 }
 

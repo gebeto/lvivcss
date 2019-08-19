@@ -19,22 +19,29 @@
 
 .navigation {
 	z-index: 99;
-	bottom: 100%;
+	top: 0;
+	height: 2rem;
+	font-size: 0.7em;
+}
+
+.navigation .slider {
+	position: absolute;
+	bottom: 0;
 	flex-direction: column;
 	width: 100vw;
 	height: auto;
 	padding: 0 1rem;
-	transition: transform 200ms;
-	transform: translateY(2rem);
+	transition-duration: 200ms;
+	transition-property: transform;
 	border-bottom: 1px dashed #333;
 	background-color: white;
-	font-size: 0.7em;
 }
 
 p.nav-header {
 	display: flex;
 	margin-bottom: 0;
 	transition-duration: 200ms;
+	transition-property: opacity;
 	outline: none;
 	font-size: 0.7rem;
 	font-weight: bold;
@@ -42,8 +49,8 @@ p.nav-header {
 	align-items: center;
 }
 
-.navigation:focus-within {
-	transform: translateY(100%);
+.navigation:focus-within .slider {
+	transform: translateY(calc(100% - 2rem));
 }
 
 .navigation:focus-within .nav-header {
