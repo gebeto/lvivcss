@@ -1,4 +1,5 @@
-.navigation {
+
+.navigation .slider {
 	flex-direction: row-reverse;
 	transform: translateX(-100%) rotate(-90deg);
 	transform-origin: 100% 0;
@@ -6,10 +7,10 @@
 }
 
 .nav-link.flare {
-	font-weight: 900;
-	color: #F57C00;
+  color: #F57C00;
+  font-weight: 900;
 }
 
 .nav-link.flare.active {
-	color: inherit;
+  color: inherit;
 }

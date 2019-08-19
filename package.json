@@ -2,7 +2,7 @@
   "name": "lvivcssweb",
   "version": "0.0.0",
   "scripts": {
-    "hbs": "hbs -P './hbs/partials/*' -D './data/data.json' './hbs/index.hbs'",
+    "hbs": "hbs -P './hbs/partials/*' -H /hbs/helpers/*.js -D './data/data.json' './hbs/**.hbs'",
     "start": "live-server",
     "deploy": "firebase deploy"
   },
