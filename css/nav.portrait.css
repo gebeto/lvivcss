@@ -31,7 +31,7 @@
 	font-size: 0.7em;
 }
 
-p.navigation-header {
+p.nav-header {
 	display: flex;
 	margin-bottom: 0;
 	transition-duration: 200ms;
@@ -46,7 +46,7 @@ p.navigation-header {
 	transform: translateY(100%);
 }
 
-.navigation:focus-within .navigation-header {
+.navigation:focus-within .nav-header {
 	height: 0;
 	opacity: 0;
 }

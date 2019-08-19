@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{{> head}}
+	<meta name="description"
+		content="Найкращі спікери з України та Білорусі, що виступатимуть на LvivCSS'19, найяскравішій конференції України">
+	<link rel="stylesheet" href="css/page.layout.css">
+	<link rel="stylesheet" href="css/page.layout.portrait.css" media="(orientation:portrait), (max-height: 480px)">
+	<link rel="stylesheet" href="css/speaker.css">
+	<title>LvivCSS'2019 — конференція не тільки про CSS</title>
+</head>
+
+<body class="page">
+	{{> nav path="speakers.html"}}
+	<h1 class="logo small"><a href="./">LvivCSS'19</a></h1>
+	<h2 class="page-title sticky">
+		Наші спікери
+		<a class="action-link"
+			href="https://docs.google.com/forms/d/e/1FAIpQLScQdBWmp7seXmeqPNBKo4cyzqrcx9i2LPwJp-1684-VcKYUsA/viewform">запропонувати
+			свою доповідь
+		</a>
+	</h2>
+	<section class="content columns">
+		{{#each speakers}}
+		<article class="speaker-info">
+			<h3>{{this.topicName}}</h3>
+			<h4>{{this.speakerName}}</h4>
+			<img class="speaker-photo"
+				srcset="/assets/images/speakers/{{this.image}}.128.jpg 128w, /assets/images/speakers/{{this.image}}.86.jpg 86w"
+				sizes="(max-width: 480px) 86px, 128px" src="/assets/images/speakers/{{this.image}}.jpg"
+				alt="{{this.speakerName}}">
+			<p>{{this.talkDescription}}</p>
+			<p>{{this.speakerBio}}</p>
+		</article>
+		{{/each}}
+		<p class="cliffhanger">…далі буде…</p>
+	</section>
+</body>

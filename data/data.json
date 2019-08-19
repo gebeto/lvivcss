@@ -1,20 +1,20 @@
 {
 	"navigation": [{
-			"href": "",
+			"href": "/",
 			"title": "Головна"
 		}, {
-			"href": "speakers",
+			"href": "speakers.html",
 			"title": "Спікери"
 		},
 		{
-			"href": "tickets",
+			"href": "tickets.html",
 			"title": "Квитки",
 			"isFlare": true
 		}, {
-			"href": "partners",
+			"href": "partners.html",
 			"title": "Партнери"
 		}, {
-			"href": "contacts",
+			"href": "contacts.html",
 			"title": "Контакти"
 		}
 	],

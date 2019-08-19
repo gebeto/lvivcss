@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{{> head}}
+	<meta name="description" content="LvivCSS'19, найяскравіша конференція України. Конференція не тільки про CSS">
+	<link rel="stylesheet" href="css/hero.layout.css">
+	<link rel="stylesheet" href="css/hero.layout.portrait.css" media="(orientation: portrait), (max-height: 480px)">
+	<title>LvivCSS'2019 — конференція не тільки про CSS</title>
+</head>
+
+<body>
+	{{> nav path='/'}}
+	<section class="hero">
+		{{> hero}}
+		<p><a class="link important" href="/tickets.html">придбати квиток</a></p>
+	</section>
+	<section class="content">
+		<p>Це <b>конференція</b> про симбіоз дизайну та розробки.</p>
+		<p>Це <b>подія</b> про найкращі практики створення красивого і зручного фронтенду.</p>
+		<p>Це доповіді, що дійсно <b>важливі</b>.</p>
+		<p>Слідкуй за нами в <a href="https://t.me/lvivcss">telegram-каналі</a></p>
+		<p>Долучайся до події у <a href="https://www.facebook.com/events/491374968072733/">facebook</a></p>
+	</section>
+</body>

@@ -19,7 +19,6 @@
   width: var(--photo-width);
   height: var(--photo-height);
   margin: 5pt 1rem 0 0;
-  border: 2px solid #ccc;
 }
 
 .speaker-info {
@@ -27,6 +26,10 @@
   padding-bottom: 0.5rem;
   border-bottom: 1px solid grey;
   break-inside: avoid;
+}
+
+.speaker-info p:empty + p {
+  margin-top: 0;
 }
 
 .cliffhanger {

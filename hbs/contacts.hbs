@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{{> head}}
+	<meta name="description" content="LvivCSS'19, найяскравіша конференція України. Конференція не тільки про CSS">
+	<link rel="stylesheet" href="css/hero.layout.css">
+	<link rel="stylesheet" href="css/hero.layout.portrait.css" media="(orientation: portrait), (max-height: 480px)">
+	<style>.global-logo{width: 200px;margin-bottom:1rem;}</style>
+	<title>LvivCSS'2019 — конференція не тільки про CSS</title>
+</head>
+
+<body>
+	{{> nav path='contacts.html'}}
+	<section class="hero">
+		{{> hero}}
+	</section>
+	<section class="content">
+		<img class="global-logo" src="assets/images/partners/globalcss.png" alt="GlobalCSS" loading="auto">
+		<p>Нам можна <b>писати:</b></p><a href="mailto:lvivcss@outlook.com">lvivcss@outlook.com</a>
+		<p>Нам можна <b>телефонувати:</b></p>
+		<ul>
+			<li>Сергій: <a href="tel:+380635657098">+380 63 565 70 98</a></li>
+			<li>Марія: <a href="tel:+380935924040">+380 93 592 40 40</a></li>
+			<li>Наталя: <a href="tel:+380508568637">+380 50 856 86 37</a></li>
+		</ul>
+	</section>
+</body>

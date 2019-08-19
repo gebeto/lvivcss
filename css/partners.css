@@ -28,14 +28,10 @@ figcaption {
 }
 
 .partner-logo {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80%;
-}
-
-.partner-logo {
+  box-sizing: border-box;
   width: var(--logo-size);
   height: var(--logo-size);
+  padding: 0.5rem;
 }
 
 .gold {

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{{> head}}
+	<meta name="description"
+		content="Найкращі спікери з України та Білорусі, що виступатимуть на LvivCSS'19, найяскравішій конференції України">
+	<link rel="stylesheet" href="css/page.layout.css">
+	<link rel="stylesheet" href="css/page.layout.portrait.css" media="(orientation:portrait), (max-height: 480px)">
+	<link rel="stylesheet" href="css/partners.css">
+	<title>LvivCSS'2019 — конференція не тільки про CSS</title>
+</head>
+
+<body class="page">
+	{{> nav path='partners.html'}}
+	<h1 class="logo small"><a href="./">LvivCSS'19</a></h1>
+	<h2 class="page-title sticky">
+		Наші партнери
+		<a class="action-link" href="./partnership.html">стати нашим партнером</a>
+	</h2>
+	<section class="content columns">
+		{{#each partners as |partner|}}
+		<section>
+			<h3>{{partner.title}}</h3>
+			{{#each partner.items}}
+			<figure class="{{partner.name}} partner">
+				<img class="partner-logo" src="/assets/images/partners/{{this.logo}}.jpg" loading="lazy">
+				<figcaption>{{this.name}}</figcaption>
+			</figure>
+			{{/each}}
+		</section>
+		{{/each}}
+	</section>
+</body>
