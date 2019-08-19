@@ -2,15 +2,12 @@
   "name": "lvivcssweb",
   "version": "0.0.0",
   "scripts": {
-    "dev": "pug ./pug/*.pug -o ./ -O ./data/data.json -w",
+    "hbs": "hbs -P './hbs/partials/*' -D './data/data.json' './hbs/index.hbs'",
     "start": "live-server",
     "deploy": "firebase deploy"
   },
   "private": true,
-  "devDependencies": {
-    "pug": "^2.0.4"
-  },
   "dependencies": {
-    "pug-cli": "^1.0.0-alpha6"
+    "handlebars-helpers": "^0.10.0"
   }
 }

@@ -1,0 +1,11 @@
+<nav class="navigation">
+	{{#each navigation}}
+	<a
+		class="nav-link {{#eq ../path this.href}}active{{/eq}} {{#if this.isFlare}}flare{{/if}}"
+		href="{{this.href}}">{{this.title}}</a>
+	{{/each}}
+	<p class="nav-header" tabindex="1" alt="Навігація">
+		<span class="burger"></span>Навігація
+	</p>
+</nav>
+<div class="backdrop"></div>

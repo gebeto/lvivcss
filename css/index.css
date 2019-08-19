@@ -160,7 +160,7 @@ h3,h4 {
   clear: both;
 }
 
-h1 + h2, h2 + h3, h3 + h4 {
+h2 + h3, h3 + h4 {
   padding-top: 0;
 }
 
@@ -244,12 +244,12 @@ p:last-of-type {
   line-height: var(--navigation-item-height);
 }
 
-.navigation-link.active {
+.nav-link.active {
   color: var(--base-font-color);
   font-weight: bold;
 }
 
-.navigation-header {
+.nav-header {
   display: none;
 }
 
