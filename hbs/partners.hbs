@@ -25,7 +25,13 @@
 			{{#each partner.items}}
 			<figure class="{{partner.name}} partner">
 				<img class="partner-logo" src="/assets/images/partners/{{this.logo}}.jpg" loading="lazy">
-				<figcaption>{{this.name}}</figcaption>
+				<figcaption>
+					{{#if this.url}}
+					<a href="{{this.url}}">{{this.name}}</a>
+					{{else}}
+					{{this.name}}
+					{{/if}}
+				</figcaption>
 			</figure>
 			{{/each}}
 		</section>
