@@ -2,6 +2,7 @@
 	--nav-width: auto;
 	--navigation-size: 2rem;
 	--navigation-item-height: 3rem;
+	--nav-header-color: #4A148C;
 }
 
 .backdrop {
@@ -47,6 +48,7 @@ p.nav-header {
 	font-weight: bold;
 	line-height: 2rem;
 	align-items: center;
+	color: var(--nav-header-color);
 }
 
 .navigation:focus-within .slider {
@@ -69,15 +71,15 @@ p.nav-header {
 	height: 9px;
 	margin-right: 0.4rem;
 	background-image: linear-gradient(
-		black 0px,
-		black 1px,
+		var(--nav-header-color) 0px,
+		var(--nav-header-color) 1px,
 		transparent 1px,
 		transparent 4px,
-		black 4px,
-		black 5px,
+		var(--nav-header-color) 4px,
+		var(--nav-header-color) 5px,
 		transparent 5px,
 		transparent 8px,
-		black 8px,
-		black 9px
+		var(--nav-header-color) 8px,
+		var(--nav-header-color) 9px
 	);
 }
