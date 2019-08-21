@@ -29,7 +29,11 @@
 			<h3>{{partner.title}}</h3>
 			{{#each partner.items}}
 			<figure class="{{partner.name}} partner">
-				<img class="partner-logo" src="/assets/images/partners/{{this.logo}}.jpg" loading="lazy">
+				<img
+					alt="{{partner.title}} партнер — {{this.name}}"
+					class="partner-logo"
+					src="/assets/images/partners/{{this.logo}}.jpg"
+					loading="lazy">
 				<figcaption>
 					{{#if this.url}}
 					<a href="{{this.url}}">{{this.name}}</a>
