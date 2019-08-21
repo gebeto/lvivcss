@@ -3,6 +3,7 @@
   font-family: "GlacialIndifference";
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
   src: url("../assets/fonts/glacialindifference-bold-webfont.woff2") format("woff2");
 }
 
@@ -203,7 +204,7 @@ p:last-of-type {
 .logo {
   display: inline-block;
   color: var(--base-logo-color);
-  font-family: "GlacialIndifference";
+  font-family: "GlacialIndifference", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: var(--logo-font-size);
 }
 
