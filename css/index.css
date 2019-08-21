@@ -3,7 +3,6 @@
   font-family: "GlacialIndifference";
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
   src: url("../assets/fonts/glacialindifference-bold-webfont.woff2") format("woff2");
 }
 
@@ -12,7 +11,7 @@
   font-weight: 100;
   font-style: normal;
   font-display: swap;
-  src: url("../assets/fonts/manrope-thin-webfont.woff2") format("woff2");
+  src: url("../assets/fonts/manrope-light-webfont.woff2") format("woff2");
 }
 
 @font-face {
