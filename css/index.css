@@ -10,7 +10,6 @@
   font-family: "Manrope_";
   font-weight: 100;
   font-style: normal;
-  font-display: swap;
   src: url("../assets/fonts/manrope-light-webfont.woff2") format("woff2");
 }
 
@@ -18,7 +17,6 @@
   font-family: "Manrope_";
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
   src: url("../assets/fonts/manrope-regular-webfont.woff2") format("woff2");
 }
 
@@ -26,7 +24,6 @@
   font-family: "Manrope_";
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
   src: url("../assets/fonts/manrope-bold-webfont.woff2") format("woff2");
 }
 
@@ -34,7 +31,6 @@
   font-family: "Manrope_";
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
   src: url("../assets/fonts/manrope-extrabold-webfont.woff2") format("woff2");
 }
 
