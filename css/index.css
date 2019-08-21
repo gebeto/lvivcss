@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "Manrope3";
+  font-family: "Manrope_";
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-  font-family: "Manrope3";
+  font-family: "Manrope_";
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -31,7 +31,7 @@
 }
 
 @font-face {
-  font-family: "Manrope3";
+  font-family: "Manrope_";
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -139,7 +139,7 @@ body {
 }
 
 html {
-  font-family: Manrope3, Arial, Helvetica, sans-serif;
+  font-family: Manrope_, Arial, Helvetica, sans-serif;
   font-size: var(--base-font-size);
   line-height: 1.5;
 }
