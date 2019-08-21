@@ -8,6 +8,11 @@
 	--paragraph-font-size: 0.75rem;
 }
 
+h4 small {
+  font-size: 50%;
+  font-weight: bold;
+}
+
 .columns {
   column-count: var(--column-count);
   column-gap: 32pt;
