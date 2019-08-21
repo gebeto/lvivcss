@@ -5,9 +5,10 @@
 	<meta property="og:title" content="Це — спікери LvivCSS'19">
 	<meta property="og:url" content="https://lvivcss.org/speakers.html">
 	<meta property="og:description"
-	content="Найкращі спікери з України та Білорусі, що виступатимуть на LvivCSS'19, найяскравішій конференції України">
+		content="Найкращі спікери з України та Білорусі, що виступатимуть на LvivCSS'19, найяскравішій конференції України">
+	<meta property="og:image" content="https://lvivcss.org/assets/images/og-index/cover.jpg">
+
 	{{> head}}
-	{{> def-og}}
 	<meta name="description"
 		content="Найкращі спікери з України та Білорусі, що виступатимуть на LvivCSS'19, найяскравішій конференції України">
 	<link rel="stylesheet" href="css/page.layout.css">
@@ -31,7 +32,7 @@
 				{{this.speakerName}}
 				{{#if this.city}}<br><small>{{this.city}}</small>{{/if}}
 			</h4>
-			
+
 			<img class="speaker-photo"
 				srcset="/assets/images/speakers/{{this.image}}.128.jpg 128w, /assets/images/speakers/{{this.image}}.86.jpg 86w"
 				sizes="(max-width: 480px) 86px, 128px" src="/assets/images/speakers/{{this.image}}.jpg"
