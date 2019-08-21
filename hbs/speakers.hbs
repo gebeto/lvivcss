@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
 	{{> head}}
@@ -21,13 +21,13 @@
 	<section class="content columns">
 		{{#each speakers}}
 		<article class="speaker-info">
-			<h3>{{this.talkName}}</h3>
+			{{#if this.talkName}}<h3>{{this.talkName}}</h3>{{/if}}
 			<h4>{{this.speakerName}}</h4>
 			<img class="speaker-photo"
 				srcset="/assets/images/speakers/{{this.image}}.128.jpg 128w, /assets/images/speakers/{{this.image}}.86.jpg 86w"
 				sizes="(max-width: 480px) 86px, 128px" src="/assets/images/speakers/{{this.image}}.jpg"
 				alt="{{this.speakerName}}">
-			<p>{{this.talkDescription}}</p>
+			{{#if this.talkDescription}}<p>{{this.talkDescription}}</p>{{/if}}
 			<p>{{this.speakerBio}}</p>
 		</article>
 		{{/each}}
