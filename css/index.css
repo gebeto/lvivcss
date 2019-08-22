@@ -231,7 +231,7 @@ p:last-of-type {
 .navigation {
   position: fixed;
   left: 0;
-
+  width: 0;
 }
 
 .navigation .slider {
