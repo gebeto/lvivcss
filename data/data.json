@@ -80,9 +80,16 @@
 		"name": "gold",
 		"title": "Золоті",
 		"items": [{
-			"logo": "coingaming",
-			"name": "Coingaming"
-		}]
+				"logo": "coingaming",
+				"name": "Coingaming",
+				"url": "https://coingaming.io"
+			},
+			{
+				"logo": "svitla",
+				"name": "Svitla Systems",
+				"url": "https://svitla.com"
+			}
+		]
 	}, {
 		"name": "bronze",
 		"title": "Бронзові",
