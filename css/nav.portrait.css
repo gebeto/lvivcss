@@ -38,17 +38,20 @@
 	background-color: white;
 }
 
-p.nav-header {
+.nav-header {
 	display: flex;
 	margin-bottom: 0;
 	transition-duration: 200ms;
 	transition-property: opacity;
+	color: var(--nav-header-color);
+	border: none;
 	outline: none;
+	background-color: transparent;
+	font-family: Manrope_;
 	font-size: 0.7rem;
 	font-weight: bold;
 	line-height: 2rem;
 	align-items: center;
-	color: var(--nav-header-color);
 }
 
 .navigation:focus-within .slider {
