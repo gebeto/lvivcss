@@ -36,6 +36,7 @@
 	transition-property: transform;
 	border-bottom: 1px dashed #333;
 	background-color: white;
+	transform: none;
 }
 
 .nav-header {
