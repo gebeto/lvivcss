@@ -3,7 +3,7 @@
 }
 
 .back {
-	margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 img {
@@ -24,16 +24,16 @@ section {
   left: -1rem;
   display: inline-block;
   content: "+";
-  color: #33691E;
-  font-weight: bold;
+  color: #33691e;
+  font-weight: 700;
 }
 
 .addition .in-package::before {
   content: "•";
-  color: black;
+  color: #000;
 }
 
-@media (orientation: portrait) {
+@media (orientation:portrait) {
   :root {
     --base-font-size: 14pt;
     --section-margin: 0 1rem;

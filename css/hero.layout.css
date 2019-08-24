@@ -7,11 +7,11 @@
 }
 
 body {
-  padding: var(--body-margin);
-  box-sizing: border-box;
   display: grid;
-	max-width: 100vw;
+  box-sizing: border-box;
+  max-width: 100vw;
   min-height: 100vh;
+  padding: var(--body-margin);
   grid-template-columns: var(--body-columns);
   grid-template-areas: var(--body-grid);
   grid-template-rows: var(--body-rows);
@@ -34,7 +34,7 @@ body {
 
 .conference-date {
   font-size: var(--conference-date-font-size);
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .conference-address {
@@ -45,7 +45,7 @@ body {
   color: #333;
 }
 
-@media (max-width: 1280px) {
+@media (max-width:1280px) {
   :root {
     --body-grid: "nav hero""nav content";
     --body-columns: var(--navigation-size) 1fr;

@@ -1,16 +1,14 @@
 :root {
-	--column-count: 1;
+  --column-count: 1;
   --photo-width: 6rem;
   --photo-height: calc(var(--photo-width) * (4 / 3));
-	--body-top-padding: 1rem;
-	
-	/* Global override */
-	--paragraph-font-size: 0.75rem;
+  --body-top-padding: 1rem;
+  --paragraph-font-size: 0.75rem;
 }
 
 h4 small {
   font-size: 50%;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .columns {
@@ -28,12 +26,12 @@ h4 small {
 
 .speaker-info {
   overflow: hidden;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid grey;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid gray;
   break-inside: avoid;
 }
 
-.speaker-info p:empty + p {
+.speaker-info p:empty+p {
   margin-top: 0;
 }
 
@@ -42,19 +40,19 @@ h4 small {
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width:768px) {
   :root {
     --column-count: 2;
   }
 }
 
-@media (min-width: 1366px) {
+@media (min-width:1366px) {
   :root {
     --column-count: 3;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width:480px) {
   :root {
     --photo-width: 4rem;
   }

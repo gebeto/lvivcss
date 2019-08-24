@@ -1,6 +1,5 @@
 :root {
-  --body-grid:
-    "nav logo"
+  --body-grid: "nav logo"
     "nav header"
     "nav content"
     "nav footer";
@@ -17,9 +16,9 @@
 }
 
 body {
-  padding: var(--body-margin);
-  box-sizing: border-box;
   display: grid;
+  box-sizing: border-box;
+  padding: var(--body-margin);
   grid-template-areas: var(--body-grid);
   grid-template-columns: var(--body-columns);
   grid-template-rows: var(--body-rows);
@@ -43,8 +42,8 @@ body {
 .page-title {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid grey;
-  background-color: white;
+  border-bottom: 1px solid gray;
+  background-color: #fff;
   grid-area: header;
   justify-content: space-between;
   align-items: flex-start;
