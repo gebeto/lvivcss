@@ -1,0 +1,7 @@
+:root {
+  --body-grid: "nav""hero""content";
+  --body-columns: calc(100vw - 2rem);
+  --body-margin: 0 1rem;
+  --body-rows: var(--navigation-size) min-content 1fr;
+  --conference-date-font-size: 1rem;
+}
