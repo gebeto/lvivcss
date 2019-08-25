@@ -6,12 +6,25 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#4A148C">
+	<!-- icon in the highest resolution we need it for -->
+	<link rel="icon" sizes="192x192" href="assets/icon.192.png">
+	<!-- reuse same icon for Safari -->
+	<link rel="apple-touch-icon" href="assets/icon.512.png">
 	<meta property="og:type" content="website">
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker
+				.register('/sw.js')
+				.then(function () { console.log("Service Worker Registered"); });
+		}
+	</script>
 	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/glacialindifference-bold-webfont.woff2">
 	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/manrope-light-webfont.woff2">
 	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/manrope-regular-webfont.woff2">
 	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/manrope-bold-webfont.woff2">
 	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/manrope-extrabold-webfont.woff2">
+	<link rel="manifest" href="/app.webmanifest">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.google-analytics.com/analytics.js"></script>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145644243-1"></script>
@@ -26,7 +39,8 @@
 	<meta property="og:image" content="https://lvivcss.org/assets/images/og-index/cover.jpg">
 	<meta property="og:url" content="https://lvivcss.org/">
 	<meta property="og:description"
-		content="LvivCSS повертається, щоб стати ще кращою, цікавішою і найнезвичайнішою подією року! LvivCSS — конференція про симбіоз дизайну та розробки, про найкращі практики створення красивого і зручного. І, звичайно ж, це про дружню атмосферу, нові знайомства і нові враження! Не проґав свій шанс прийняти участь в одній з найкрутіших frontend-конференцій України!">	<meta name="description" content="LvivCSS'19, найяскравіша конференція України. Конференція не тільки про CSS">
+		content="LvivCSS повертається, щоб стати ще кращою, цікавішою і найнезвичайнішою подією року! LvivCSS — конференція про симбіоз дизайну та розробки, про найкращі практики створення красивого і зручного. І, звичайно ж, це про дружню атмосферу, нові знайомства і нові враження! Не проґав свій шанс прийняти участь в одній з найкрутіших frontend-конференцій України!">	<script defer src="./js/install.js" type="module"></script>
+	<meta name="description" content="LvivCSS'19, найяскравіша конференція України. Конференція не тільки про CSS">
 	<link rel="stylesheet" href="css/hero.layout.min.css">
 	<link rel="stylesheet" href="css/hero.layout.portrait.css" media="(orientation: portrait), (max-height: 480px)">
 </head>
@@ -71,4 +85,11 @@
 		<p>Слідкуй за нами в <a href="https://t.me/lvivcss">telegram-каналі</a></p>
 		<p>Долучайся до події у <a href="https://www.facebook.com/events/491374968072733/">facebook</a></p>
 	</section>
+	<div id="installBanner" class="install-banner">
+		Тепер і PWA!
+		<div>
+			<button id="install">Встановити</button>
+			<button id="dismiss">Сховати</button>
+		</div>
+	</div>
 </body>

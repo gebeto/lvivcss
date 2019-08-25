@@ -5,6 +5,7 @@
 	<title>LvivCSS'19 — конференція не тільки про CSS</title>
 	{{> head}}
 	{{> def-og}}
+	<script defer src="./js/install.js" type="module"></script>
 	<meta name="description" content="LvivCSS'19, найяскравіша конференція України. Конференція не тільки про CSS">
 	<link rel="stylesheet" href="css/hero.layout.min.css">
 	<link rel="stylesheet" href="css/hero.layout.portrait.css" media="(orientation: portrait), (max-height: 480px)">
@@ -27,4 +28,11 @@
 		<p>Слідкуй за нами в <a href="https://t.me/lvivcss">telegram-каналі</a></p>
 		<p>Долучайся до події у <a href="https://www.facebook.com/events/491374968072733/">facebook</a></p>
 	</section>
+	<div id="installBanner" class="install-banner">
+		Тепер і PWA!
+		<div>
+			<button id="install">Встановити</button>
+			<button id="dismiss">Сховати</button>
+		</div>
+	</div>
 </body>
