@@ -7,7 +7,7 @@
 		"footer";
 	--body-columns: 1fr;
 	--logo-top-padding: 0;
-	--sticky-top: var(--navigation-size);
+	--sticky-top: var(--nav-height);
 	--body-margin: 0 1rem;
-	--body-rows: var(--navigation-size) repeat(3, min-content);
+	--body-rows: var(--nav-height) repeat(3, min-content);
 }

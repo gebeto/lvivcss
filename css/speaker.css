@@ -3,11 +3,19 @@
   --photo-width: 6rem;
   --photo-height: calc(var(--photo-width) * (4 / 3));
   --body-top-padding: 1rem;
-  --paragraph-font-size: 0.75rem;
+  --paragraph-font-size: var(--text-small);
+}
+
+h4 {
+  font-size: var(--text-big);
+}
+
+h3 {
+  font-size: var(--text-huge);
 }
 
 h4 small {
-  font-size: 50%;
+  font-size: var(--text-tiny);
   font-weight: 700;
 }
 
@@ -49,11 +57,5 @@ h4 small {
 @media (min-width:1366px) {
   :root {
     --column-count: 3;
-  }
-}
-
-@media (max-width:480px) {
-  :root {
-    --photo-width: 4rem;
   }
 }

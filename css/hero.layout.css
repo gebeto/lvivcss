@@ -1,6 +1,6 @@
 :root {
   --body-grid: "nav hero content";
-  --body-columns: var(--navigation-size) 4fr 3fr;
+  --body-columns: var(--nav-height) 4fr 3fr;
   --content-padding: 1rem;
   --body-margin: 0;
   --body-rows: 1fr;
@@ -33,11 +33,12 @@ body {
 }
 
 .conference-date {
-  font-size: var(--conference-date-font-size);
+  font-size: var(--text-normal);
   font-weight: 700;
 }
 
 .conference-address {
+  font-size: var(--text-tiny);
   font-style: normal;
 }
 
@@ -48,7 +49,7 @@ body {
 @media (max-width:1280px) {
   :root {
     --body-grid: "nav hero""nav content";
-    --body-columns: var(--navigation-size) 1fr;
+    --body-columns: var(--nav-height) 1fr;
     --content-padding: 0;
   }
 }

@@ -3,7 +3,7 @@
     "nav header"
     "nav content"
     "nav footer";
-  --body-columns: var(--navigation-size) 1fr;
+  --body-columns: var(--nav-height) 1fr;
   --logo-top-padding: 1rem;
   --sticky-top: 0;
   --body-margin: 0 1rem 0 0;

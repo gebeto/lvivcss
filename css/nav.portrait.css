@@ -1,8 +1,7 @@
 :root {
   --nav-width: auto;
-  --navigation-size: 2rem;
-  --navigation-item-height: 3rem;
-  --nav-header-color: #4A148C;
+  --nav-height: 3rem;
+  --navigation-item-height: var(--nav-height);
 }
 
 .backdrop {
@@ -21,8 +20,8 @@
 .navigation {
   z-index: 99;
   top: 0;
-  height: 2rem;
-  font-size: .7em;
+  height: var(--nav-height);
+  font-size: var(--text-small);
 }
 
 .navigation .slider {
@@ -32,31 +31,27 @@
   width: 100vw;
   height: auto;
   padding: 0 1rem;
-  transition-duration: 200ms;
-  transition-property: transform;
+  transition: 200ms transform;
   transform: none;
-  border-bottom: 1px dashed #333;
+  border-bottom: 1px dashed var(--color-gray);
   background-color: #fff;
 }
 
 .nav-header {
   display: flex;
   margin-bottom: 0;
-  transition-duration: 200ms;
-  transition-property: opacity;
-  color: var(--nav-header-color);
+  transition: 200ms opacity;
+  color: var(--color-deep-purple);
   border: 0;
   outline: 0;
   background-color: transparent;
-  font-family: Manrope_;
-  font-size: .7rem;
-  font-weight: 700;
-  line-height: 2rem;
+  font: 700 var(--text-normal) Manrope_;
+  line-height: var(--nav-height);
   align-items: center;
 }
 
 .navigation:focus-within .slider {
-  transform: translateY(calc(100% - 2rem));
+  transform: translateY(calc(100% - var(--nav-height)));
 }
 
 .navigation:focus-within .nav-header {
@@ -74,5 +69,5 @@
   width: 12px;
   height: 9px;
   margin-right: .4rem;
-  background-image: linear-gradient(var(--nav-header-color) 0, var(--nav-header-color) 1px, transparent 1px, transparent 4px, var(--nav-header-color) 4px, var(--nav-header-color) 5px, transparent 5px, transparent 8px, var(--nav-header-color) 8px, var(--nav-header-color) 9px);
+  background-image: linear-gradient(var(--color-deep-purple) 0, var(--color-deep-purple) 1px, transparent 1px, transparent 4px, var(--color-deep-purple) 4px, var(--color-deep-purple) 5px, transparent 5px, transparent 8px, var(--color-deep-purple) 8px, var(--color-deep-purple) 9px);
 }

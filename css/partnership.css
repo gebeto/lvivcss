@@ -35,7 +35,6 @@ section {
 
 @media (orientation:portrait) {
   :root {
-    --base-font-size: 14pt;
     --section-margin: 0 1rem;
   }
 }
