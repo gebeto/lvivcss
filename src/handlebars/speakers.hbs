@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="uk">
-
-<head>
-	<title>Це — спікери LvivCSS'19. Вони готують для тебе свої доповіді.</title>
-	<meta property="og:title" content="Це — спікери LvivCSS'19">
-	<meta property="og:url" content="https://lvivcss.org/speakers.html">
-	<meta property="og:description"
-		content="Найкращі спікери з України та Білорусі, що виступатимуть на LvivCSS'19, найяскравішій конференції України">
-	<meta property="og:image" content="https://lvivcss.org/assets/images/og-index/cover.jpg">
-	{{> head}}
-	<meta name="description"
-		content="Найкращі спікери з України та Білорусі, що виступатимуть на LvivCSS'19, найяскравішій конференції України">
-</head>
+{{> head page=pages.speakers}}
 
 <body class="page-layout">
 	{{> nav path="speakers.html"}}
@@ -20,7 +7,7 @@
 		Наші спікери<br>
 		<a class="call-to-action" href="http://bit.ly/lvivcss2019-become-a-speaker">запропонуй доповідь</a>
 	</h2>
-	<section class="page-layout-content columns">
+	<div class="page-layout-content columns">
 		{{#each speakers}}
 		<article class="column-card">
 			{{#if this.talkName}}<h3>{{this.talkName}}</h3>{{/if}}
@@ -38,5 +25,5 @@
 		</article>
 		{{/each}}
 		<p class="cliffhanger">…далі буде…</p>
-	</section>
+	</div>
 </body>

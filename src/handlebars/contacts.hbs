@@ -1,29 +1,10 @@
-<!DOCTYPE html>
-<html lang="uk">
-
-<head>
-	<title>Контакти організаторів LvivCSS'19</title>
-	{{> head}}
-	<meta property="og:title" content="Це — контакти організаторів LvivCSS'19">
-	<meta property="og:image" content="https://lvivcss.org/assets/images/og-index/cover.jpg">
-	<meta property="og:url" content="https://lvivcss.org/contacts.html">
-	<meta property="og:description"
-		content="Організатори дуже стараються, щоб LvivCSS'19 вийшла такою, щоб про неї переповідали прийдешні покоління. І тільки хороше.">
-	<meta name="description"
-		content="Це сторінка з контактами організаторів LvivCSS'19, найяскравішої конференції України. Конференції не тільки про CSS">
-	<style>
-		.global-logo {
-			width: 200px;
-			margin: 1rem 0 0 0;
-		}
-	</style>
-</head>
+{{> head page=pages.contacts}}
 
 <body class="hero-layout">
 	{{> nav path='contacts.html'}}
 	<section class="hero">
 		{{> hero}}
-		<img class="global-logo" src="assets/images/partners/globalcss.jpg" alt="GlobalCSS" loading="auto">
+		<img width="200" src="./assets/images/globalcss.svg" alt="GlobalCSS">
 		<p>Нам можна <b>писати:</b></p><a href="mailto:lvivcss@outlook.com">lvivcss@outlook.com</a>
 		<p>Нам можна <b>телефонувати:</b></p>
 		<ul>
@@ -31,7 +12,5 @@
 			<li>Марія: <a href="tel:+380935924040">+380 93 592 40 40</a></li>
 			<li>Наталя: <a href="tel:+380508568637">+380 50 856 86 37</a></li>
 		</ul>
-	</section>
-	<section class="content">
 	</section>
 </body>

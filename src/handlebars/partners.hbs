@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="uk">
-
-<head>
-	{{> head}}
-	<title>Це — партнери LvivCSS'19. Вони допомагають нам робити конференцію і дуже чекають на тебе.</title>
-	<meta property="og:title" content="Це — партнери LvivCSS'2019">
-	<meta property="og:url" content="https://lvivcss.org/partners.html">
-	<meta property="og:description"
-		content="Найкращі партнери, що підтримують LvivCSS'19, найяскравішу конференцію України">
-	<meta property="og:image" content="https://lvivcss.org/assets/images/og-index/cover.jpg">
-	<meta name="description"
-		content="Найкращі партнери, що підтримують LvivCSS'19, найяскравішу конференцію України">
-	{{!-- <link rel="stylesheet" href="css/partners.css"> --}}
-</head>
+{{> head page=pages.partners}}
 
 <body class="page-layout">
 	{{> nav path='partners.html'}}
@@ -21,17 +7,13 @@
 		Наші партнери<br>
 		<a class="call-to-action" href="./partnership.html">стати нашим партнером</a>
 	</h2>
-	<section class="page-layout-content">
+	<div class="page-layout-content">
 		{{#each partners as |partner|}}
 		<section class="partner-category">
 			<h3>{{partner.title}}</h3>
 			{{#each partner.items}}
 			<figure class="{{partner.name}} partner">
-				<img
-					alt="{{this.name}}"
-					class="partner-logo"
-					src="/assets/images/partners/{{this.logo}}.jpg"
-					loading="lazy">
+				<img alt="{{this.name}}" class="partner-logo" src="/assets/images/partners/{{this.logo}}.jpg" loading="lazy">
 				<figcaption>
 					{{#if this.url}}
 					<a href="{{this.url}}">{{this.name}}</a>
@@ -43,5 +25,5 @@
 			{{/each}}
 		</section>
 		{{/each}}
-	</section>
+	</div>
 </body>

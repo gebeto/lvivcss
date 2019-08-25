@@ -61,7 +61,7 @@ body {
   grid-area: hero;
 }
 
-.hero-layout .content {
+.hero-layout-content {
   box-sizing: border-box;
   padding: 1rem;
   grid-area: content;

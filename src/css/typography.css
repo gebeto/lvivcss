@@ -80,7 +80,7 @@ h6 {
   line-height: 1.2;
 }
 
-p {
+p, address {
   margin: 0 0 1em 0;
 }
 
