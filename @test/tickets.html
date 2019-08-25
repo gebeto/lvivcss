@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<title>Квитки на LvivCSS'19. Якщо в тебе буде такий, ти зможеш відвідати найкрутішу конференцію про frontend. Так просто.</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#4A148C">
+	<!-- icon in the highest resolution we need it for -->
+	<link rel="icon" sizes="192x192" href="assets/icon.192.png">
+	<!-- reuse same icon for Safari -->
+	<link rel="apple-touch-icon" href="assets/icon.512.png">
+	<meta property="og:type" content="website">
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker
+				.register('/sw.js')
+				.then(function () { console.log("Service Worker Registered"); });
+		}
+	</script>
+	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/glacialindifference-bold-webfont.woff2">
+	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/manrope-light-webfont.woff2">
+	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/manrope-regular-webfont.woff2">
+	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/manrope-bold-webfont.woff2">
+	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/manrope-extrabold-webfont.woff2">
+	<link rel="manifest" href="/app.webmanifest">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.google-analytics.com/analytics.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145644243-1"></script>
+	<script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-145644243-1');</script>
+	<link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/index.min.css">
+	<link rel="stylesheet" href="css/index.240.css" media="(max-width: 240px)">
+	<link rel="stylesheet" href="css/nav.landscape.min.css" media="(orientation: landscape)">
+	<link rel="stylesheet" href="css/nav.portrait.min.css" media="(orientation: portrait), (max-height: 480px)">
+	<link rel="stylesheet" href="css/logo.640.css" media="(max-width: 640px)">
+	<link rel="stylesheet" href="css/logo.320.css" media="(max-width: 320px)">	<meta property="og:title" content="Це — квитки на LvivCSS'19">
+	<meta property="og:url" content="https://lvivcss.org/tickets.html">
+	<meta property="og:description"
+		content="Тут ти можеш придбати квиток на конференцію, якщо в тебе ще досі такого нема. А чому це в тебе його досі нема?!">
+	<meta property="og:image" content="https://lvivcss.org/assets/images/og-index/cover.jpg">
+	<meta name="description" content="Це сторінка, де можна придбати квитки на LvivCSS'19, найяскравішу конференцію України. І нам буде дуже прикро, якщо вона відбудеться без тебе.">
+	<link rel="stylesheet" href="css/hero.layout.min.css">
+	<link rel="stylesheet" href="css/hero.layout.portrait.css" media="(orientation: portrait), (max-height: 480px)">
+	<style>.teaser{--paragraph-font-size: 0.75rem}</style>
+</head>
+
+<body>
+	<nav class="navigation">
+		<div class="slider">
+			<a class="nav-link  "
+				href="/">Головна</a>
+			<a class="nav-link  "
+				href="speakers.html">Спікери</a>
+			<a class="nav-link active flare"
+				href="tickets.html">Квитки</a>
+			<a class="nav-link  "
+				href="partners.html">Партнери</a>
+			<a class="nav-link  "
+				href="contacts.html">Контакти</a>
+			<button class="nav-header">
+				<span class="burger"></span>навігація
+			</button>
+		</div>
+	</nav>
+	<div class="backdrop"></div>	<section class="hero">
+		<h1 class="logo">LvivCSS'19</h1>
+		<p class="logo-motto">конференція <b>не тільки про CSS</b></p>
+		<p><time class="conference-date" datetime="2019-11-02">2 листопада 2019</time></p>
+		<address class="conference-address">
+			<a href="https://goo.gl/maps/m17XLnBE8UHEeM1n6" target="_blank" rel="noreferrer">
+				<b>MolodoZeleno</b>,
+				вул. Джерельна 20, м. Львів
+			</a>
+		</address>	</section>
+	<section class="content">
+		<script src="https://lvivcss2019.ticketforevent.com/uk/widget/?h=0&s=0&bt=1&template=flatwhite"></script>
+		<p class="teaser"><b>2 потоки</b> з <a href="./speakers.html"><b>15 спікерів</b></a> з цікавими темами, заснованими на власному досвіді.</p>
+		<p class="teaser">Цілий день насиченого спілкування та приємних несподіванок від нас та наших партнерів.</p>
+		<p class="teaser">А ти ще без квитка.</p>
+	</section>
+</body>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#4A148C">
+	<!-- icon in the highest resolution we need it for -->
+	<link rel="icon" sizes="192x192" href="assets/icon.192.png">
+	<!-- reuse same icon for Safari -->
+	<link rel="apple-touch-icon" href="assets/icon.512.png">
+	<meta property="og:type" content="website">
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker
+				.register('/sw.js')
+				.then(function () { console.log("Service Worker Registered"); });
+		}
+	</script>
+	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/glacialindifference-bold-webfont.woff2">
+	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/manrope-light-webfont.woff2">
+	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/manrope-regular-webfont.woff2">
+	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/manrope-bold-webfont.woff2">
+	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/manrope-extrabold-webfont.woff2">
+	<link rel="manifest" href="/app.webmanifest">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.google-analytics.com/analytics.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145644243-1"></script>
+	<script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-145644243-1');</script>
+	<link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/index.min.css">
+	<link rel="stylesheet" href="css/index.240.css" media="(max-width: 240px)">
+	<link rel="stylesheet" href="css/nav.landscape.min.css" media="(orientation: landscape)">
+	<link rel="stylesheet" href="css/nav.portrait.min.css" media="(orientation: portrait), (max-height: 480px)">
+	<link rel="stylesheet" href="css/logo.640.css" media="(max-width: 640px)">
+	<link rel="stylesheet" href="css/logo.320.css" media="(max-width: 320px)">	<title>Це — партнери LvivCSS'19. Вони допомагають нам робити конференцію і дуже чекають на тебе.</title>
+	<meta property="og:title" content="Це — партнери LvivCSS'2019">
+	<meta property="og:url" content="https://lvivcss.org/partners.html">
+	<meta property="og:description"
+		content="Найкращі партнери, що підтримують LvivCSS'19, найяскравішу конференцію України">
+	<meta property="og:image" content="https://lvivcss.org/assets/images/og-index/cover.jpg">
+	<meta name="description"
+		content="Найкращі партнери, що підтримують LvivCSS'19, найяскравішу конференцію України">
+	<link rel="stylesheet" href="css/page.layout.css">
+	<link rel="stylesheet" href="css/page.layout.portrait.css" media="(orientation:portrait), (max-height: 480px)">
+	<link rel="stylesheet" href="css/partners.css">
+</head>
+
+<body class="page">
+	<nav class="navigation">
+		<div class="slider">
+			<a class="nav-link  "
+				href="/">Головна</a>
+			<a class="nav-link  "
+				href="speakers.html">Спікери</a>
+			<a class="nav-link  flare"
+				href="tickets.html">Квитки</a>
+			<a class="nav-link active "
+				href="partners.html">Партнери</a>
+			<a class="nav-link  "
+				href="contacts.html">Контакти</a>
+			<button class="nav-header">
+				<span class="burger"></span>навігація
+			</button>
+		</div>
+	</nav>
+	<div class="backdrop"></div>	<h1 class="logo small"><a href="./">LvivCSS'19</a></h1>
+	<h2 class="page-title sticky">
+		Наші партнери
+		<a class="action-link" href="./partnership.html">стати нашим партнером</a>
+	</h2>
+	<section class="content columns">
+		<section>
+			<h3>Золоті</h3>
+			<figure class="gold partner">
+				<img
+					alt="Coingaming"
+					class="partner-logo"
+					src="/assets/images/partners/coingaming.jpg"
+					loading="lazy">
+				<figcaption>
+					<a href="https://coingaming.io">Coingaming</a>
+				</figcaption>
+			</figure>
+			<figure class="gold partner">
+				<img
+					alt="Svitla Systems"
+					class="partner-logo"
+					src="/assets/images/partners/svitla.jpg"
+					loading="lazy">
+				<figcaption>
+					<a href="https://svitla.com">Svitla Systems</a>
+				</figcaption>
+			</figure>
+		</section>
+		<section>
+			<h3>Бронзові</h3>
+			<figure class="bronze partner">
+				<img
+					alt="Sigma Software"
+					class="partner-logo"
+					src="/assets/images/partners/sigma.jpg"
+					loading="lazy">
+				<figcaption>
+					Sigma Software
+				</figcaption>
+			</figure>
+		</section>
+		<section>
+			<h3>Інформаційні</h3>
+			<figure class="info partner">
+				<img
+					alt="VinnytsiaJS"
+					class="partner-logo"
+					src="/assets/images/partners/vinnytsiajs.jpg"
+					loading="lazy">
+				<figcaption>
+					VinnytsiaJS
+				</figcaption>
+			</figure>
+			<figure class="info partner">
+				<img
+					alt="GIRL IN TECH"
+					class="partner-logo"
+					src="/assets/images/partners/girl-in-tech.jpg"
+					loading="lazy">
+				<figcaption>
+					<a href="https://t.me/girlintech">GIRL IN TECH</a>
+				</figcaption>
+			</figure>
+		</section>
+	</section>
+</body>
