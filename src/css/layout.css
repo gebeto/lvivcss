@@ -1,33 +1,20 @@
-:root {
-  --heroPadding: 0;
-  --heroLayout: "nav hero content";
-  --heroColumns: var(--navWidth) 4fr 3fr;
-  --heroRows: 1fr;
-  --heroVerticalAlign: center;
-
-  --pagePadding: 0 1rem 0 0;
-  --pageLayout: "nav logo""nav header""nav content""nav footer";
-  --pageColumns: var(--navWidth) 1fr;
-  --pageRows: repeat(4, min-content);
-  --pageVerticalAlign: center;
-  --pageTitleTop: 0;
-
-  --columnCount: 3;
-  --cardImgWidth: 6rem;
-  --cardImgHeight: calc(var(--cardImgWidth) / 3 * 4);
-}
-
 html,
 body {
   width: 100%;
-  max-width: 100%;
   min-width: 240px;
+  max-width: 100%;
   min-height: 100%;
   margin: 0;
   padding: 0;
 }
 
 .hero-layout {
+  --heroPadding: 0;
+  --heroLayout: "nav hero content";
+  --heroColumns: var(--navWidth) 4fr 3fr;
+  --heroRows: 1fr;
+  --heroVerticalAlign: center;
+
   display: grid;
   box-sizing: border-box;
   min-height: 100vh;
@@ -41,6 +28,13 @@ body {
 }
 
 .page-layout {
+  --pagePadding: 0 1rem 0 0;
+  --pageLayout: "nav logo""nav header""nav content""nav footer";
+  --pageColumns: var(--navWidth) 1fr;
+  --pageRows: repeat(4, min-content);
+  --pageVerticalAlign: center;
+  --pageTitleTop: 0;
+
   display: grid;
   box-sizing: border-box;
   min-height: 100vh;
@@ -86,7 +80,7 @@ body {
 }
 
 @media (orientation:landscape) and (max-width:1280px) {
-  :root {
+  .hero-layout {
     --heroLayout: "nav hero""nav content";
     --heroRows: 1fr;
   }
@@ -94,13 +88,15 @@ body {
 
 @media (orientation:portrait),
 (max-height:420px) {
-  :root {
+  .hero-layout {
     --heroLayout: "nav""hero""content";
     --heroColumns: 1fr;
     --heroRows: var(--navHeight) min-content 1fr;
     --heroPadding: 0;
     --heroVerticalAlign: flex-start;
+  }
 
+  .page-layout {
     --pageLayout: "nav""logo""header""content""footer";
     --pagePadding: 0 1rem;
     --pageRows: var(--navHeight) repeat(3, min-content);

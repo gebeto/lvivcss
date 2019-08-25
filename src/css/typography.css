@@ -42,10 +42,10 @@
 }
 
 html {
+  hyphens: auto;
   font-family: Manrope_, Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: var(--sizeM);
   line-height: 1.5;
-  hyphens: auto;
 }
 
 h1 {

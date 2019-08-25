@@ -15,6 +15,9 @@
   .logo {
     font-size: var(--size3XL);
   }
+  .logo.small {
+    margin: 0;
+  }
 }
 
 @supports (-webkit-background-clip:text) {

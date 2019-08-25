@@ -5,8 +5,8 @@
 
 .main-nav {
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   display: flex;
   flex-direction: row-reverse;
   width: var(--navHeight);
@@ -78,34 +78,35 @@
 
   .main-nav-toggle {
     --clrToggle: var(--clrPurplePrimary);
-    display: block;
+    display: flex;
     height: var(--navHeight);
     padding: 0 1rem;
     text-align: left;
     color: var(--clrToggle);
     border: none;
     background: transparent;
-    font: 900 Manrope;
-    font-size: var(--sizeM);
+    font-size: var(--sizeS);
     font-weight: 700;
+    align-items: center;
   }
 
   .main-nav-toggle::before {
     display: inline-block;
-    width: 12px;
-    height: 9px;
+    width: 16px;
+    height: 12px;
     margin-right: .4rem;
     content: "";
-    background-image: linear-gradient(var(--clrToggle) 0,
-        var(--clrToggle) 1px,
-        transparent 1px,
-        transparent 4px,
-        var(--clrToggle) 4px,
-        var(--clrToggle) 5px,
+    background-image: linear-gradient(
+        var(--clrToggle) 0,
+        var(--clrToggle) 2px,
+        transparent 2px,
         transparent 5px,
-        transparent 8px,
-        var(--clrToggle) 8px,
-        var(--clrToggle) 9px);
+        var(--clrToggle) 5px,
+        var(--clrToggle) 7px,
+        transparent 7px,
+        transparent 10px,
+        var(--clrToggle) 10px,
+        var(--clrToggle) 12px);
   }
 
   .main-nav:focus-within .main-nav-toggle {

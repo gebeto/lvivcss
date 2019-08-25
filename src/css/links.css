@@ -8,8 +8,8 @@ a:hover {
 }
 
 a.important {
-	font-weight: 700;
 	font-size: var(--sizeXL);
+	font-weight: 700;
 }
 
 a.not-so.important {
@@ -17,7 +17,9 @@ a.not-so.important {
 }
 
 a.call-to-action {
-	font-size: var(--sizeL);
+	display: inline-block;
+	font-size: var(--sizeM);
+	line-height: 1.2;
 }
 
 address a {

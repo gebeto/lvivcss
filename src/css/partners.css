@@ -9,9 +9,10 @@
 .partner {
   --partnerLogoSize: 10rem;
   --labelFontSize: calc(var(--partnerLogoSize) / 10);
+
   float: left;
-  break-inside: avoid;
   margin: 0;
+  break-inside: avoid;
 }
 
 figcaption {

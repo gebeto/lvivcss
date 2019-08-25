@@ -1,4 +1,7 @@
 .columns {
+  --columnCount: 3;
+  --cardImgWidth: 6rem;
+  --cardImgHeight: calc(var(--cardImgWidth) / 3 * 4);
   column-count: var(--columnCount);
   column-gap: 2rem;
 }
@@ -30,13 +33,13 @@
 }
 
 @media (max-width:1366px) {
-  :root {
+  .columns {
     --columnCount: 2;
   }
 }
 
 @media (max-width:768px) {
-  :root {
+  .columns {
     --columnCount: 1;
   }
 }
