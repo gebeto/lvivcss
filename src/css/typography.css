@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "GlacialIndifference";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url(../assets/fonts/glacialindifference-bold-webfont.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Manrope_";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url(../assets/fonts/manrope-regular-webfont.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Manrope_";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url(../assets/fonts/manrope-bold-webfont.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Manrope_";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url(../assets/fonts/manrope-extrabold-webfont.woff2) format("woff2");
+}
+
+:root {
+  --scale: 1.2;
+  --sizeM: 16pt;
+  --sizeXS: calc(var(--sizeS) / var(--scale));
+  --sizeS: calc(var(--sizeM) / var(--scale));
+  --sizeL: calc(var(--sizeM) * var(--scale));
+  --sizeXL: calc(var(--sizeL) * var(--scale));
+  --sizeXXL: calc(var(--sizeXL) * var(--scale));
+  --size3XL: calc(var(--sizeXXL) * var(--scale));
+}
+
+html {
+  font-family: Manrope_, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: var(--sizeM);
+  line-height: 1.5;
+  hyphens: auto;
+}
+
+h1 {
+  font-size: var(--size3XL);
+}
+
+h2 {
+  font-size: var(--sizeXXL);
+}
+
+h3 {
+  font-size: var(--sizeXL);
+}
+
+h4 {
+  font-size: var(--sizeL);
+}
+
+h5,
+h6 {
+  font-size: var(--sizeM);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.5em 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+small {
+  font-size: var(--sizeXS);
+}
+
+address {
+  font-style: normal;
+}
+
+@media (orientation:landscape) and (max-width:568px) {
+  :root {
+    --sizeM: 14pt;
+  }
+}
+
+@media (max-width:240px) {
+  :root {
+    --sizeM: 10pt;
+  }
+}

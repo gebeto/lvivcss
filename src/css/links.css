@@ -1,0 +1,25 @@
+a {
+  text-decoration: none;
+  color: var(--clrBlueDeep);
+}
+
+a:hover {
+  color: var(--clrBlueLight);
+}
+
+a.important {
+	font-weight: 700;
+	font-size: var(--sizeXL);
+}
+
+a.not-so.important {
+	font-size: var(--sizeL);
+}
+
+a.call-to-action {
+	font-size: var(--sizeL);
+}
+
+address a {
+	color: var(--clrText);
+}

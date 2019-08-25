@@ -1,0 +1,42 @@
+.columns {
+  column-count: var(--columnCount);
+  column-gap: 2rem;
+}
+
+.column-card {
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px dashed gray;
+  break-inside: avoid;
+}
+
+.column-card-img {
+  float: left;
+  box-sizing: border-box;
+  width: var(--cardImgWidth);
+  height: var(--cardImgHeight);
+  margin: 5pt 1rem 0 0;
+}
+
+.column-card p:empty+p {
+  margin-top: 0;
+}
+
+.cliffhanger {
+	margin-top: 1rem;
+	text-align: center;
+	column-span: all;
+}
+
+@media (max-width:1366px) {
+  :root {
+    --columnCount: 2;
+  }
+}
+
+@media (max-width:768px) {
+  :root {
+    --columnCount: 1;
+  }
+}

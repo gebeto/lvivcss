@@ -2,9 +2,9 @@
   "name": "lvivcssweb",
   "version": "0.0.0",
   "scripts": {
-    "hbs": "hbs -P './hbs/partials/*' -H ./hbs/helpers/*.js -D './data/data.json' './hbs/**.hbs'",
-    "start": "live-server",
-    "deploy": "firebase deploy"
+    "hbs": "hbs -P './src/handlebars/partials/*' -H ./src/handlebars/helpers/*.js -D './data/data.json' './src/handlebars/**.hbs'",
+    "css": "css-combine ./src/css/index.css > index.css",
+    "start": "live-server"
   },
   "private": true,
   "dependencies": {

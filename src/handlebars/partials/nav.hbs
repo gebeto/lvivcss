@@ -1,0 +1,10 @@
+<nav class="main-nav">
+	{{#each navigation}}
+	<a class="main-nav-link {{#eq ../path this.href}}active{{/eq}} {{#if this.isFlare}}flare{{/if}}"
+		href="{{this.href}}">{{this.title}}</a>
+	{{/each}}
+	<button class="main-nav-toggle">
+		навігація
+	</button>
+</nav>
+<div class="main-nav-backdrop"></div>

@@ -11,21 +11,19 @@
 	<meta property="og:image" content="https://lvivcss.org/assets/images/og-index/cover.jpg">
 	<meta name="description"
 		content="Найкращі партнери, що підтримують LvivCSS'19, найяскравішу конференцію України">
-	<link rel="stylesheet" href="css/page.layout.css">
-	<link rel="stylesheet" href="css/page.layout.portrait.css" media="(orientation:portrait), (max-height: 480px)">
-	<link rel="stylesheet" href="css/partners.css">
+	{{!-- <link rel="stylesheet" href="css/partners.css"> --}}
 </head>
 
-<body class="page">
+<body class="page-layout">
 	{{> nav path='partners.html'}}
 	<h1 class="logo small"><a href="./">LvivCSS'19</a></h1>
-	<h2 class="page-title sticky">
-		Наші партнери
-		<a class="action-link" href="./partnership.html">стати нашим партнером</a>
+	<h2 class="page-layout-title">
+		Наші партнери<br>
+		<a class="call-to-action" href="./partnership.html">стати нашим партнером</a>
 	</h2>
-	<section class="content columns">
+	<section class="page-layout-content">
 		{{#each partners as |partner|}}
-		<section>
+		<section class="partner-category">
 			<h3>{{partner.title}}</h3>
 			{{#each partner.items}}
 			<figure class="{{partner.name}} partner">

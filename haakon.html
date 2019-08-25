@@ -17,16 +17,11 @@
 	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/manrope-bold-webfont.woff2">
 	<link rel="prefetch" as="font" crossorigin="anonymous" href="/assets/fonts/manrope-extrabold-webfont.woff2">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="index.css">
 	<script async src="https://www.google-analytics.com/analytics.js"></script>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145644243-1"></script>
 	<script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-145644243-1');</script>
-	<link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-	<link rel="stylesheet" href="css/index.min.css">
-	<link rel="stylesheet" href="css/index.240.css" media="(max-width: 240px)">
-	<link rel="stylesheet" href="css/nav.landscape.min.css" media="(orientation: landscape)">
-	<link rel="stylesheet" href="css/nav.portrait.min.css" media="(orientation: portrait), (max-height: 480px)">
-	<link rel="stylesheet" href="css/logo.640.css" media="(max-width: 640px)">
-	<link rel="stylesheet" href="css/logo.320.css" media="(max-width: 320px)">
 	<meta name="description" content="Це — інтерв'ю з Haakon Wium Lie. Винахідником CSS. І він був на LvivCSS2018">
 
 	<link rel="stylesheet" href="css/page.layout.css">
@@ -79,24 +74,22 @@
 </head>
 
 <body class="page">
-	<nav class="navigation">
-		<div class="slider">
-			<a class="nav-link  "
-				href="/">Головна</a>
-			<a class="nav-link  "
-				href="speakers.html">Спікери</a>
-			<a class="nav-link  flare"
-				href="tickets.html">Квитки</a>
-			<a class="nav-link  "
-				href="partners.html">Партнери</a>
-			<a class="nav-link  "
-				href="contacts.html">Контакти</a>
-			<button class="nav-header">
-				<span class="burger"></span>навігація
-			</button>
-		</div>
+	<nav class="main-nav">
+		<a class="main-nav-link  "
+			href="/">Головна</a>
+		<a class="main-nav-link  "
+			href="speakers.html">Спікери</a>
+		<a class="main-nav-link  flare"
+			href="tickets.html">Квитки</a>
+		<a class="main-nav-link  "
+			href="partners.html">Партнери</a>
+		<a class="main-nav-link  "
+			href="contacts.html">Контакти</a>
+		<button class="main-nav-toggle">
+			навігація
+		</button>
 	</nav>
-	<div class="backdrop"></div>	<h1 class="logo small"><a href="./">LvivCSS'19</a></h1>
+	<div class="main-nav-backdrop"></div>	<h1 class="logo small"><a href="./">LvivCSS'19</a></h1>
 	<section class="content">
 		<h2 class="page-title">
 			Haakon Wium Lie. Від CSS до LvivCSS
