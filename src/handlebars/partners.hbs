@@ -1,0 +1,29 @@
+{{> head page=pages.partners}}
+
+<body class="page-layout">
+	{{> nav path='partners.html'}}
+	<h1 class="logo small"><a href="./">LvivCSS'19</a></h1>
+	<h2 class="page-layout-title">
+		Наші партнери<br>
+		<a class="call-to-action" href="./partnership.html">стати нашим партнером</a>
+	</h2>
+	<div class="page-layout-content">
+		{{#each partners as |partner|}}
+		<section class="partner-category">
+			<h3>{{partner.title}}</h3>
+			{{#each partner.items}}
+			<figure class="{{partner.name}} partner">
+				<img alt="{{this.name}}" class="partner-logo" src="/assets/images/partners/{{this.logo}}.jpg" loading="lazy">
+				<figcaption>
+					{{#if this.url}}
+					<a href="{{this.url}}">{{this.name}}</a>
+					{{else}}
+					{{this.name}}
+					{{/if}}
+				</figcaption>
+			</figure>
+			{{/each}}
+		</section>
+		{{/each}}
+	</div>
+</body>

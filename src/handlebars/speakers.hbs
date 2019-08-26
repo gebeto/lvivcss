@@ -1,0 +1,29 @@
+{{> head page=pages.speakers}}
+
+<body class="page-layout">
+	{{> nav path="speakers.html"}}
+	<h1 class="logo small"><a href="./">LvivCSS'19</a></h1>
+	<h2 class="page-layout-title sticky">
+		Наші спікери<br>
+		<a class="call-to-action" href="http://bit.ly/lvivcss2019-become-a-speaker">запропонуй доповідь</a>
+	</h2>
+	<div class="page-layout-content columns">
+		{{#each speakers}}
+		<article class="column-card">
+			{{#if this.talkName}}<h3>{{this.talkName}}</h3>{{/if}}
+			<h4>
+				{{this.speakerName}}
+				{{#if this.city}}<br><small>{{this.city}}</small>{{/if}}
+			</h4>
+
+			<img class="column-card-img"
+				srcset="/assets/images/speakers/{{this.image}}.128.jpg 128w, /assets/images/speakers/{{this.image}}.86.jpg 86w"
+				sizes="(max-width: 480px) 86px, 128px" src="/assets/images/speakers/{{this.image}}.jpg"
+				alt="{{this.speakerName}}">
+			{{#if this.talkDescription}}<p>{{this.talkDescription}}</p>{{/if}}
+			<p>{{{this.speakerBio}}}</p>
+		</article>
+		{{/each}}
+		<p class="cliffhanger">…далі буде…</p>
+	</div>
+</body>

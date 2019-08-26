@@ -1,0 +1,124 @@
+:root {
+  --navWidth: 3rem;
+  --navHeight: 100vh;
+}
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  width: var(--navHeight);
+  height: var(--navWidth);
+  transform: translateX(-100%) rotate(-90deg);
+  transform-origin: 100% 0;
+  text-transform: lowercase;
+  background-color: white;
+  line-height: var(--navWidth);
+  justify-content: space-around;
+}
+
+.main-nav-link.active {
+  color: var(--clrText);
+  font-weight: 900;
+}
+
+.main-nav-link.flare {
+  font-weight: 700;
+}
+
+.main-nav-toggle {
+  display: none;
+}
+
+.main-nav-backdrop {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 200ms;
+  pointer-events: none;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+@media (orientation:portrait),
+(max-height:420px) {
+  :root {
+    --navWidth: 100vw;
+    --navHeight: 2rem;
+  }
+
+  .main-nav {
+    position: fixed;
+    z-index: 10;
+    flex-direction: column;
+    width: var(--navWidth);
+    height: auto;
+    padding: .5rem 0 0 0;
+    transition: 200ms transform;
+    transform: translateY(calc(var(--navHeight) - 100%));
+    border-bottom: 1px dashed black;
+    font-size: var(--sizeM);
+    line-height: 1;
+  }
+
+  .main-nav:focus-within {
+    padding: .5rem 0;
+    transform: translateY(0);
+  }
+
+  .main-nav:focus-within+.main-nav-backdrop {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  .main-nav-toggle {
+    --clrToggle: var(--clrPurplePrimary);
+    display: flex;
+    height: var(--navHeight);
+    padding: 0 1rem;
+    text-align: left;
+    color: var(--clrToggle);
+    border: none;
+    background: transparent;
+    font-size: var(--sizeS);
+    font-weight: 700;
+    align-items: center;
+    margin: 0;
+  }
+
+  .main-nav-toggle::before {
+    display: inline-block;
+    width: 16px;
+    height: 12px;
+    margin-right: .4rem;
+    content: "";
+    background-image: linear-gradient(
+        var(--clrToggle) 0,
+        var(--clrToggle) 2px,
+        transparent 2px,
+        transparent 5px,
+        var(--clrToggle) 5px,
+        var(--clrToggle) 7px,
+        transparent 7px,
+        transparent 10px,
+        var(--clrToggle) 10px,
+        var(--clrToggle) 12px);
+  }
+
+  .main-nav:focus-within .main-nav-toggle {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+  }
+
+  .main-nav-link {
+    margin: 0;
+    padding: 1rem 1rem;
+    text-transform: lowercase;
+  }
+}
