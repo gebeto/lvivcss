@@ -1,5 +1,5 @@
 {{> head page=pages.partners}}
-
+<link rel="stylesheet" href="partnership.css">
 <body class="page-layout">
 	{{> nav path='partners.html'}}
 	<h1 class="logo small"><a href="./">LvivCSS'19</a></h1>
@@ -13,7 +13,7 @@
 			<h3>{{partner.title}}</h3>
 			{{#each partner.items}}
 			<figure class="{{partner.name}} partner">
-				<img alt="{{this.name}}" class="partner-logo" src="/assets/images/partners/{{this.logo}}.jpg" loading="lazy">
+				<img alt="{{this.name}}" class="partner-logo" src="/assets/images/partners/{{this.logo}}" loading="lazy">
 				<figcaption>
 					{{#if this.url}}
 					<a href="{{this.url}}">{{this.name}}</a>

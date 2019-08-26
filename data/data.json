@@ -112,12 +112,12 @@
 		"name": "gold",
 		"title": "Золоті",
 		"items": [{
-				"logo": "coingaming",
+				"logo": "coingaming.jpg",
 				"name": "Coingaming",
 				"url": "https://coingaming.io"
 			},
 			{
-				"logo": "svitla",
+				"logo": "svitla.jpg",
 				"name": "Svitla Systems",
 				"url": "https://svitla.com"
 			}
@@ -126,19 +126,23 @@
 		"name": "bronze",
 		"title": "Бронзові",
 		"items": [{
-			"logo": "sigma",
+			"logo": "sigma.jpg",
 			"name": "Sigma Software"
 		}]
 	}, {
 		"name": "info",
 		"title": "Інформаційні",
 		"items": [{
-			"logo": "vinnytsiajs",
+			"logo": "vinnytsiajs.jpg",
 			"name": "VinnytsiaJS"
 		}, {
-			"logo": "girl-in-tech",
+			"logo": "girl-in-tech.jpg",
 			"name": "GIRL IN TECH",
 			"url": "https://t.me/girlintech"
+		}, {
+			"logo": "css-minsk-js.svg",
+			"name": "CSS-Minsk-JS",
+			"url": "https://css-minsk-js.by/"
 		}]
 	}]
 }
