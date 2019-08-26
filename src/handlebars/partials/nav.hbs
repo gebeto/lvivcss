@@ -2,6 +2,7 @@
 	{{#each navigation}}
 	<a class="main-nav-link{{#eq ../path this.href}} active{{/eq}}{{#if this.isFlare}} flare{{/if}}" href="{{this.href}}">{{this.title}}</a>
 	{{/each}}
-	<button class="main-nav-toggle">навігація</button>
+	<p class="main-nav-toggle" tabindex="0">навігація</p>
 </nav>
-<div class="main-nav-backdrop"></div>
+<!-- iOS fix for forced blur -->
+<div class="main-nav-backdrop" onclick="() => {}"></div>

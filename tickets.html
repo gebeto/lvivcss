@@ -36,9 +36,10 @@
 		<a class="main-nav-link active flare" href="tickets.html">Квитки</a>
 		<a class="main-nav-link" href="partners.html">Партнери</a>
 		<a class="main-nav-link" href="contacts.html">Контакти</a>
-		<button class="main-nav-toggle">навігація</button>
+		<p class="main-nav-toggle" tabindex="0">навігація</p>
 	</nav>
-	<div class="main-nav-backdrop"></div>	<section class="hero">
+	<!-- iOS fix for forced blur -->
+	<div class="main-nav-backdrop" onclick="() => {}"></div>	<section class="hero">
 		<h1 class="logo">LvivCSS'19</h1>
 		<p class="logo-motto">конференція <b>не тільки про CSS</b></p>
 		<p>

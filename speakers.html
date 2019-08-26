@@ -36,9 +36,10 @@
 		<a class="main-nav-link flare" href="tickets.html">Квитки</a>
 		<a class="main-nav-link" href="partners.html">Партнери</a>
 		<a class="main-nav-link" href="contacts.html">Контакти</a>
-		<button class="main-nav-toggle">навігація</button>
+		<p class="main-nav-toggle" tabindex="0">навігація</p>
 	</nav>
-	<div class="main-nav-backdrop"></div>	<h1 class="logo small"><a href="./">LvivCSS'19</a></h1>
+	<!-- iOS fix for forced blur -->
+	<div class="main-nav-backdrop" onclick="() => {}"></div>	<h1 class="logo small"><a href="./">LvivCSS'19</a></h1>
 	<h2 class="page-layout-title sticky">
 		Наші спікери<br>
 		<a class="call-to-action" href="http://bit.ly/lvivcss2019-become-a-speaker">запропонуй доповідь</a>

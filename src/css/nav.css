@@ -88,6 +88,7 @@
     font-size: var(--sizeS);
     font-weight: 700;
     align-items: center;
+    margin: 0;
   }
 
   .main-nav-toggle::before {
