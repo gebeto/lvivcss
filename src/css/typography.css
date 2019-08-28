@@ -96,7 +96,7 @@ address {
   font-style: normal;
 }
 
-@media (orientation:landscape) and (max-width:568px) {
+@media (orientation:landscape) and (max-width:568px), (max-width: 1680px) {
   :root {
     --sizeM: 14pt;
   }
