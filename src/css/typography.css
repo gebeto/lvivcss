@@ -102,6 +102,12 @@ address {
   }
 }
 
+@media (max-width:320px) {
+  :root {
+    --sizeM: 12pt;
+  }
+}
+
 @media (max-width:240px) {
   :root {
     --sizeM: 10pt;
