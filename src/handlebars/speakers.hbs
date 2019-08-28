@@ -17,8 +17,9 @@
 			</h4>
 
 			<img class="column-card-img"
-				srcset="/assets/images/speakers/{{this.image}}.128.jpg 128w, /assets/images/speakers/{{this.image}}.86.jpg 86w"
-				sizes="(max-width: 480px) 86px, 128px" src="/assets/images/speakers/{{this.image}}.jpg"
+				{{!-- srcset="/assets/images/speakers/{{this.image}}.128.jpg 128w, /assets/images/speakers/{{this.image}}.86.jpg 86w" --}}
+				{{!-- sizes="(max-width: 480px) 86px, 128px" --}}
+				src="/assets/images/speakers/{{this.image}}.128.jpg"
 				alt="{{this.speakerName}}">
 			{{#if this.talkDescription}}<p>{{this.talkDescription}}</p>{{/if}}
 			<p>{{{this.speakerBio}}}</p>
