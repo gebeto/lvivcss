@@ -1,5 +1,5 @@
 {{> head page=pages.speakers}}
-
+<script src="./js/modal.js" defer></script>
 <body class="page-layout">
 	{{> nav path="speakers.html"}}
 	<h1 class="logo small"><a href="./">LvivCSS'19</a></h1>
@@ -9,8 +9,10 @@
 	</h2>
 	<div class="page-layout-content columns">
 		{{#each speakers}}
+		<input type="checkbox" id="{{this.image}}">
 		<article class="column-card">
-			{{#if this.talkName}}<h3>{{this.talkName}}</h3>{{/if}}
+			<label for="{{this.image}}" class="card-collapse-action"><a class="action">Закрити</a></label>
+			{{#if this.talkName}}<h3 class="talkname">{{this.talkName}}</h3>{{/if}}
 			<h4>
 				{{this.speakerName}}
 				{{#if this.city}}<br><small>{{this.city}}</small>{{/if}}
@@ -20,8 +22,11 @@
 				srcset="/assets/images/speakers/{{this.image}}.128.jpg 128w, /assets/images/speakers/{{this.image}}.86.jpg 86w"
 				sizes="(max-width: 480px) 86px, 128px" src="/assets/images/speakers/{{this.image}}.jpg"
 				alt="{{this.speakerName}}">
-			{{#if this.talkDescription}}<p>{{this.talkDescription}}</p>{{/if}}
+			<div class="text">
+			{{#if this.talkDescription}}<p class="description">{{this.talkDescription}}</p>{{/if}}
 			<p>{{{this.speakerBio}}}</p>
+			</div>
+			<label for="{{this.image}}" class="card-expand-action"><a class="action">Детальніше</a></label>
 		</article>
 		{{/each}}
 		<p class="cliffhanger">…далі буде…</p>
