@@ -155,6 +155,10 @@
 			"logo": "css-minsk-js.svg",
 			"name": "CSS-Minsk-JS",
 			"url": "https://css-minsk-js.by/"
+		}, {
+			"logo": "frontendua.svg",
+			"name": "Frontend UA",
+			"url": "https://twitter.com/frontend_ua"
 		}]
 	}]
 }
