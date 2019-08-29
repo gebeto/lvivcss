@@ -9,7 +9,7 @@
 	</h2>
 	<div class="page-layout-content columns">
 		{{#each speakers}}
-		<input type="checkbox" id="{{this.image}}">
+		<input type="checkbox" class="modal-toggle" id="{{this.image}}">
 		<article class="column-card">
 			<label for="{{this.image}}" class="card-collapse-action"><a class="action">Закрити</a></label>
 			{{#if this.talkName}}<h3 class="talkname">{{this.talkName}}</h3>{{/if}}
@@ -19,9 +19,7 @@
 			</h4>
 
 			<img class="column-card-img"
-				{{!-- srcset="/assets/images/speakers/{{this.image}}.128.jpg 128w, /assets/images/speakers/{{this.image}}.86.jpg 86w" --}}
-				{{!-- sizes="(max-width: 480px) 86px, 128px" --}}
-				src="/assets/images/speakers/{{this.image}}.128.jpg"
+				src="/assets/images/speakers/{{this.image}}.jpg"
 				alt="{{this.speakerName}}">
 			<div class="text">
 			{{#if this.talkDescription}}<p class="description">{{this.talkDescription}}</p>{{/if}}

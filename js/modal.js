@@ -1,10 +1,26 @@
-const classList = document.body.classList;
-const onModalTriggerClick = mode => () => document.body.classList.toggle('noscroll', mode);
-const addOnClick = (items, mode) => {
-	for (const item of items) {
-		item.addEventListener('click', onModalTriggerClick(mode));
+/* 
+	Якщо вимкнути Javascript, то все, що станеться — не можна буде закрити
+	перегляд одного спікера по ESC, і body матиме scrolling піл переглядом.
+	От і все ¯\_(ツ)_/¯
+ */
+
+const bodyClassList = document.body.classList;
+
+const onESCKey = ({ key }) => {
+	if (key === 'Escape') {
+		const checkbox = document.querySelector('input.modal-toggle:checked');
+		if (!checkbox) {
+			return;
+		}
+		checkbox.checked = false;
+		checkbox.onchange({ target: checkbox });
 	}
 };
 
-addOnClick(document.querySelectorAll('.card-expand-action'), true);
-addOnClick(document.querySelectorAll('.card-collapse-action'), false);
+document.body.addEventListener('keydown', onESCKey);
+
+const onchange = ({ target: { checked } }) => bodyClassList.toggle('noscroll', checked);
+
+for (const checkbox of document.querySelectorAll('input.modal-toggle')) {
+	checkbox.onchange = onchange;
+}
