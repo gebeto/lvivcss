@@ -89,7 +89,7 @@ input:checked+.column-card .description {
 }
 
 input:checked+.column-card .column-card-img {
-  --cardImgWidth: 10rem;
+  --cardImgWidth: 16rem;
 }
 
 input:checked+.column-card .text {
