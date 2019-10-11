@@ -1,0 +1,138 @@
+:root {
+  --track-width: 100%;
+}
+
+.break.single,
+input {
+  display: none;
+}
+
+table {
+  width: 100%;
+  margin-top: 1rem;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: .75rem;
+}
+
+td,
+thead th {
+  padding: .5rem;
+}
+
+thead th {
+  position: sticky;
+  top: 72px;
+  background-color: #fff;
+}
+
+td {
+  vertical-align: top;
+}
+
+th:first-child {
+  padding-left: 0;
+}
+
+td:last-child {
+  padding-right: 0;
+}
+
+.time-column {
+  width: 2rem;
+  text-align: left;
+}
+
+.break {
+  padding: .25rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+tr:nth-child(odd) td {
+  background-color: #fafafa;
+}
+
+.schedule-item {
+  display: grid;
+  grid-template-areas: "title""speaker";
+  row-gap: .5rem;
+}
+
+.schedule-item h3,
+.schedule-item h4 {
+  padding: 0;
+  font-size: inherit;
+}
+
+.schedule-item h3 {
+  font-weight: 700;
+}
+
+.track-switch {
+  display: none;
+}
+
+@media (orientation:portrait) {
+  :root {
+    --column-width: 0;
+  }
+
+  .track-cell {
+    overflow: hidden;
+    width: 0;
+  }
+
+  .schedule-item {
+    box-sizing: border-box;
+    min-width: var(--column-width);
+  }
+
+  #track-a:checked~.page-layout-content .track-cell.track-a,
+  #track-b:checked~.page-layout-content .track-cell.track-b,
+  #track-c:checked~.page-layout-content .track-cell.track-c,
+  #track-d:checked~.page-layout-content .track-cell.track-d {
+    display: table-cell;
+    box-sizing: border-box;
+    width: var(--column-width);
+  }
+
+  #track-a:checked~nav [for=track-a],
+  #track-b:checked~nav [for=track-b],
+  #track-c:checked~nav [for=track-c],
+  #track-d:checked~nav [for=track-d] {
+    font-weight: 700;
+  }
+
+  thead th {
+    top: calc(72px + 2rem);
+  }
+
+  .track-switch {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100vw;
+    height: 3rem;
+  }
+
+  .break {
+    font-size: .5rem;
+  }
+
+  table {
+    margin-bottom: 3rem;
+  }
+
+  .track-switch label {
+    display: flex;
+    padding: .5rem;
+    text-align: center;
+    background-color: #fff;
+    font-size: .6rem;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+}

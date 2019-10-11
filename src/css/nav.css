@@ -17,6 +17,7 @@
   background-color: white;
   line-height: var(--navWidth);
   justify-content: space-around;
+  padding: 0 1rem;
 }
 
 .main-nav-link.active {

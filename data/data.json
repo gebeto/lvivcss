@@ -1,26 +1,27 @@
 {
 	"navigation": [{
-			"href": "/",
-			"title": "Головна"
-		}, {
-			"href": "speakers",
-			"title": "Спікери"
-		}, {
-			"href": "workshops",
-			"title": "Воркшопи"
-		},
-		{
-			"href": "tickets",
-			"title": "Квитки",
-			"isFlare": true
-		}, {
-			"href": "partners",
-			"title": "Партнери"
-		}, {
-			"href": "contacts",
-			"title": "Контакти"
-		}
-	],
+		"href": "/",
+		"title": "Головна"
+	}, {
+		"href": "speakers",
+		"title": "Спікери"
+	}, {
+		"href": "workshops",
+		"title": "Воркшопи"
+	}, {
+		"href": "schedule",
+		"title": "Розклад"
+	}, {
+		"href": "tickets",
+		"title": "Квитки",
+		"isFlare": true
+	}, {
+		"href": "partners",
+		"title": "Партнери"
+	}, {
+		"href": "contacts",
+		"title": "Контакти"
+	}],
 	"pages": {
 		"index": {
 			"title": "LvivCSS'19 — конференція не тільки про CSS",
@@ -265,5 +266,104 @@
 			"name": "BeerJS Житомир",
 			"url": "https://www.facebook.com/groups/beerJSZhytomyr/"
 		}]
-	}]
+	}],
+	"schedule": {
+		"tracks": [{
+			"title": "Зала А",
+			"id": "a"
+		}, {
+			"title": "Зала Б",
+			"id": "b"
+		}, {
+			"title": "Куточок спікерів",
+			"id": "c"
+		}, {
+			"title": "Куточок спільнот",
+			"id": "d"
+		}],
+		"items": [
+			{ "time": "10:00", "title": "Відкриття" },
+			{
+				"time": "10:00",
+				"tracks": [
+					{ "trackId": "a", "speakerId": "shpilevska" },
+					{ "trackId": "b", "speakerId": "fedosov" },
+					{ "trackId": "c" },
+					{ "trackId": "d", "title": "" }
+				]
+			},
+			{ "time": "10:40" },
+			{
+				"time": "10:50",
+				"tracks": [
+					{ "trackId": "a", "speakerId": "dubko" },
+					{ "trackId": "b", "speakerId": "yukhnovych" },
+					{ "trackId": "c" },
+					{ "trackId": "d", "title": "" }
+				]
+			},
+			{ "time": "11:30" },
+			{
+				"time": "11:40",
+				"tracks": [
+					{ "trackId": "a", "speakerId": "shpilevska" },
+					{ "trackId": "b", "speakerId": "fedosov" },
+					{ "trackId": "c" },
+					{ "trackId": "d", "title": "" }
+				]
+			},
+			{ "time": "12:20" },
+			{
+				"time": "12:30",
+				"tracks": [
+					{ "trackId": "a", "speakerId": "dubko" },
+					{ "trackId": "b", "speakerId": "yukhnovych" },
+					{ "trackId": "c" },
+					{ "trackId": "d", "title": "" }
+				]
+			},
+			{ "time": "13:10", "title": "Обід" },
+			{
+				"time": "14:10",
+				"tracks": [
+					{ "trackId": "a", "speakerId": "shpilevska" },
+					{ "trackId": "b", "speakerId": "fedosov" },
+					{ "trackId": "c" },
+					{ "trackId": "d", "title": "" }
+				]
+			},
+			{ "time": "14:50" },
+			{
+				"time": "15:00",
+				"tracks": [
+					{ "trackId": "a", "speakerId": "dubko" },
+					{ "trackId": "b", "speakerId": "yukhnovych" },
+					{ "trackId": "c" },
+					{ "trackId": "d", "title": "" }
+				]
+			},
+			{ "time": "15:40" },
+			{
+				"time": "15:50",
+				"tracks": [
+					{ "trackId": "a", "speakerId": "shpilevska" },
+					{ "trackId": "b", "speakerId": "fedosov" },
+					{ "trackId": "c" },
+					{ "trackId": "d", "title": "" }
+				]
+			},
+			{ "time": "16:30" },
+			{
+				"time": "16:40",
+				"tracks": [
+					{ "trackId": "a", "speakerId": "dubko" },
+					{ "trackId": "b", "speakerId": "yukhnovych" },
+					{ "trackId": "c" },
+					{ "trackId": "d", "title": "" }
+				]
+			},
+			{ "time": "17:20", "title": "Урочисте закриття конференції" },
+			{ "time": "18:00", "title": "Афтепаті" }
+		]
+	}
 }

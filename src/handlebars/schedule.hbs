@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	{{> head page=pages.workshops}}
+	<script src="./js/modal.js" defer></script>
+	<script src="./js/follow.js" defer type="module"></script>
+</head>
+
+<body>
+	{{> gtm}}
+	{{> nav path="workshops"}}
+	<h1 class="logo small app-logo"><a href="./">LvivCSS'19</a></h1>
+	<h2 class="app-header app-sticky">
+		Воркшопи<br>
+		<a class="call-to-action" href="/tickets">придбай квиток</a>
+	</h2>
+	<main class="app-main app-column app-column-max-2">
+		{{#each schedule.tracks}}
+		<input type="radio" {{#if @index}}{{else}}checked="checked" {{/if}}name="track" id="track-{{this.id}}">
+		{{/each}}
+		<nav class="track-switch">
+			{{#each schedule.tracks}}
+			<label for="track-{{this.id}}">{{this.title}}</label>
+			{{/each}}
+		</nav>
+		<div class="page-layout-content">
+			<table>
+				<thead>
+					<tr>
+						<th class="time-column">Час</th>
+						{{#each schedule.tracks}}
+						<th class="track-cell track-{{this.id}}">{{this.title}}</th>
+						{{/each}}
+					</tr>
+				</thead>
+				<tbody>
+					{{#each schedule.items}}
+					<tr>
+						<th class="time-column">{{this.time}}</th>
+						{{#if this.tracks}}
+						{{#each this.tracks}}
+						<td class="track-cell track-{{this.trackId}}">
+							<div class="schedule-item">
+								{{#if speakerId}}
+								{{#with (look ../../speakers this.speakerId)}}
+								<h3>{{this.talkName}}</h3>
+								<h4>{{this.speakerName}}</h4>
+								{{/with}}
+								{{else if title}}
+								<h3>{{this.title}}</h3>
+								{{/if}}
+							</div>
+						</td>
+						{{/each}}
+						{{else}}
+						<td class="break" colspan="{{../schedule.tracks.length}}">
+							{{#if this.title}}{{this.title}}{{else}}Перерва{{/if}}
+						</td>
+						{{/if}}
+					</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+		<script>
+			const element = document.querySelector('.page-layout-content');
+			const onResize = () => {
+				const maxWidth = element.offsetWidth;
+				document.documentElement.style.setProperty('--column-width', `calc(${maxWidth}px - 3rem)`);
+			}
+			window.addEventListener('resize', onResize);
+			onResize();
+		</script>
+	</main>
+</body>
