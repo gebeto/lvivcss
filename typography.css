@@ -1,0 +1,81 @@
+:root {
+  --txtBaseSize: 16pt;
+  --txtScale: 1.5;
+  --txtSizeXS: calc(var(--txtSizeS) / var(--txtScale));
+  --txtSizeS: calc(var(--txtSizeM) / var(--txtScale));
+  --txtSizeM: 1rem;
+  --txtSizeXL: calc(var(--txtSizeM) * var(--txtScale));
+  --txtSizeXXL: calc(var(--txtSizeXL) * var(--txtScale));
+  --txtSize3XL: calc(var(--txtSizeXXL) * var(--txtScale));
+  --txtSize4XL: calc(var(--txtSize3XL) * var(--txtScale));
+}
+
+@font-face {
+  font-family: GlacialIndifference;
+  src: url(./assets/fonts/GlacialIndifference-Regular.otf);
+}
+
+@font-face {
+  font-family: GlacialIndifference;
+  font-weight: 700;
+  src: url(./assets/fonts/GlacialIndifference-Bold.otf);
+}
+
+@font-face {
+  font-family: ManropeFont;
+  font-weight: 400;
+  src: url(./assets/fonts/manrope-medium-webfont.woff2);
+}
+
+@font-face {
+  font-family: ManropeFont;
+  font-weight: 700;
+  src: url(./assets/fonts/manrope-semibold-webfont.woff2);
+}
+
+@font-face {
+  font-family: ManropeFont;
+  font-weight: 900;
+  src: url(./assets/fonts/manrope-extrabold-webfont.woff2);
+}
+
+html {
+  font-size: var(--txtBaseSize);
+}
+
+body {
+  font-size: var(--txtSizeM);
+  font-family: GlacialIndifference, Arial, serif;
+}
+
+body.cyr {
+  font-family: ManropeFont, Arial, serif;
+}
+
+.logo {
+  font-family: GlacialIndifference, Arial, serif;
+  font-size: var(--txtSize4XL);
+  line-height: 80%;
+}
+
+h1 {
+  font-size: var(--txtSize3XL);
+  margin-left: -7px;
+}
+
+h2 {
+  font-size: var(--txtSizeXXL);
+  margin-left: -4px;
+}
+
+h3 {
+  font-size: var(--txtSizeXL);
+}
+
+h4 {
+  font-size: var(--txtSizeL);
+}
+
+p {
+  margin-bottom: 1rem;
+}
