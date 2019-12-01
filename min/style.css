@@ -1,0 +1,176 @@
+@font-face {
+  font-family: Manrope;
+  font-weight: 400;
+  src: url(manrope-medium-webfont.woff2);
+}
+
+@font-face {
+  font-family: Manrope;
+  font-weight: 700;
+  src: url(manrope-semibold-webfont.woff2);
+}
+
+@font-face {
+  font-family: Manrope;
+  font-weight: 900;
+  src: url(manrope-extrabold-webfont.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Manrope, sans-serif;
+  font-size: 16pt;
+
+  line-height: 1.5;
+}
+
+body {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 1rem 0;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+p:not(:last-child),
+ul:not(:last-child),
+figure:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+b {
+  font-weight: 900;
+}
+
+section {
+  page-break-before: always;
+}
+
+ul li {
+  position: relative;
+  padding-left: 1.2rem;
+  list-style: none;
+}
+
+ul li::before {
+  position: absolute;
+  left: 0;
+  content: '— ';
+}
+
+ul li:not(:last-child)::after {
+  content: ';';
+}
+
+ul li:last-child::after {
+  content: '.';
+}
+
+figure {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 20rem;
+}
+
+figure img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5pt 10pt;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.sponsor {
+  height: 20pt;
+  margin: 8pt;
+}
+
+.logo {
+  width: 25%;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+}
+
+footer .logo {
+  width: auto;
+  height: 16pt;
+}
+
+.short-contacts li {
+  padding: 0;
+}
+
+.short-contacts a {
+  display: block;
+  padding: 0.25rem 0;
+}
+
+.short-contacts li::before {
+  content: "";
+}
+
+.short-contacts li:not(:last-child)::after,
+.short-contacts li:last-child::after {
+  content: "";
+}
+
+@media print {
+  header {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+    page-break-after: avoid;
+  }
+
+  figure {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  html {
+    font-size: 12pt;
+  }
+
+  .logo {
+    width: 50%;
+  }
+}
