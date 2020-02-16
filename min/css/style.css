@@ -227,6 +227,7 @@ footer {
     gap: 16pt;
     padding: 32pt 5vw;
     box-sizing: border-box;
+    flex: 0;
   }
 
   .teaser-item {
