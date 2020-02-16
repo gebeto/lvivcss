@@ -99,7 +99,7 @@ body {
   flex: 1;
 }
 
-.landing-page .logo-group {
+.logo-group {
   --logo-font-size: 24pt;
   display: grid;
   padding: var(--logo-font-size);
@@ -144,6 +144,7 @@ body {
 .landing-page .date-location {
   white-space: nowrap;
   margin-bottom: calc(-1 * var(--logo-font-size) / 8);
+  font-size: calc(var(--logo-font-size) / 2);
 }
 
 .btn.tickets {
@@ -211,11 +212,15 @@ footer {
 }
 
 @media screen and (orientation: portrait) {
+  .logo-group {
+    --logo-font-size: 21pt;
+  }
+
   .teaser {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10pt;
-    padding: 32pt 10vw;
+    gap: 16pt;
+    padding: 32pt 5vw;
     box-sizing: border-box;
   }
 
