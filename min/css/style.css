@@ -32,6 +32,7 @@
 
 body {
   font-family: var(--text);
+  background-color: #12134a;
   background-image: url("../img/43313-b.webp");
   background-size: 150% 150%;
   background-position: center;
