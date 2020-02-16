@@ -41,6 +41,10 @@ body {
   font-display: fallback;
 }
 
+html.no-webp body {
+  background-image: url("../img/43313-b.jpg");
+}
+
 .btn,
 .glossy {
   --opacity: 0.25;
