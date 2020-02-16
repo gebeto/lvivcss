@@ -172,6 +172,7 @@ html.no-webp body {
   flex: 1;
   --vmargin: 8pt;
   padding: var(--vmargin);
+  box-sizing: border-box;
   backdrop-filter: blur(20pt);
 }
 
