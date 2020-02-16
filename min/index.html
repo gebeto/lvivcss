@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="lviv.min.css — конференція про останні тренди в веб-розробці та UI/UX дизайні. 30 травня, Львів.">
+	<title>lviv.min.css v.1</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<section class="section hero landing-page" id="home">
+		<header>
+			<div class="logo-group">
+				<h1 class="glossy">lviv.<br>min.<br>css</h1>
+				<div class="details">
+					<h2>Конференція<br>про web-розробку<br>та UI/UX</h2>
+					<span class="date-location"><time datetime="2020-05-30"> <b>30 травня</b> 2020 року</time>, Львів</span>
+				</div>
+			</div>	
+		</header>
+		<div class="teaser glossy">
+			<figure class="teaser-item">
+				<img
+					class="teaser-pic glossy"
+					src="./img/as.webp"
+					alt="Олександра Шинкевич" />
+				<figcaption class="teaser-label"> Олександра Шинкевич </figcaption>
+			</figure>
+			<figure class="teaser-item">
+				<img class="teaser-pic glossy" src="./img/nd.webp" alt="Микита Дубко" />
+				<figcaption class="teaser-label"> Микита<br>Дубко </figcaption>
+			</figure>
+			<figure class="teaser-item">
+				<img class="teaser-pic glossy" src="./img/os.webp" alt="Олена Шпілевська" />
+				<figcaption class="teaser-label"> Олена<br>Шпілевська </figcaption>
+			</figure>
+			<figure class="teaser-item">
+				<img class="teaser-pic glossy" src="./img/an.webp" alt="Антон Немцев" />
+				<figcaption class="teaser-label">Антон<br>Немцев</figcaption>
+			</figure>
+			<figure class="teaser-item">
+				<img class="teaser-pic glossy" src="./img/km.webp" alt="Катерина Міщенко" />
+				<figcaption class="teaser-label">Катерина<br>Міщенко</figcaption>
+			</figure>
+			<figure class="teaser-item">
+				<img class="teaser-pic glossy" src="./img/ya.webp" alt="Юрій Артюх" />
+				<figcaption class="teaser-label">Юрій<br>Артюх</figcaption>
+			</figure>
+		</div>
+		<footer>
+			<a href="http://bit.ly/2HblvtR" class="btn tickets">
+				<svg width="16" height="16" fill="white" class="icon">
+					<use xlink:href="#ticket"></use>
+				</svg>
+				Ранні квитки — 950 ₴
+			</a>
+			<div class="social">
+				<a href="https://www.facebook.com/events/815009412287187" class="btn btn-icon" title="Подія на facebook" aria-label="Подія на facebook">
+					<svg width="16" height="16" fill="white" class="icon">
+						<use xlink:href="#fb"></use>
+					</svg>
+				</a>
+				<a href="https://t.me/lvivcss" class="btn btn-icon" title="Канал в telegram" aria-label="Канал в telegram">
+					<svg width="16" height="16" fill="white" class="icon">
+						<use xlink:href="#tg"></use>
+					</svg>
+				</a>
+			</div>
+		</footer>
+	</section>
+
+	<div hidden>
+		<svg id="ticket" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<path
+				d="M449 128l-11 11a46 46 0 01-65 0 46 46 0 010-65l11-11-64-63L0 320l63 64 11-11a46 46 0 0165 0 46 46 0 010 65l-11 11 64 63 320-320-63-64zM170 448a75 75 0 00-10-96 75 75 0 00-96-10l-22-22L320 42l22 22a75 75 0 0010 96 75 75 0 0096 10l22 22-278 278-22-22z" />
+			<path d="M278 213l21-21 21 21-21 21zM235 170l21-21 22 21-22 22zM320 256l22-22 21 22-21 21z" />
+		</svg>
+		<svg id="fb" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M75 512h167V330h-60v-60h60v-75c0-41 34-75 75-75h75v60h-60c-17 0-30 13-30 30v60h87l-10 60h-77v182h135c41 0 75-34 75-75V75c0-41-34-75-75-75H75C34 0 0 34 0 75v362c0 41 34 75 75 75zM30 75c0-25 20-45 45-45h362c25 0 45 20 45 45v362c0 25-20 45-45 45H332V360h73l20-120h-93v-30h90V90H317c-58 0-105 47-105 105v45h-60v120h60v122H75c-25 0-45-20-45-45zm0 0" />
+		</svg>
+		<svg id="tg" viewBox="1 -35 512 511" xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M121 253l64 159 83-83 141 113L512 0 0 206zm-39-47l244-98-195 117zm287-90L207 264l-19 74-36-90zM219 336l10-37 15 12zm172 53L243 272 465 69zm0 0" />
+		</svg>
+
+		<svg id="caret-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 285">
+			<path fill="currentColor"
+				d="M282 76.5l-14.2-14.3a9 9 0 00-13.1 0L142.5 174.4 30.3 62.2a9 9 0 00-13.2 0L3 76.5a9 9 0 000 13.1l133 133a9 9 0 0013.1 0l133-133a9 9 0 000-13z" />
+		</svg>
+	</div>
+</body>
+
+</html>
